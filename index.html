@@ -426,6 +426,41 @@ map.on('load', function () {
 
 // --------------------------------------------------------------- //
 
+    map.addSource('MetMasts', {
+        type: 'vector',
+        url: 'mapbox://joaocreste.9tqubt20'
+    });
+    map.addLayer({
+        'id': 'MetMasts',
+        'type': 'symbol',
+        'source': 'MetMasts',
+        'layout': {
+            'visibility': 'none',
+            'icon-allow-overlap': true,
+            'icon-image': 'embassy-11',
+            'text-field': [
+                          "concat",
+                          [
+                            "to-string",
+                            ["get", "Speed"]
+                          ],
+                          " m/s"
+                        ],
+            'text-size': 9,
+            'text-offset': [0,-1.5],
+            'text-font': [
+                          "DIN Offc Pro Regular",
+                          "Arial Unicode MS Regular"
+                        ],
+
+        },
+
+        'source-layer': 'MetMasts-bsplhe'
+    });
+
+
+// --------------------------------------------------------------- //
+
 // - 2. ENVIRONMENTAL CONSTRAINTS -------------------------------- //
 
 // --------------------------------------------------------------- //
@@ -810,6 +845,39 @@ satellite.on('load', function () {
         'source-layer': 'WindTurbines-9t28pp'
     });
 
+
+    satellite.addSource('MetMasts', {
+        type: 'vector',
+        url: 'mapbox://joaocreste.9tqubt20'
+    });
+    satellite.addLayer({
+        'id': 'MetMasts',
+        'type': 'symbol',
+        'source': 'MetMasts',
+        'layout': {
+            'visibility': 'none',
+            'icon-allow-overlap': true,
+            'icon-image': 'embassy-11',
+            'text-field': [
+                          "concat",
+                          [
+                            "to-string",
+                            ["get", "Speed"]
+                          ],
+                          " m/s"
+                        ],
+            'text-size': 9,
+            'text-offset': [0,-1.5],
+            'text-font': [
+                          "DIN Offc Pro Regular",
+                          "Arial Unicode MS Regular"
+                        ],
+
+        },
+
+        'source-layer': 'MetMasts-bsplhe'
+    });
+
 // --------------------------------------------------------------- //
 
 // - 2. ENVIRONMENTAL CONSTRAINTS -------------------------------- //
@@ -932,7 +1000,7 @@ satellite.on('load', function () {
 });
 
 
-var map_layers = ['TerraSanta', 'Substations', 'Transmission Lines', 'Wind Perimeters', 'Wind Turbines','Caves', 'IndigenousLands','ConservationUnits'];
+var map_layers = ['TerraSanta', 'MetMasts','Substations', 'Transmission Lines', 'Wind Perimeters', 'Wind Turbines','Caves', 'IndigenousLands','ConservationUnits'];
 
 for (var i = 0; i < map_layers.length; i++) {
     var id = map_layers[i];
