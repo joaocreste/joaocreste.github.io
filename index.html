@@ -256,6 +256,7 @@ map.on('load', function () {
 
     map.addLayer({
         'id': 'Substations',
+        'icon-allow-overlap': true,
         'type': 'symbol',
         'source': 'substations',
         'layout': {
@@ -408,7 +409,7 @@ map.on('load', function () {
 
     map.addSource('Wind Turbines', {
         type: 'vector',
-        url: 'mapbox://joaocreste.7pppz94g'
+        url: 'mapbox://joaocreste.cjnd4w8va01la31oiayfur4jj-5b8a0'
     });
     map.addLayer({
         'id': 'Wind Turbines',
@@ -419,10 +420,45 @@ map.on('load', function () {
         },
         'paint': {
             'circle-radius': 2,
-            'circle-color': "hsl(272, 47%, 43%)"
+            'circle-color': [
+							  "match",
+							  ["get", "OPERACAO"],
+							  ["", "SIM"],
+							  "hsl(154, 94%, 29%)",
+							  "hsl(0, 94%, 34%)"
+							],
+			'circle-stroke-color': "hsl(0, 0%, 100%)",
+			'circle-stroke-width': 0.5,
         },
-        'source-layer': 'WindTurbines-9t28pp'
+        'source-layer': 'wind-turbines-BR'
     });
+
+// --------------------------------------------------------------- //
+
+    map.addSource('WindNames', {
+        type: 'vector',
+        url: 'mapbox://joaocreste.c6u9yw5u'
+    });
+    map.addLayer({
+        'id': 'WindNames',
+        'type': 'symbol',
+        'source': 'WindNames',
+        'layout': {
+            'visibility': 'none',
+            'text-field':["to-string", ["get", "Name"]],
+            'text-size':10
+
+        },
+
+        'paint':{
+            'text-halo-color': "hsl(0, 0%, 100%)",
+            'text-halo-width': 1, 
+
+        },
+
+        'source-layer': 'Parques_Elicos_Vlidos'
+    });
+
 
 // --------------------------------------------------------------- //
 
@@ -457,6 +493,9 @@ map.on('load', function () {
 
         'source-layer': 'MetMasts-bsplhe'
     });
+
+// --------------------------------------------------------------- //
+
 
 
 // --------------------------------------------------------------- //
@@ -578,6 +617,98 @@ map.on('load', function () {
 
 // --------------------------------------------------------------- //
 
+// - 3. LAND RELATED --------------------------------------------- //
+
+// --------------------------------------------------------------- //
+
+    map.addSource('SIGEF', {
+        type: 'vector',
+        url: 'mapbox://joaocreste.2f04truc'
+    });
+
+    map.addLayer({
+        'id': 'SIGEF',
+        'type': 'fill',
+        'source': 'SIGEF',
+        'layout': {
+            'visibility': 'none',
+
+        },
+
+
+        'paint':{
+            'fill-color': "hsla(281, 88%, 41%, 0.1)",
+            'fill-outline-color': "hsl(285, 86%, 24%)", 
+
+        },
+
+        'source-layer': 'Sigef_Brasil_RN-0jc2aw'
+    });
+
+// --------------------------------------------------------------- //
+
+    map.addLayer({
+        'id': 'Registries',
+        'type': 'symbol',
+        'source': 'SIGEF',
+        'layout': {
+            'visibility': 'none',
+            'text-field':[
+                          "concat",
+                          ["get", "nome_area"],
+                          "\n",
+                          ["get", "registro_m"],
+                          "\n",
+                          ["get", "status"]
+                        ],
+            'text-font':[
+                          "DIN Offc Pro Regular",
+                          "Arial Unicode MS Regular"
+                        ],
+            'text-size':10,
+
+        },
+
+
+        'paint':{
+            'text-halo-color': "hsl(0, 0%, 100%)",
+            'text-halo-width': 0.2, 
+
+        },
+
+        'source-layer': 'Sigef_Brasil_RN-0jc2aw'
+    });
+
+// --------------------------------------------------------------- //
+
+    map.addSource('CAR', {
+        type: 'vector',
+        url: 'mapbox://joaocreste.0kommva0'
+    });
+
+    map.addLayer({
+        'id': 'CAR',
+        'type': 'fill',
+        'source': 'CAR',
+        'layout': {
+            'visibility': 'none',
+
+        },
+
+
+        'paint':{
+            'fill-color': 'hsla(39, 86%, 41%, 0.3)',
+            'fill-outline-color': 'hsl(36, 94%, 34%)', 
+
+        },
+
+        'source-layer': 'PotentialAreas'
+    });
+
+// --------------------------------------------------------------- //
+
+// --------------------------------------------------------------- //
+
 });
 
 satellite.on('load', function () {
@@ -681,6 +812,7 @@ satellite.on('load', function () {
         'source': 'substations',
         'layout': {
             'visibility': 'none',
+            'icon-allow-overlap': true,
             'icon-image': 'picnic-site-15',
             'icon-size': 1.1,
             'text-field': [
@@ -827,9 +959,36 @@ satellite.on('load', function () {
 
 // --------------------------------------------------------------- //
 
+    satellite.addSource('WindNames', {
+        type: 'vector',
+        url: 'mapbox://joaocreste.c6u9yw5u'
+    });
+    satellite.addLayer({
+        'id': 'WindNames',
+        'type': 'symbol',
+        'source': 'WindNames',
+        'layout': {
+            'visibility': 'none',
+            'text-field':["to-string", ["get", "Name"]],
+            'text-size':10
+
+        },
+
+        'paint':{
+            'text-halo-color': "hsl(0, 0%, 100%)",
+            'text-halo-width': 1, 
+
+        },
+
+        'source-layer': 'Parques_Elicos_Vlidos'
+    });
+
+// --------------------------------------------------------------- //
+
+
     satellite.addSource('Wind Turbines', {
         type: 'vector',
-        url: 'mapbox://joaocreste.7pppz94g'
+        url: 'mapbox://joaocreste.cjnd4w8va01la31oiayfur4jj-5b8a0'
     });
     satellite.addLayer({
         'id': 'Wind Turbines',
@@ -840,11 +999,20 @@ satellite.on('load', function () {
         },
         'paint': {
             'circle-radius': 2,
-            'circle-color': "hsl(272, 47%, 43%)"
+            'circle-color': [
+							  "match",
+							  ["get", "OPERACAO"],
+							  ["", "SIM"],
+							  "hsl(154, 94%, 29%)",
+							  "hsl(0, 94%, 34%)"
+							],
+			'circle-stroke-color': "hsl(0, 0%, 100%)",
+			'circle-stroke-width': 0.5,
         },
-        'source-layer': 'WindTurbines-9t28pp'
+        'source-layer': 'wind-turbines-BR'
     });
 
+// --------------------------------------------------------------- //
 
     satellite.addSource('MetMasts', {
         type: 'vector',
@@ -877,6 +1045,9 @@ satellite.on('load', function () {
 
         'source-layer': 'MetMasts-bsplhe'
     });
+
+// --------------------------------------------------------------- //
+
 
 // --------------------------------------------------------------- //
 
@@ -997,10 +1168,101 @@ satellite.on('load', function () {
 
 // --------------------------------------------------------------- //
 
+// - 3. LAND RELATED --------------------------------------------- //
+
+// --------------------------------------------------------------- //
+
+    satellite.addSource('SIGEF', {
+        type: 'vector',
+        url: 'mapbox://joaocreste.2f04truc'
+    });
+
+    satellite.addLayer({
+        'id': 'SIGEF',
+        'type': 'fill',
+        'source': 'SIGEF',
+        'layout': {
+            'visibility': 'none',
+
+        },
+
+
+        'paint':{
+            'fill-color': "hsla(281, 88%, 41%, 0.1)",
+            'fill-outline-color': "hsl(285, 86%, 24%)", 
+
+        },
+
+        'source-layer': 'Sigef_Brasil_RN-0jc2aw'
+    });
+
+// --------------------------------------------------------------- //
+
+    satellite.addLayer({
+        'id': 'Registries',
+        'type': 'symbol',
+        'source': 'SIGEF',
+        'layout': {
+            'visibility': 'none',
+            'text-field':[
+                          "concat",
+                          ["get", "nome_area"],
+                          "\n",
+                          ["get", "registro_m"],
+                          "\n",
+                          ["get", "status"]
+                        ],
+            'text-font':[
+                          "DIN Offc Pro Regular",
+                          "Arial Unicode MS Regular"
+                        ],
+            'text-size':10,
+
+        },
+
+
+        'paint':{
+            'text-halo-color': "hsl(0, 0%, 100%)",
+            'text-halo-width': 0.2, 
+
+        },
+
+        'source-layer': 'Sigef_Brasil_RN-0jc2aw'
+    });
+
+// --------------------------------------------------------------- //
+
+    satellite.addSource('CAR', {
+        type: 'vector',
+        url: 'mapbox://joaocreste.0kommva0'
+    });
+
+    satellite.addLayer({
+        'id': 'CAR',
+        'type': 'fill',
+        'source': 'CAR',
+        'layout': {
+            'visibility': 'none',
+
+        },
+
+
+        'paint':{
+            'fill-color': 'hsla(39, 86%, 41%, 0.3)',
+            'fill-outline-color': 'hsl(36, 94%, 34%)', 
+
+        },
+
+        'source-layer': 'PotentialAreas'
+    });
+// --------------------------------------------------------------- //
+
 });
 
 
-var map_layers = ['TerraSanta', 'MetMasts','Substations', 'Transmission Lines', 'Wind Perimeters', 'Wind Turbines','Caves', 'IndigenousLands','ConservationUnits'];
+
+
+var map_layers = ['TerraSanta','SIGEF','Registries','CAR', 'MetMasts','Substations', 'Transmission Lines', 'Wind Perimeters', 'Wind Turbines','WindNames','Caves', 'IndigenousLands','ConservationUnits'];
 
 for (var i = 0; i < map_layers.length; i++) {
     var id = map_layers[i];
