@@ -381,30 +381,6 @@ map.on('load', function () {
 
 // --------------------------------------------------------------- //
 
-    map.addSource('WindPerimeters', {
-        type: 'vector',
-        url: 'mapbox://joaocreste.dg66bvub'
-    });
-
-    map.addLayer({
-        'id': 'Wind Perimeters',
-        'type': 'fill',
-        'source': 'WindPerimeters',
-        'layout': {
-            'visibility': 'none',
-
-        },
-
-
-        'paint':{
-            'fill-color': "hsla(281, 88%, 41%, 0.1)",
-            'fill-outline-color': "hsl(285, 86%, 24%)", 
-
-        },
-
-        'source-layer': 'PerimeterWindParks-7ld4vb'
-    });
-
 // --------------------------------------------------------------- //
 
     map.addSource('Wind Turbines', {
@@ -440,7 +416,7 @@ map.on('load', function () {
         url: 'mapbox://joaocreste.c6u9yw5u'
     });
     map.addLayer({
-        'id': 'WindNames',
+        'id': 'Wind Complexes',
         'type': 'symbol',
         'source': 'WindNames',
         'layout': {
@@ -462,14 +438,14 @@ map.on('load', function () {
 
 // --------------------------------------------------------------- //
 
-    map.addSource('MetMasts', {
+    map.addSource('Met Masts', {
         type: 'vector',
         url: 'mapbox://joaocreste.9tqubt20'
     });
     map.addLayer({
-        'id': 'MetMasts',
+        'id': 'Met Masts',
         'type': 'symbol',
-        'source': 'MetMasts',
+        'source': 'Met Masts',
         'layout': {
             'visibility': 'none',
             'icon-allow-overlap': true,
@@ -544,15 +520,15 @@ map.on('load', function () {
 
 // --------------------------------------------------------------- //
 
-    map.addSource('IndigenousLands', {
+    map.addSource('Indigenous Lands', {
         type: 'vector',
         url: 'mapbox://joaocreste.7pljgzin'
     });
 
     map.addLayer({
-        'id': 'IndigenousLands',
+        'id': 'Indigenous Lands',
         'type': 'fill',
-        'source': 'IndigenousLands',
+        'source': 'Indigenous Lands',
         'layout': {
             'visibility': 'none',
 
@@ -567,15 +543,15 @@ map.on('load', function () {
 
 // --------------------------------------------------------------- //
 
-    map.addSource('ConservationUnits', {
+    map.addSource('Conservation Units', {
         type: 'vector',
         url: 'mapbox://joaocreste.ckpn4m4m'
     });
 
     map.addLayer({
-        'id': 'ConservationUnits',
+        'id': 'Conservation Units',
         'type': 'fill',
-        'source': 'ConservationUnits',
+        'source': 'Conservation Units',
         'layout': {
             'visibility': 'none',
 
@@ -587,32 +563,6 @@ map.on('load', function () {
         },
 
         'source-layer': 'ucstodas'
-    });
-
-// --------------------------------------------------------------- //
-
-    map.addSource('TerraSanta', {
-        type: 'vector',
-        url: 'mapbox://joaocreste.dxflixj9'
-    });
-
-    map.addLayer({
-        'id': 'TerraSanta',
-        'type': 'fill',
-        'source': 'TerraSanta',
-        'layout': {
-            'visibility': 'none',
-
-        },
-
-
-        'paint':{
-            'fill-color': "hsla(128, 43%, 54%, 0.3)",
-            'fill-outline-color': "hsl(131, 48%, 31%)", 
-
-        },
-
-        'source-layer': 'Poligonal'
     });
 
 // --------------------------------------------------------------- //
@@ -681,15 +631,15 @@ map.on('load', function () {
 
 // --------------------------------------------------------------- //
 
-    map.addSource('CAR', {
+    map.addSource('Rural Areas', {
         type: 'vector',
-        url: 'mapbox://joaocreste.0kommva0'
+        url: 'mapbox://joaocreste.bt21uvv8'
     });
 
     map.addLayer({
-        'id': 'CAR',
+        'id': 'Rural Areas',
         'type': 'fill',
-        'source': 'CAR',
+        'source': 'Rural Areas',
         'layout': {
             'visibility': 'none',
 
@@ -702,10 +652,61 @@ map.on('load', function () {
 
         },
 
-        'source-layer': 'PotentialAreas'
+        'source-layer': 'RN_AREA_IMOVEL-26c1pv'
     });
 
 // --------------------------------------------------------------- //
+
+    map.addSource('APPs', {
+        type: 'vector',
+        url: 'mapbox://joaocreste.66y7wmo8'
+    });
+
+    map.addLayer({
+        'id': 'APPs',
+        'type': 'fill',
+        'source': 'APPs',
+        'layout': {
+            'visibility': 'none',
+
+        },
+
+
+        'paint':{
+            'fill-color': "hsla(144, 39%, 47%, 0.6)",
+            'fill-outline-color': "hsla(144, 39%, 47%, 0.95)",
+
+        },
+
+        'source-layer': 'RN_APP-8bfws0'
+    });
+
+// --------------------------------------------------------------- //
+
+
+    map.addSource('Legal Reserve', {
+        type: 'vector',
+        url: 'mapbox://joaocreste.0r85zzcs'
+    });
+
+    map.addLayer({
+        'id': 'Legal Reserve',
+        'type': 'fill',
+        'source': 'Legal Reserve',
+        'layout': {
+            'visibility': 'none',
+
+        },
+
+
+        'paint':{
+            'fill-color': "hsla(144, 39%, 47%, 0.6)",
+            'fill-outline-color': "hsla(144, 39%, 47%, 0.95)", 
+
+        },
+
+        'source-layer': 'RN_RESERVA_LEGAL-dkvhgm'
+    });
 
 // --------------------------------------------------------------- //
 
@@ -933,30 +934,6 @@ satellite.on('load', function () {
 
 // --------------------------------------------------------------- //
 
-    satellite.addSource('WindPerimeters', {
-        type: 'vector',
-        url: 'mapbox://joaocreste.dg66bvub'
-    });
-
-    satellite.addLayer({
-        'id': 'Wind Perimeters',
-        'type': 'fill',
-        'source': 'WindPerimeters',
-        'layout': {
-            'visibility': 'none',
-
-        },
-
-
-        'paint':{
-            'fill-color': "hsla(281, 88%, 41%, 0.1)",
-            'fill-outline-color': "hsl(285, 86%, 24%)", 
-
-        },
-
-        'source-layer': 'PerimeterWindParks-7ld4vb'
-    });
-
 // --------------------------------------------------------------- //
 
     satellite.addSource('WindNames', {
@@ -964,13 +941,13 @@ satellite.on('load', function () {
         url: 'mapbox://joaocreste.c6u9yw5u'
     });
     satellite.addLayer({
-        'id': 'WindNames',
+        'id': 'Wind Complexes',
         'type': 'symbol',
         'source': 'WindNames',
         'layout': {
             'visibility': 'none',
             'text-field':["to-string", ["get", "Name"]],
-            'text-size':10
+            'text-size':10,
 
         },
 
@@ -1014,14 +991,14 @@ satellite.on('load', function () {
 
 // --------------------------------------------------------------- //
 
-    satellite.addSource('MetMasts', {
+    satellite.addSource('Met Masts', {
         type: 'vector',
         url: 'mapbox://joaocreste.9tqubt20'
     });
     satellite.addLayer({
-        'id': 'MetMasts',
+        'id': 'Met Masts',
         'type': 'symbol',
-        'source': 'MetMasts',
+        'source': 'Met Masts',
         'layout': {
             'visibility': 'none',
             'icon-allow-overlap': true,
@@ -1095,15 +1072,15 @@ satellite.on('load', function () {
 
 // --------------------------------------------------------------- //
 
-    satellite.addSource('IndigenousLands', {
+    satellite.addSource('Indigenous Lands', {
         type: 'vector',
         url: 'mapbox://joaocreste.7pljgzin'
     });
 
     satellite.addLayer({
-        'id': 'IndigenousLands',
+        'id': 'Indigenous Lands',
         'type': 'fill',
-        'source': 'IndigenousLands',
+        'source': 'Indigenous Lands',
         'layout': {
             'visibility': 'none',
 
@@ -1118,15 +1095,15 @@ satellite.on('load', function () {
 
 // --------------------------------------------------------------- //
 
-    satellite.addSource('ConservationUnits', {
+    satellite.addSource('Conservation Units', {
         type: 'vector',
         url: 'mapbox://joaocreste.ckpn4m4m'
     });
 
     satellite.addLayer({
-        'id': 'ConservationUnits',
+        'id': 'Conservation Units',
         'type': 'fill',
-        'source': 'ConservationUnits',
+        'source': 'Conservation Units',
         'layout': {
             'visibility': 'none',
 
@@ -1140,31 +1117,6 @@ satellite.on('load', function () {
         'source-layer': 'ucstodas'
     });
 
-// --------------------------------------------------------------- //
-
-    satellite.addSource('TerraSanta', {
-        type: 'vector',
-        url: 'mapbox://joaocreste.dxflixj9'
-    });
-
-    satellite.addLayer({
-        'id': 'TerraSanta',
-        'type': 'fill',
-        'source': 'TerraSanta',
-        'layout': {
-            'visibility': 'none',
-
-        },
-
-
-        'paint':{
-            'fill-color': "hsla(128, 43%, 54%, 0.3)",
-            'fill-outline-color': "hsl(131, 48%, 31%)", 
-
-        },
-
-        'source-layer': 'Poligonal'
-    });
 
 // --------------------------------------------------------------- //
 
@@ -1232,15 +1184,15 @@ satellite.on('load', function () {
 
 // --------------------------------------------------------------- //
 
-    satellite.addSource('CAR', {
+    satellite.addSource('Rural Areas', {
         type: 'vector',
-        url: 'mapbox://joaocreste.0kommva0'
+        url: 'mapbox://joaocreste.bt21uvv8'
     });
 
     satellite.addLayer({
-        'id': 'CAR',
+        'id': 'Rural Areas',
         'type': 'fill',
-        'source': 'CAR',
+        'source': 'Rural Areas',
         'layout': {
             'visibility': 'none',
 
@@ -1253,8 +1205,62 @@ satellite.on('load', function () {
 
         },
 
-        'source-layer': 'PotentialAreas'
+        'source-layer': 'RN_AREA_IMOVEL-26c1pv'
     });
+// --------------------------------------------------------------- //
+
+
+    satellite.addSource('APPs', {
+        type: 'vector',
+        url: 'mapbox://joaocreste.66y7wmo8'
+    });
+
+    satellite.addLayer({
+        'id': 'APPs',
+        'type': 'fill',
+        'source': 'APPs',
+        'layout': {
+            'visibility': 'none',
+
+        },
+
+
+        'paint':{
+            'fill-color': "hsla(144, 39%, 47%, 0.6)",
+            'fill-outline-color': "hsla(144, 39%, 47%, 0.95)", 
+
+        },
+
+        'source-layer': 'RN_APP-8bfws0'
+    });
+
+// --------------------------------------------------------------- //
+
+
+    satellite.addSource('Legal Reserve', {
+        type: 'vector',
+        url: 'mapbox://joaocreste.0r85zzcs'
+    });
+
+    satellite.addLayer({
+        'id': 'Legal Reserve',
+        'type': 'fill',
+        'source': 'Legal Reserve',
+        'layout': {
+            'visibility': 'none',
+
+        },
+
+
+        'paint':{
+            'fill-color': "hsla(144, 39%, 47%, 0.6)",
+            'fill-outline-color': "hsla(144, 39%, 47%, 0.95)", 
+
+        },
+
+        'source-layer': 'RN_RESERVA_LEGAL-dkvhgm'
+    });
+
 // --------------------------------------------------------------- //
 
 });
@@ -1262,7 +1268,7 @@ satellite.on('load', function () {
 
 
 
-var map_layers = ['TerraSanta','SIGEF','Registries','CAR', 'MetMasts','Substations', 'Transmission Lines', 'Wind Perimeters', 'Wind Turbines','WindNames','Caves', 'IndigenousLands','ConservationUnits'];
+var map_layers = ['Registries','SIGEF','Rural Areas','APPs','Legal Reserve','Caves', 'Indigenous Lands','Conservation Units','Met Masts','Substations', 'Transmission Lines', 'Wind Complexes','Wind Turbines'];
 
 for (var i = 0; i < map_layers.length; i++) {
     var id = map_layers[i];
