@@ -170,7 +170,7 @@ map.on('load', function () {
             'visibility': 'none'
         },
         'paint': {
-            'circle-radius': 2,
+            'circle-radius': 3,
             'circle-color': [
 							  "match",
 							  ["get", "Operacao"],
@@ -557,6 +557,79 @@ SatView.onclick = function (e) {
 
 });
 
+
+// --Substation info-- //
+
+map.on('click', 'Substations', function (e) {
+var coordinates = e.features[0].geometry.coordinates.slice();
+var tensao = e.features[0].properties.Tensao;
+var name = e.features[0].properties.Nome;
+var nameLEN = e.features[0].properties.Nome_LEN;
+var remaining = e.features[0].properties.Remaining;
+var description = "<p>" + name +"</p>" + "<p>Voltage Level: <strong>"+tensao+"</strong></p>" +
+                        "<p>Remaining capacity LEN: <strong>"+remaining+ " m"+"</strong>" + "* referred to as" + nameLEN +  "</p>"
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+new mapboxgl.Popup()
+    .setLngLat(coordinates)
+    .setHTML(description)
+    .addTo(map);
+});
+ 
+// Change the cursor to a pointer when the mouse is over the places layer.
+map.on('mouseenter', 'Substations', function () {
+    map.getCanvas().style.cursor = 'pointer';
+});
+ 
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', 'Substations', function () {
+    map.getCanvas().style.cursor = '';
+});
+
+
+// --Wind Turbine info-- //
+
+map.on('click', 'Wind Turbines', function (e) {
+var coordinates = e.features[0].geometry.coordinates.slice();
+var power = e.features[0].properties.POT_MW;
+var hub = e.features[0].properties.ALT_TORRE;
+var diameter = e.features[0].properties.DIAM_ROTOR;
+var description = "<p>Power: <strong>"+power + " MW" +"</strong></p>" +
+                    "<p>Hub Height: <strong>"+hub+ " m"+"</strong></p>" +
+                    "<p>Diameter: <strong>"+diameter+" m"+"</strong></p>"                
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+new mapboxgl.Popup()
+    .setLngLat(coordinates)
+    .setHTML(description)
+    .addTo(map);
+});
+ 
+// Change the cursor to a pointer when the mouse is over the places layer.
+map.on('mouseenter', 'Wind Turbines', function () {
+    map.getCanvas().style.cursor = 'pointer';
+});
+ 
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', 'Wind Turbines', function () {
+    map.getCanvas().style.cursor = '';
+});
+
+
+
+
 var geocoder = new MapboxGeocoder({ accessToken: mapboxgl.accessToken });
 
 document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
@@ -584,3 +657,4 @@ for (var i = 0; i < map_layers.length; i++) {
         }
     };
 }
+

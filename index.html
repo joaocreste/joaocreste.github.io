@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>srtdash - Starter Template</title>
+    <title>Forager Intel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -37,6 +37,14 @@
 <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.2/mapbox-gl-geocoder.css' type='text/css' />
 
 <style>
+.mapboxgl-popup {
+position: static;
+
+font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+</style>
+
+<style>
 body {
     overflow: hidden;
 }
@@ -50,11 +58,11 @@ body * {
 }
 
 .map {
-    position: inherit;
+    position: static;
     top: 0;
     bottom: 0;
     width: 100%;
-    height: 900px;
+    height: 750px;
 
 }
 
@@ -251,7 +259,7 @@ top:0px;
         <!-- footer area start-->
         <footer>
             <div class="footer-area">
-                <p>© Copyright 2018. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+                <p>© Copyright 2019. All right reserved</p>
             </div>
         </footer>
         <!-- footer area end-->
@@ -287,7 +295,7 @@ top:0px;
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>
 
-    <script src="js/main.js"></script>
+    <script src="assets/js/mbmain.js"></script>
 
 </body>
 
