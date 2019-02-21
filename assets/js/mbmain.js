@@ -566,8 +566,8 @@ var tensao = e.features[0].properties.Tensao;
 var name = e.features[0].properties.Nome;
 var nameLEN = e.features[0].properties.Nome_LEN;
 var remaining = e.features[0].properties.Remaining;
-var description = "<p>" + name +"</p>" + "<p>Voltage Level: <strong>"+tensao+"</strong></p>" +
-                        "<p>Remaining capacity LEN: <strong>"+remaining+ " m"+"</strong>" + "* referred to as" + nameLEN +  "</p>"
+console.log(remaining)
+var description = "<p>" + name +"</p>" + "<p>Voltage Level: <strong>"+tensao+" kV</strong></p>" +  "<p>Remaining capacity: <strong>"+remaining+" MW</strong></p>"
  
 // Ensure that if the map is zoomed out such that multiple
 // copies of the feature are visible, the popup appears
