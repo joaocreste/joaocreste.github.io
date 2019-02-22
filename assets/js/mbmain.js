@@ -699,10 +699,12 @@ map.on('mouseleave', 'Substations', function () {
 
 map.on('click', 'Wind Turbines', function (e) {
 var coordinates = e.features[0].geometry.coordinates.slice();
+var name = e.features[0].properties.NOME_EOL
 var power = e.features[0].properties.POT_MW;
 var hub = e.features[0].properties.ALT_TORRE;
 var diameter = e.features[0].properties.DIAM_ROTOR;
-var description = "<p>Power: <strong>"+power + " MW" +"</strong></p>" +
+var description = "<p>Name: <strong>"+name +"</strong></p>" +
+                    "<p>Power: <strong>"+power + " MW" +"</strong></p>" +
                     "<p>Hub Height: <strong>"+hub+ " m"+"</strong></p>" +
                     "<p>Diameter: <strong>"+diameter+" m"+"</strong></p>"                
  
