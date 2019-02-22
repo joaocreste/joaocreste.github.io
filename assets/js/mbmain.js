@@ -19,6 +19,7 @@ var MapView = document.getElementById('MapView')
 var SatView = document.getElementById('SatView')
 var SolarView = document.getElementById('SolarView')
 var WindSpeed = document.getElementById('WindSpeed')
+var Clear = document.getElementById('Clear')
 
 
 MapView.onclick = function (e) {
@@ -52,6 +53,10 @@ WindSpeed.onclick = function (e) {
 
 map.on('load', function () {
 
+map.loadImage('http://joaocreste.github.io/wind-turbine.png', function(error, image) {
+    if (error) throw error;
+    map.addImage('wind-turbine-icon', image);
+}),
 // - 0. LAYERS TO WORK AS STYLES------------------------------------ //
 
 // --------------------------------------------------------------- //
@@ -306,8 +311,11 @@ map.on('load', function () {
         'source': 'WindNames',
         'layout': {
             'visibility': 'none',
-            'text-field':["to-string", ["get", "Name"]],
-            'text-size':10
+            "icon-image": "wind-turbine-icon",
+            "icon-size": 0.02,
+            'text-field':["to-string", ["get", "Nome"]],
+            'text-size':10,
+            'text-offset': [0,-1.5],
 
         },
 
@@ -317,7 +325,7 @@ map.on('load', function () {
 
         },
 
-        'source-layer': 'Parques_Elicos_Vlidos'
+        'source-layer': 'WindFarmsBRAll-6vkoay'
     });
 
 
@@ -694,6 +702,43 @@ map.on('mouseleave', 'Substations', function () {
     map.getCanvas().style.cursor = '';
 });
 
+// --Solar Projects info-- //
+
+map.on('click', 'Wind Complexes', function (e) {
+var coordinates = e.features[0].geometry.coordinates.slice();
+var ceg = e.features[0].properties.CEG;
+var name = e.features[0].properties.Nome;
+var power = e.features[0].properties.P_OUT_KW/1e3;
+var status = e.features[0].properties.ESTAGIO;
+var owner = e.features[0].properties.PROPRIETAR;
+var description =   "<p>Name: <strong>"+name+"</strong></p>" +
+                    "<p>Owner: <strong>"+owner+"</strong></p>" +
+                    "<p>CEG: <strong>"+ceg +"</strong></p>" +
+                    "<p>Power: <strong>"+power + " MW" +"</strong></p>" +
+                    "<p>Status: <strong>"+status+"</strong></p>"              
+ 
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+new mapboxgl.Popup()
+    .setLngLat(coordinates)
+    .setHTML(description)
+    .addTo(map);
+});
+ 
+// Change the cursor to a pointer when the mouse is over the places layer.
+map.on('mouseenter', 'Wind Complexes', function () {
+    map.getCanvas().style.cursor = 'pointer';
+});
+ 
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', 'Wind Complexes', function () {
+    map.getCanvas().style.cursor = '';
+});
+
+
+// --Solar Projects info-- //
 
 // --Wind Turbine info-- //
 
@@ -763,8 +808,6 @@ map.on('mouseleave', 'Solar (Status)', function () {
 });
 
 
-
-
 var geocoder = new MapboxGeocoder({ accessToken: mapboxgl.accessToken });
 
 document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
@@ -791,5 +834,14 @@ for (var i = 0; i < map_layers.length; i++) {
             map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
         }
     };
+}
+
+Clear.onclick = function (e) {
+
+    for (var i = 0; i < map_layers.length; i++) {
+        var id = map_layers[i];
+
+        map.setLayoutProperty(id, 'visibility', 'none');
+    }
 }
 
