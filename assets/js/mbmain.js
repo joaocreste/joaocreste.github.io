@@ -845,3 +845,22 @@ Clear.onclick = function (e) {
     }
 }
 
+// Adding geotagged pictures
+
+
+var marker = [-5.350262, -35.357346];
+ 
+// create the popup
+var popup = new mapboxgl.Popup({ offset: 25 })
+    .setText('Construction on the Washington Monument began in 1848.');
+ 
+// create DOM element for the marker
+var el = document.createElement('div');
+    el.id = 'marker';
+ 
+// create the marker
+new mapboxgl.Marker(el)
+    .setLngLat(marker)
+    .setPopup(popup) // sets a popup on this marker
+    .addTo(map);
+
