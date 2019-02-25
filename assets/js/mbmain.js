@@ -53,7 +53,7 @@ WindSpeed.onclick = function (e) {
 
 map.on('load', function () {
 
-map.loadImage('http://joaocreste.github.io/wind-turbine.png', function(error, image) {
+map.loadImage('https://joaocreste.github.io/wind-turbine.png', function(error, image) {
     if (error) throw error;
     map.addImage('wind-turbine-icon', image);
 }),
