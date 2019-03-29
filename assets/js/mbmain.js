@@ -53,10 +53,21 @@ WindSpeed.onclick = function (e) {
 
 map.on('load', function () {
 
-map.loadImage('https://joaocreste.github.io/wind-turbine.png', function(error, image) {
+map.loadImage('http://joaocreste.github.io/wind-turbine.png', function(error, image) {
     if (error) throw error;
     map.addImage('wind-turbine-icon', image);
 }),
+
+map.loadImage('http://joaocreste.github.io/ss_existing.png', function(error, image) {
+    if (error) throw error;
+    map.addImage('ss_existing', image);
+}),
+
+map.loadImage('http://joaocreste.github.io/ss_planned.png', function(error, image) {
+    if (error) throw error;
+    map.addImage('ss_planned', image);
+}),
+
 // - 0. LAYERS TO WORK AS STYLES------------------------------------ //
 
 // --------------------------------------------------------------- //
@@ -151,8 +162,8 @@ map.loadImage('https://joaocreste.github.io/wind-turbine.png', function(error, i
         'source': 'substations',
         'layout': {
             'visibility': 'none',
-            'icon-image': 'picnic-site-15',
-            'icon-size': 1.1,
+            'icon-image': 'ss_existing',
+            'icon-size': 0.015,
             'text-field': [
                           "step",
                           ["zoom"],
@@ -178,6 +189,49 @@ map.loadImage('https://joaocreste.github.io/wind-turbine.png', function(error, i
         },
 
         'source-layer': 'Substation_Existing-23494i'
+    });
+
+
+// --------------------------------------------------------------- //
+    map.addSource('substations_planned', {
+        type: 'vector',
+        url: 'mapbox://joaocreste.1s1lvilb'
+    });
+
+    map.addLayer({
+        'id': 'Substations Planned',
+        'icon-allow-overlap': true,
+        'type': 'symbol',
+        'source': 'substations_planned',
+        'layout': {
+            'visibility': 'none',
+            'icon-image': 'ss_planned',
+            'icon-size': 0.015,
+            'text-field': [
+                          "step",
+                          ["zoom"],
+                          "",
+                          6,
+                          [
+                            "to-string",
+                            ["get", "Nome"]
+                          ]
+                        ],
+            'text-font': [
+                          "DIN Offc Pro Regular",
+                          "Arial Unicode MS Regular"
+                        ],
+            'text-size': 10,
+            'text-offset': [0, -1.2],
+
+        },
+        'paint':{
+            'text-halo-color': "hsl(0, 0%, 100%)",
+            'text-halo-width': 1,
+
+        },
+
+        'source-layer': 'Substation_Planned-69cqo0'
     });
 
 // --------------------------------------------------------------- //
@@ -267,6 +321,97 @@ map.loadImage('https://joaocreste.github.io/wind-turbine.png', function(error, i
         },
 
         'source-layer': 'TL_Existing-7irkcq'
+    });
+
+// --------------------------------------------------------------- //
+
+// --------------------------------------------------------------- //
+
+    map.addSource('Transmission Lines Planned', {
+        type: 'vector',
+        url: 'mapbox://joaocreste.azpmj0zc'
+    });
+
+    map.addLayer({
+        'id': 'Transmission Lines Planned',
+        'type': 'line',
+        'source': 'Transmission Lines Planned',
+        'layout': {
+                    'visibility': 'none',
+                },
+
+        'paint': {
+                    'line-color': [
+                      "case",
+                      [
+                        "match",
+                        ["get", "Tensao"],
+                        ["", "800"],
+                        true,
+                        false
+                      ],
+                      "hsla(259, 98%, 36%,0.5)",
+                      [
+                        "match",
+                        ["get", "Tensao"],
+                        ["", "765"],
+                        true,
+                        false
+                      ],
+                      "hsla(242, 83%, 44%,0.5)",
+                      [
+                        "match",
+                        ["get", "Tensao"],
+                        ["", "600"],
+                        true,
+                        false
+                      ],
+                      "hsla(272, 100%, 35%,0.5)",
+                      [
+                        "match",
+                        ["get", "Tensao"],
+                        ["", "525"],
+                        true,
+                        false
+                      ],
+                      "hsla(272, 97%, 36%,0.5)",
+                      [
+                        "match",
+                        ["get", "Tensao"],
+                        ["", "500"],
+                        true,
+                        false
+                      ],
+                      "hsla(275, 100%, 43%,0.5)",
+                      [
+                        "match",
+                        ["get", "Tensao"],
+                        ["", "440"],
+                        true,
+                        false
+                      ],
+                      "hsla(0, 100%, 44%,0.5)",
+                      [
+                        "match",
+                        ["get", "Tensao"],
+                        ["", "345"],
+                        true,
+                        false
+                      ],
+                      "hsla(16, 100%, 52%,0.5)",
+                      [
+                        "match",
+                        ["get", "Tensao"],
+                        ["", "230"],
+                        true,
+                        false
+                      ],
+                      "hsla(20, 100%, 58%,0.5)",
+                      "#000000"
+                    ],
+        },
+
+        'source-layer': 'TL_Planned-dsfcbm'
     });
 
 // --------------------------------------------------------------- //
@@ -702,6 +847,41 @@ map.on('mouseleave', 'Substations', function () {
     map.getCanvas().style.cursor = '';
 });
 
+// --Planned Substation info-- //
+
+map.on('click', 'Substations Planned', function (e) {
+var coordinates = e.features[0].geometry.coordinates.slice();
+var tensao = e.features[0].properties.Tensao;
+var name = e.features[0].properties.Nome;
+var situation = e.features[0].properties.Situacao;
+
+var description = "<p>" + name +"</p>" + "<p>Voltage Level: <strong>"+tensao+" kV</strong></p>" +  "<p>Situation: <strong>"+situation+" </strong></p>"
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+new mapboxgl.Popup()
+    .setLngLat(coordinates)
+    .setHTML(description)
+    .addTo(map);
+});
+ 
+// Change the cursor to a pointer when the mouse is over the places layer.
+map.on('mouseenter', 'Substations Planned', function () {
+    map.getCanvas().style.cursor = 'pointer';
+});
+ 
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', 'Substations Planned', function () {
+    map.getCanvas().style.cursor = '';
+});
+
+// --Solar Projects info-- //
+
 // --Solar Projects info-- //
 
 map.on('click', 'Wind Complexes', function (e) {
@@ -812,7 +992,7 @@ var geocoder = new MapboxGeocoder({ accessToken: mapboxgl.accessToken });
 
 document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 
-var map_layers = ['Registries','SIGEF','Rural Areas','APPs','Legal Reserve','Caves', 'Indigenous Lands','Conservation Units','Met Masts','Substations', 'Transmission Lines', 'Wind Complexes','Wind Turbines','Solar (Status)','Solar Projects'];
+var map_layers = ['Registries','SIGEF','Rural Areas','APPs','Legal Reserve','Caves', 'Indigenous Lands','Conservation Units','Met Masts','Substations','Substations Planned', 'Transmission Lines', 'Transmission Lines Planned', 'Wind Complexes','Wind Turbines','Solar (Status)','Solar Projects'];
 
 for (var i = 0; i < map_layers.length; i++) {
     var id = map_layers[i];
