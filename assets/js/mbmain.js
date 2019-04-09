@@ -476,6 +476,31 @@ map.loadImage('http://joaocreste.github.io/ss_planned.png', function(error, imag
 
 // --------------------------------------------------------------- //
 
+
+    map.addSource('Wind Interference Areas', {
+        type: 'vector',
+        url: 'mapbox://joaocreste.01oywogm'
+    });
+
+    map.addLayer({
+        'id': 'Wind Interference Areas',
+        'type': 'fill',
+        'source': 'Wind Interference Areas',
+        'layout': {
+            'visibility': 'none',
+
+        },
+
+        'paint':{
+            'fill-color': "hsla(334, 96%, 31%, 0.25)",
+            'fill-outline-color': "hsl(281, 0%, 100%)",
+        },
+
+        'source-layer': 'WTGInterference-3u2cs8'
+    });
+
+// --------------------------------------------------------------- //
+
     map.addSource('Met Masts', {
         type: 'vector',
         url: 'mapbox://joaocreste.9tqubt20'
@@ -959,10 +984,12 @@ map.on('mouseleave', 'Wind Turbines', function () {
 map.on('click', 'Solar (Status)', function (e) {
 var coordinates = e.features[0].geometry.coordinates.slice();
 var name = e.features[0].properties.NOME;
+var ceg = e.features[0].properties.CEG;
 var power = e.features[0].properties.POT_KW/1e3;
 var owner = e.features[0].properties.PROPRIETAR;
 var status = e.features[0].properties.ESTAGIO_1;
 var description = "<p>Name: <strong>"+name +"</strong></p>" +
+                  "<p>CEG: <strong>"+ceg +"</strong></p>" +
                     "<p>Power: <strong>"+power + " MW" +"</strong></p>" +
                     "<p>Owner: <strong>"+owner+"</strong></p>" +
                     "<p>Status: <strong>"+status+"</strong></p>"                
@@ -992,7 +1019,7 @@ var geocoder = new MapboxGeocoder({ accessToken: mapboxgl.accessToken });
 
 document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 
-var map_layers = ['Registries','SIGEF','Rural Areas','APPs','Legal Reserve','Caves', 'Indigenous Lands','Conservation Units','Met Masts','Substations','Substations Planned', 'Transmission Lines', 'Transmission Lines Planned', 'Wind Complexes','Wind Turbines','Solar (Status)','Solar Projects'];
+var map_layers = ['Registries','SIGEF','Rural Areas','APPs','Legal Reserve','Caves', 'Indigenous Lands','Conservation Units','Met Masts','Substations','Substations Planned', 'Transmission Lines', 'Transmission Lines Planned', 'Wind Complexes','Wind Turbines','Wind Interference Areas','Solar (Status)','Solar Projects'];
 
 for (var i = 0; i < map_layers.length; i++) {
     var id = map_layers[i];
