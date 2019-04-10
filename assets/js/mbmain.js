@@ -162,8 +162,16 @@ map.loadImage('http://joaocreste.github.io/ss_planned.png', function(error, imag
         'source': 'substations',
         'layout': {
             'visibility': 'none',
-            'icon-image': 'ss_existing',
-            'icon-size': 0.015,
+            'icon-image': 'picnic-site-11',
+            'icon-size': [
+  "interpolate",
+  ["exponential", 1.3],
+  ["zoom"],
+  0,
+  1,
+  22,
+  3
+],
             'text-field': [
                           "step",
                           ["zoom"],
@@ -205,8 +213,16 @@ map.loadImage('http://joaocreste.github.io/ss_planned.png', function(error, imag
         'source': 'substations_planned',
         'layout': {
             'visibility': 'none',
-            'icon-image': 'ss_planned',
-            'icon-size': 0.015,
+            'icon-image': 'picnic-site-11',
+            'icon-size': [
+                          "interpolate",
+                          ["exponential", 1.3],
+                          ["zoom"],
+                          0,
+                          1,
+                          22,
+                          3
+                        ],
             'text-field': [
                           "step",
                           ["zoom"],
@@ -350,7 +366,7 @@ map.loadImage('http://joaocreste.github.io/ss_planned.png', function(error, imag
                         true,
                         false
                       ],
-                      "hsla(259, 98%, 36%,0.5)",
+                      "hsl(259, 98%, 36%)",
                       [
                         "match",
                         ["get", "Tensao"],
@@ -358,7 +374,7 @@ map.loadImage('http://joaocreste.github.io/ss_planned.png', function(error, imag
                         true,
                         false
                       ],
-                      "hsla(242, 83%, 44%,0.5)",
+                      "hsl(242, 83%, 44%)",
                       [
                         "match",
                         ["get", "Tensao"],
@@ -366,7 +382,7 @@ map.loadImage('http://joaocreste.github.io/ss_planned.png', function(error, imag
                         true,
                         false
                       ],
-                      "hsla(272, 100%, 35%,0.5)",
+                      "hsl(272, 100%, 35%)",
                       [
                         "match",
                         ["get", "Tensao"],
@@ -374,7 +390,7 @@ map.loadImage('http://joaocreste.github.io/ss_planned.png', function(error, imag
                         true,
                         false
                       ],
-                      "hsla(272, 97%, 36%,0.5)",
+                      "hsl(272, 97%, 36%)",
                       [
                         "match",
                         ["get", "Tensao"],
@@ -382,7 +398,7 @@ map.loadImage('http://joaocreste.github.io/ss_planned.png', function(error, imag
                         true,
                         false
                       ],
-                      "hsla(275, 100%, 43%,0.5)",
+                      "hsl(275, 100%, 43%)",
                       [
                         "match",
                         ["get", "Tensao"],
@@ -390,7 +406,7 @@ map.loadImage('http://joaocreste.github.io/ss_planned.png', function(error, imag
                         true,
                         false
                       ],
-                      "hsla(0, 100%, 44%,0.5)",
+                      "hsl(0, 100%, 44%)",
                       [
                         "match",
                         ["get", "Tensao"],
@@ -398,7 +414,7 @@ map.loadImage('http://joaocreste.github.io/ss_planned.png', function(error, imag
                         true,
                         false
                       ],
-                      "hsla(16, 100%, 52%,0.5)",
+                      "hsl(16, 100%, 52%)",
                       [
                         "match",
                         ["get", "Tensao"],
@@ -406,15 +422,39 @@ map.loadImage('http://joaocreste.github.io/ss_planned.png', function(error, imag
                         true,
                         false
                       ],
-                      "hsla(20, 100%, 58%,0.5)",
+                      "hsl(20, 100%, 58%)",
                       "#000000"
                     ],
+
+                    'line-dasharray':[1,1],
         },
 
         'source-layer': 'TL_Planned-dsfcbm'
     });
 
 // --------------------------------------------------------------- //
+
+
+    map.addSource('Gas Pipelines', {
+        type: 'vector',
+        url: 'mapbox://joaocreste.cvrrw762'
+    });
+
+    map.addLayer({
+        'id': 'Gas Pipelines',
+        'type': 'line',
+        'source': 'Gas Pipelines',
+        'layout': {
+                    'visibility': 'none',
+                },
+
+        'paint': {
+                    'line-color': "hsl(111, 97%, 17%)",
+                    'line-width':2,
+        },
+
+        'source-layer': '_Polylines_'
+    });
 
 // --------------------------------------------------------------- //
 
@@ -439,7 +479,7 @@ map.loadImage('http://joaocreste.github.io/ss_planned.png', function(error, imag
 							  "hsl(0, 94%, 34%)"
 							],
 			'circle-stroke-color': "hsl(0, 0%, 100%)",
-			'circle-stroke-width': 0.5,
+			'circle-stroke-width': 1,
         },
         'source-layer': 'wind-turbines-BR'
     });
@@ -456,8 +496,16 @@ map.loadImage('http://joaocreste.github.io/ss_planned.png', function(error, imag
         'source': 'WindNames',
         'layout': {
             'visibility': 'none',
-            "icon-image": "wind-turbine-icon",
-            "icon-size": 0.02,
+            "icon-image": "windmill-15",
+            "icon-size": [
+                          "interpolate",
+                          ["exponential", 1.16],
+                          ["zoom"],
+                          0,
+                          1,
+                          22,
+                          3
+],
             'text-field':["to-string", ["get", "Nome"]],
             'text-size':10,
             'text-offset': [0,-1.5],
@@ -1019,7 +1067,25 @@ var geocoder = new MapboxGeocoder({ accessToken: mapboxgl.accessToken });
 
 document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 
-var map_layers = ['Registries','SIGEF','Rural Areas','APPs','Legal Reserve','Caves', 'Indigenous Lands','Conservation Units','Met Masts','Substations','Substations Planned', 'Transmission Lines', 'Transmission Lines Planned', 'Wind Complexes','Wind Turbines','Wind Interference Areas','Solar (Status)','Solar Projects'];
+var map_layers = ['Registries',
+                  'SIGEF',
+                  'Rural Areas',
+                  'APPs',
+                  'Legal Reserve',
+                  'Caves',
+                  'Indigenous Lands',
+                  'Conservation Units',
+                  'Met Masts',
+                  'Substations',
+                  'Substations Planned',
+                  'Transmission Lines',
+                  'Transmission Lines Planned',
+                  'Gas Pipelines',
+                  'Wind Complexes',
+                  'Wind Turbines',
+                  'Wind Interference Areas',
+                  'Solar (Status)',
+                  'Solar Projects'];
 
 for (var i = 0; i < map_layers.length; i++) {
     var id = map_layers[i];
@@ -1036,9 +1102,19 @@ for (var i = 0; i < map_layers.length; i++) {
         if (visibility === 'visible') {
             map.setLayoutProperty(clickedLayer, 'visibility', 'none');
             this.className = '';
+
+            if (clickedLayer == 'Solar Projects'){
+              map.setLayoutProperty('Solar (Status)', 'visibility', 'none');
+            }
+
         } else {
             this.className = 'active';
             map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+
+            if (clickedLayer == 'Solar Projects'){
+              map.setLayoutProperty('Solar (Status)', 'visibility', 'visible');
+            }
+
         }
     };
 }
