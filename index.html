@@ -581,7 +581,7 @@ footer{
 
 <nav>
   <div class="nav-brand">
-    <a href="#hero" class="nav-logo">Joao Victor Creste</a>
+    <a href="#hero" class="nav-logo" data-i18n="nav_logo">Joao Victor Creste</a>
     <div class="lang-switcher">
       <!-- UK flag -->
       <button class="lang-btn active" data-lang="en" title="English">
@@ -655,7 +655,7 @@ footer{
   <div class="hero-vline"></div>
   <div class="hero-left">
     <p class="hero-eyebrow" data-i18n="hero_eyebrow">Engineer · Financier · Energy</p>
-    <h1 class="hero-name">Joao Victor<br><em>Creste</em></h1>
+    <h1 class="hero-name" data-i18n="hero_name">Joao Victor<br><em>Creste</em></h1>
     <p class="hero-tagline" data-i18n="hero_tagline">From electrical engineering to renewable energy M&amp;A, equity research, and portfolio management — built at the intersection of <strong>energy, finance, and technology</strong>.</p>
     <div class="hero-cta">
       <a href="#experience" class="btn btn-primary" data-i18n="hero_cta_exp">View Experience</a>
@@ -1472,13 +1472,278 @@ footer{
 
     <div class="pm-grid">
 
-      <!-- Left: AUM + Allocation visual -->
+      <!-- Left: AUM + Capital Flows Map -->
       <div>
         <p class="pm-visual-label" data-i18n="pm_aum_label">Capital Under Management</p>
         <div class="aum-block">
           <div class="aum-number">$300M+</div>
           <div class="aum-sub" data-i18n="pm_aum_sub">Offshore AUM · Directly Managed</div>
           <div class="aum-families" data-i18n="pm_aum_families">Across 70+ families and wealth structures</div>
+        </div>
+
+        <!-- Capital Flows Map -->
+        <div style="margin-top:2.4rem">
+          <p class="pm-visual-label" data-i18n="pm_map_label">Capital flows</p>
+          <svg viewBox="60 55 780 440" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;margin-top:.8rem">
+            <defs>
+              <style>
+                .pm-land { stroke-linejoin:round; stroke-linecap:round; }
+                .pm-flow1 { stroke:#c8a96e; stroke-width:1.1; fill:none; opacity:0.55; stroke-dasharray:4 3; }
+                .pm-flow2 { stroke:#c8a96e; stroke-width:0.8; fill:none; opacity:0.35; stroke-dasharray:3 3; }
+              </style>
+            </defs>
+
+            <!-- North America -->
+            <path class="pm-land" fill="rgba(255,255,255,0.028)" stroke="#2e3540" stroke-width="0.85"
+              d="M82,74 C87,68 97,64 108,66 C119,68 126,76 134,80
+                 C143,84 154,82 162,87 C170,92 172,102 178,108
+                 C184,114 193,115 198,122 C203,129 201,139 206,146
+                 C211,153 220,156 224,163 C228,170 226,180 231,187
+                 C236,194 245,197 249,204 C253,211 251,221 255,228
+                 L272,228 C274,221 275,213 279,207 C283,201 291,198 294,192
+                 C297,186 295,177 299,171 C303,165 311,163 314,157
+                 C317,151 314,142 317,136 C320,130 328,128 330,122
+                 C332,116 329,107 332,101 C335,95 342,93 344,87
+                 C346,81 343,73 340,68 C337,63 330,62 325,59
+                 C320,56 317,50 312,48 L215,60
+                 C212,65 209,70 205,74 C201,78 195,78 191,82
+                 C187,86 185,93 181,97 C177,101 171,100 167,104
+                 C163,108 162,116 158,120 C154,124 147,123 143,127
+                 C139,131 138,139 134,143 C130,147 124,146 120,150
+                 C116,154 115,162 111,166 C107,170 101,169 98,173 Z"/>
+
+            <!-- South America -->
+            <path class="pm-land" fill="rgba(255,255,255,0.032)" stroke="#2e3540" stroke-width="1.0"
+              d="M256,130 C253,126 249,125 247,129
+                 C244,133 245,140 243,145 C241,150 237,153 236,158
+                 C235,163 237,170 236,175 C235,180 231,183 230,188
+                 C229,193 231,200 230,206 C229,212 225,215 224,221
+                 C223,227 226,233 226,239 C226,245 222,249 222,255
+                 C222,261 226,266 227,272 C228,278 225,285 227,291
+                 C229,297 236,300 238,306 C240,312 237,320 240,326
+                 C243,332 251,334 254,340 C257,346 254,355 258,361
+                 C262,367 271,368 275,374 C279,380 277,390 281,396
+                 C285,402 294,404 298,410 C302,416 300,426 304,432
+                 C308,438 317,440 321,446 L334,450
+                 C336,444 337,436 340,430 C343,424 350,421 352,415
+                 C354,409 352,400 354,394 C356,388 363,385 364,379
+                 C365,373 361,366 362,360 C363,354 370,350 370,344
+                 C370,338 363,333 364,327 C365,321 373,317 373,311
+                 C373,305 365,300 366,294 C367,288 376,285 375,279
+                 C374,273 365,269 364,263 C363,257 369,251 367,245
+                 C365,239 356,236 355,230 C354,224 361,218 359,212
+                 C357,206 348,203 346,197 C344,191 349,184 347,178
+                 C345,172 336,169 334,163 C332,157 336,149 333,143
+                 C330,137 321,135 318,129 C315,123 318,114 314,109
+                 C310,104 302,103 298,99 C294,95 294,88 290,85
+                 C286,82 281,85 278,90 C275,95 277,103 276,108
+                 C275,113 271,116 270,122 C269,128 272,135 270,140
+                 C268,145 264,147 263,152 C262,157 265,164 263,169
+                 C261,174 256,176 255,181 C254,186 256,130 256,130 Z"/>
+
+            <!-- Europe -->
+            <path class="pm-land" fill="rgba(255,255,255,0.028)" stroke="#2e3540" stroke-width="0.9"
+              d="M540,92 C537,88 533,87 531,90 C529,94 530,100 529,105
+                 C528,110 525,113 524,118 C523,123 525,129 524,134
+                 C523,139 519,142 518,147 C517,152 519,158 517,163
+                 C515,168 511,171 510,176 C509,181 511,187 510,192
+                 C509,197 505,200 504,205 C503,210 505,216 504,221
+                 C503,226 499,229 499,234 L559,234
+                 C561,229 563,224 566,220 C569,216 575,214 577,210
+                 C579,206 578,200 581,197 C584,194 589,194 592,190
+                 C595,186 594,180 597,177 C600,174 606,174 608,170
+                 C610,166 609,160 612,157 C615,154 621,154 623,150
+                 C625,146 624,140 627,136 C630,132 636,132 638,128
+                 C640,124 638,118 641,114 C644,110 650,110 652,106
+                 C654,102 652,96 654,92 C656,88 661,87 662,83
+                 C663,79 661,74 662,70 L645,67
+                 C643,71 641,75 638,78 C635,81 630,82 627,86
+                 C624,90 623,96 619,99 C615,102 609,100 606,104
+                 C603,107 603,114 599,117 C597,119 595,122 594,126
+                 C596,122 597,116 595,113 C593,110 590,111 588,114
+                 C586,117 587,123 585,127 Z"/>
+
+            <!-- Scandinavia -->
+            <path class="pm-land" fill="rgba(255,255,255,0.022)" stroke="#2e3540" stroke-width="0.8"
+              d="M638,67 C641,61 646,58 651,60 C656,62 658,68 663,71
+                 C668,74 674,72 678,76 C682,80 681,87 685,91
+                 C689,95 695,95 698,100 C701,105 699,112 701,117
+                 C703,122 708,125 710,130 C712,135 709,141 711,146
+                 C713,151 718,153 718,158 L707,158
+                 C706,153 704,148 702,144 C700,140 695,139 694,135
+                 C693,131 695,126 693,122 C691,118 687,117 684,114
+                 C681,111 682,106 678,104 C674,102 670,104 666,102
+                 C662,100 662,95 658,93 C654,91 650,94 647,93
+                 C644,92 642,89 640,87 C638,85 635,85 633,82
+                 C632,79 634,75 633,72 C632,69 629,67 627,64
+                 C630,61 638,61 638,67 Z"/>
+
+            <!-- UK -->
+            <path class="pm-land" fill="rgba(255,255,255,0.035)" stroke="#3d4250" stroke-width="1.0"
+              d="M546,90 C544,87 540,86 538,89 C536,92 537,98 535,102
+                 C533,106 530,108 529,113 C528,118 530,123 529,128
+                 C528,133 525,136 524,141 C523,146 525,151 524,156
+                 C523,161 520,164 519,169 C518,174 520,179 519,184
+                 C518,189 514,192 513,197 C512,202 514,207 514,212
+                 C514,217 511,221 511,226 L528,228
+                 C529,223 531,218 533,214 C535,210 540,208 541,204
+                 C542,200 540,195 542,191 C544,187 549,186 551,182
+                 C553,178 551,173 553,169 C555,165 560,163 562,159
+                 C564,155 562,150 565,146 C568,142 573,142 575,138
+                 C577,134 576,128 579,124 C582,120 587,120 589,116
+                 C591,112 589,106 591,102 C593,98 598,97 600,93
+                 C601,89 599,84 597,81 C594,78 590,80 587,82
+                 C584,84 583,90 580,93 C577,96 573,94 570,97
+                 C567,100 567,106 564,109 C562,112 560,114 559,118
+                 C561,114 562,108 560,105 C558,102 555,103 553,106
+                 C551,109 552,115 550,118 Z"/>
+
+            <!-- Iberian -->
+            <path class="pm-land" fill="rgba(255,255,255,0.022)" stroke="#2e3540" stroke-width="0.85"
+              d="M502,195 C500,191 496,190 494,193 C492,196 493,202 491,206
+                 C489,210 485,212 484,217 C483,222 485,228 484,233
+                 C483,238 479,241 478,246 C477,251 479,257 477,262
+                 C475,267 471,270 470,275 C469,280 471,286 470,291
+                 C468,296 464,299 464,304 L499,304
+                 C501,299 503,294 505,289 C507,284 512,281 513,276
+                 C514,271 512,265 514,260 C516,255 521,252 522,247
+                 C523,242 521,236 523,231 C525,226 530,223 531,218
+                 C532,213 530,207 532,202 C534,197 539,195 540,190
+                 C541,185 539,179 537,176 C534,173 529,175 526,177
+                 C523,179 522,185 519,188 C516,191 511,189 509,192 Z"/>
+
+            <!-- Italy -->
+            <path class="pm-land" fill="rgba(255,255,255,0.022)" stroke="#2e3540" stroke-width="0.85"
+              d="M614,172 C612,168 608,167 606,170 C604,173 605,179 603,183
+                 C601,187 597,190 597,195 C597,200 600,205 599,210
+                 C598,215 594,218 594,223 C594,228 598,232 598,237
+                 C598,242 594,246 595,251 C596,256 601,259 602,264
+                 C603,269 600,275 603,280 L617,277
+                 C619,272 621,267 623,262 C625,257 630,254 631,249
+                 C632,244 630,238 632,233 C634,228 640,226 641,221
+                 C642,216 640,210 641,205 C642,200 647,197 647,192
+                 C647,187 643,183 643,178 C643,173 646,169 645,165
+                 C643,161 639,161 636,163 C633,165 633,171 630,173
+                 C627,175 623,173 620,175 Z"/>
+
+            <!-- Africa -->
+            <path class="pm-land" fill="rgba(255,255,255,0.018)" stroke="#252b35" stroke-width="0.75"
+              d="M591,240 C588,236 584,235 582,239 C580,243 582,249 580,254
+                 C578,259 574,262 573,267 C572,272 575,278 574,284
+                 C573,290 569,294 568,300 C567,306 570,313 570,319
+                 C570,325 566,330 566,336 C566,342 570,347 570,353
+                 C570,359 566,364 567,370 C568,376 573,379 574,385
+                 C575,391 572,398 574,404 C576,410 583,413 585,419
+                 C587,425 584,433 587,439 C590,445 598,447 600,453
+                 C602,459 599,467 602,472 L628,474
+                 C630,468 631,461 634,455 C637,449 643,446 645,440
+                 C647,434 645,426 647,420 C649,414 655,410 656,404
+                 C657,398 654,391 656,385 C658,379 664,376 665,370
+                 C666,364 662,358 663,352 C664,346 670,342 670,336
+                 C670,330 664,325 664,319 C664,313 670,308 669,302
+                 C668,296 661,292 660,286 C659,280 663,273 661,267
+                 C659,261 652,259 651,253 C650,247 654,240 652,234 L591,240 Z"/>
+
+            <!-- Asia -->
+            <path class="pm-land" fill="rgba(255,255,255,0.018)" stroke="#252b35" stroke-width="0.7"
+              d="M663,70 C672,66 685,64 696,68 C707,72 713,81 722,86
+                 C731,91 743,90 752,96 C761,102 762,113 770,120
+                 C778,127 789,129 796,137 C803,145 801,157 808,165
+                 C815,173 826,175 832,184 C838,193 834,205 839,215
+                 C844,225 855,229 858,240 C861,251 856,264 858,276
+                 L836,278 C834,267 828,260 825,250 C822,240 825,229 821,220
+                 C817,211 808,207 804,199 C800,191 803,181 798,174
+                 C793,167 783,165 778,158 C773,151 774,141 768,135
+                 C762,129 752,128 746,122 C740,116 738,106 732,101
+                 C726,96 717,97 710,93 C703,89 700,80 694,77
+                 C688,74 679,77 673,74 Z"/>
+
+            <!-- India -->
+            <path class="pm-land" fill="rgba(255,255,255,0.018)" stroke="#252b35" stroke-width="0.75"
+              d="M722,232 C719,228 715,227 713,230 C711,234 712,240 710,244
+                 C708,248 704,251 703,256 C702,261 704,267 703,272
+                 C702,277 698,280 697,285 C696,290 698,296 700,301
+                 C702,306 700,312 703,317 L718,317
+                 C720,312 722,307 724,302 C726,297 731,294 732,289
+                 C733,284 731,278 733,273 C735,268 740,266 741,261
+                 C742,256 740,250 741,245 C742,240 747,237 747,232
+                 C747,227 743,223 740,221 C737,219 732,221 729,224
+                 C726,227 725,233 722,232 Z"/>
+
+            <!-- Japan -->
+            <path class="pm-land" fill="rgba(255,255,255,0.018)" stroke="#252b35" stroke-width="0.75"
+              d="M822,118 C820,114 816,113 815,117 C814,121 815,127 813,131
+                 C811,135 807,138 806,143 C805,148 808,154 806,159
+                 C804,164 799,167 799,172 L811,172
+                 C813,168 815,163 817,159 C819,155 824,152 825,148
+                 C826,144 824,138 826,134 C828,130 834,128 835,124
+                 C833,119 824,122 822,118 Z"/>
+
+            <!-- Flow lines tier 1: Origins → Cayman/BVI -->
+            <path class="pm-flow1" d="M288,382 C270,330 230,265 192,198"/>
+            <path class="pm-flow1" d="M288,382 C268,324 248,260 222,186"/>
+            <path class="pm-flow1" d="M308,352 C278,298 232,248 192,198"/>
+            <path class="pm-flow1" d="M308,352 C282,292 254,242 222,186"/>
+            <path class="pm-flow1" d="M316,416 C276,340 234,268 192,198"/>
+            <path class="pm-flow1" d="M284,410 C256,336 218,266 192,198"/>
+            <path class="pm-flow1" d="M284,410 C260,330 242,258 222,186"/>
+
+            <!-- Flow lines tier 2: Cayman/BVI → Destinations -->
+            <path class="pm-flow2" d="M192,198 C170,192 148,185 116,172"/>
+            <path class="pm-flow2" d="M192,198 C178,192 166,186 152,178"/>
+            <path class="pm-flow2" d="M192,198 C174,185 162,173 144,160"/>
+            <path class="pm-flow2" d="M192,198 C300,155 420,145 540,155"/>
+            <path class="pm-flow2" d="M192,198 C320,148 458,146 592,166"/>
+            <path class="pm-flow2" d="M192,198 C320,155 454,160 580,182"/>
+            <path class="pm-flow2" d="M192,198 C380,160 560,170 732,212"/>
+            <path class="pm-flow2" d="M192,198 C420,140 626,122 824,150"/>
+            <path class="pm-flow2" d="M222,186 C176,183 150,179 116,172"/>
+            <path class="pm-flow2" d="M222,186 C196,183 174,181 152,178"/>
+            <path class="pm-flow2" d="M222,186 C196,178 172,169 144,160"/>
+            <path class="pm-flow2" d="M222,186 C340,148 440,143 540,155"/>
+            <path class="pm-flow2" d="M222,186 C348,144 472,144 592,166"/>
+            <path class="pm-flow2" d="M222,186 C348,152 466,158 580,182"/>
+            <path class="pm-flow2" d="M222,186 C396,156 566,168 732,212"/>
+            <path class="pm-flow2" d="M222,186 C436,136 632,120 824,150"/>
+
+            <!-- Origins: São Paulo, Rio, Punta del Este, Buenos Aires -->
+            <circle cx="288" cy="382" r="14" fill="#c8a96e" opacity="0.08"/>
+            <circle cx="288" cy="382" r="8"  fill="#c8a96e" opacity="0.14"/>
+            <circle cx="288" cy="382" r="3.5" fill="#c8a96e"/>
+            <circle cx="308" cy="352" r="12" fill="#c8a96e" opacity="0.08"/>
+            <circle cx="308" cy="352" r="3"  fill="#c8a96e"/>
+            <circle cx="316" cy="416" r="11" fill="#c8a96e" opacity="0.08"/>
+            <circle cx="316" cy="416" r="2.8" fill="#c8a96e"/>
+            <circle cx="284" cy="410" r="11" fill="#c8a96e" opacity="0.08"/>
+            <circle cx="284" cy="410" r="2.8" fill="#c8a96e"/>
+
+            <!-- Hubs: Cayman, BVI -->
+            <circle cx="192" cy="198" r="16" fill="#c8a96e" opacity="0.07"/>
+            <circle cx="192" cy="198" r="9"  fill="#c8a96e" opacity="0.14"/>
+            <circle cx="192" cy="198" r="4"  fill="#c8a96e"/>
+            <circle cx="222" cy="186" r="13" fill="#c8a96e" opacity="0.07"/>
+            <circle cx="222" cy="186" r="7"  fill="#c8a96e" opacity="0.14"/>
+            <circle cx="222" cy="186" r="3.2" fill="#c8a96e"/>
+
+            <!-- Destinations: SF, NY, Chicago, London, Luxembourg, Geneva, Delhi, Tokyo -->
+            <circle cx="116" cy="172" r="10" fill="#c8a96e" opacity="0.08"/>
+            <circle cx="116" cy="172" r="2.8" fill="#c8a96e"/>
+            <circle cx="152" cy="178" r="10" fill="#c8a96e" opacity="0.08"/>
+            <circle cx="152" cy="178" r="2.8" fill="#c8a96e"/>
+            <circle cx="144" cy="160" r="10" fill="#c8a96e" opacity="0.08"/>
+            <circle cx="144" cy="160" r="2.8" fill="#c8a96e"/>
+            <circle cx="540" cy="155" r="13" fill="#c8a96e" opacity="0.08"/>
+            <circle cx="540" cy="155" r="7"  fill="#c8a96e" opacity="0.14"/>
+            <circle cx="540" cy="155" r="3.2" fill="#c8a96e"/>
+            <circle cx="592" cy="166" r="10" fill="#c8a96e" opacity="0.08"/>
+            <circle cx="592" cy="166" r="2.8" fill="#c8a96e"/>
+            <circle cx="580" cy="182" r="10" fill="#c8a96e" opacity="0.08"/>
+            <circle cx="580" cy="182" r="2.8" fill="#c8a96e"/>
+            <circle cx="732" cy="212" r="11" fill="#c8a96e" opacity="0.08"/>
+            <circle cx="732" cy="212" r="3"  fill="#c8a96e"/>
+            <circle cx="824" cy="150" r="11" fill="#c8a96e" opacity="0.08"/>
+            <circle cx="824" cy="150" r="3"  fill="#c8a96e"/>
+          </svg>
         </div>
 
       </div>
@@ -1700,7 +1965,7 @@ footer{
 </section>
 
 <footer>
-  <span class="ft-name">Joao Victor Creste</span>
+  <span class="ft-name" data-i18n="nav_logo">Joao Victor Creste</span>
   <span class="ft-copy">© 2025</span>
   <span class="ft-note" data-i18n="footer_note">London · Paris · São Paulo</span>
 </footer>
@@ -1877,6 +2142,8 @@ footer{
 const translations = {
   en: {
     nav_profile:'Profile', nav_career:'Career', nav_ma:'M&A', nav_ma_long:'M&A Projects',
+    nav_logo:'Joao Victor Creste',
+    hero_name:'Joao Victor<br><em>Creste</em>',
     nav_research:'Equity Research', nav_research_long:'Equity Research Coverage',
     nav_portfolio:'Portfolio Management', nav_portfolio_long:'Portfolio Management',
     nav_focus:'Next Steps', nav_contact:'Contact',
@@ -1969,6 +2236,7 @@ const translations = {
     pm_title:'Capital at <em>work</em>',
     pm_intro:'As portfolio manager of a MFO, I was responsible for the offshore investment book — designing and managing portfolios for 70+ families across global equities, fixed income, and alternative assets in the US and Europe.',
     pm_aum_label:'Capital Under Management', pm_aum_sub:'Offshore AUM · Directly Managed',
+    pm_map_label:'Where the capital was invested',
     pm_aum_families:'Across 70+ families and wealth structures',
     pm_s1_title:'Built the analytical framework from scratch',
     pm_s1_body:'The offshore book had no systematic evaluation infrastructure when I joined. I designed and coded a proprietary screening tool covering 2,000+ ETFs, mutual funds, and hedge funds — combining quantitative scoring (risk-adjusted returns, drawdown, factor exposures) with qualitative diligence. What had been a manual, judgment-driven process became a <strong>data-driven framework that could be consistently applied across the entire book</strong>.',
@@ -2011,6 +2279,8 @@ const translations = {
 
   fr: {
     nav_profile:'Profil', nav_career:'Carrière', nav_ma:'M&A', nav_ma_long:'Projets M&A',
+    nav_logo:'Joao Victor CRESTE',
+    hero_name:'Joao Victor<br><em>CRESTE</em>',
     nav_research:'Recherche Actions', nav_research_long:'Couverture Recherche Actions',
     nav_portfolio:'Gestion de Portefeuille', nav_portfolio_long:'Gestion de Portefeuille',
     nav_focus:'Prochaines Étapes', nav_contact:'Contact',
@@ -2103,6 +2373,7 @@ const translations = {
     pm_title:'Capital en <em>action</em>',
     pm_intro:"En tant que gérant de portefeuille d'un MFO, j'étais responsable du portefeuille d'investissements offshore — concevant et gérant des portefeuilles pour 70+ familles en actions mondiales, obligations et actifs alternatifs.",
     pm_aum_label:'Capital Sous Gestion', pm_aum_sub:'AUM Offshore · Géré directement',
+    pm_map_label:'Où le capital était investi',
     pm_aum_families:'Pour 70+ familles et structures patrimoniales',
     pm_s1_title:'Cadre analytique construit de zéro',
     pm_s1_body:"Le portefeuille offshore ne disposait d'aucune infrastructure d'évaluation systématique à mon arrivée. J'ai conçu et codé un outil de screening propriétaire couvrant 2 000+ ETFs, fonds communs et hedge funds — combinant scoring quantitatif avec une due diligence qualitative. Ce qui était un processus manuel est devenu un <strong>cadre data-driven appliqué systématiquement à l'ensemble du portefeuille</strong>.",
@@ -2145,17 +2416,19 @@ const translations = {
 
   pt: {
     nav_profile:'Perfil', nav_career:'Carreira', nav_ma:'M&A', nav_ma_long:'Projetos de M&A',
-    nav_research:'Pesquisa de Ações', nav_research_long:'Cobertura de Pesquisa de Ações',
+    nav_logo:'Joao Victor Creste',
+    hero_name:'Joao Victor<br><em>Creste</em>',
+    nav_research:'Equity Research', nav_research_long:'Cobertura de Equity Research',
     nav_portfolio:'Gestão de Portfólio', nav_portfolio_long:'Gestão de Portfólio',
     nav_focus:'Próximos Passos', nav_contact:'Contato',
     hero_eyebrow:'Engenheiro · Financista · Energia',
-    hero_tagline:'Da engenharia elétrica ao M&A em energias renováveis, pesquisa de ações e gestão de portfólio — construído na interseção de <strong>energia, finanças e tecnologia</strong>.',
+    hero_tagline:'Da engenharia elétrica ao M&A em energias renováveis, equity research e gestão de portfólio — construído na interseção de <strong>energia, finanças e tecnologia</strong>.',
     hero_cta_exp:'Ver Experiência', hero_cta_contact:'Entre em Contato',
     stat_countries:'Países · Estudou & trabalhou', stat_deals:'Transações M&A fechadas',
     stat_pipeline:'Pipeline avaliado', stat_aum:'AUM gerenciado', stat_memos:'Memorandos de investimento',
     about_title:'Uma <em>interseção</em> incomum',
     about_p1:'Sou um engenheiro ítalo-brasileiro formado na França e no Brasil, atualmente concluindo um MBA na ESCP Business School entre Paris e Londres. Criado em uma família de acadêmicos, sempre fui atraído pelo raciocínio de primeiros princípios — o hábito de entender não apenas <strong>o que</strong> está acontecendo, mas <strong>por que</strong> e <strong>o que isso implica</strong>.',
-    about_p2:'Minha carreira seguiu um arco incomum: da engenharia elétrica e pesquisa aplicada, ao M&A e desenvolvimento greenfield em energia renovável, à pesquisa de ações cobrindo empresas de tecnologia de alto crescimento, até a gestão de portfólio em um multi-family office. Cada capítulo foi diferente em função, mas unificado por uma atração constante pelos mesmos três domínios — energia, finanças e as ferramentas analíticas que os conectam.',
+    about_p2:'Minha carreira seguiu um arco incomum: da engenharia elétrica e pesquisa aplicada, ao M&A e desenvolvimento greenfield em energia renovável, à equity research cobrindo empresas de tecnologia de alto crescimento, até a gestão de portfólio em um multi-family office. Cada capítulo foi diferente em função, mas unificado por uma atração constante pelos mesmos três domínios — energia, finanças e as ferramentas analíticas que os conectam.',
     about_p3:'Estou convicto de que a <strong>transição energética é o desafio definidor de nossa geração, e que não pode ser resolvido por engenheiros ou financistas trabalhando isoladamente.</strong> O que exige são pessoas que entendam tanto a complexidade técnica dos sistemas de energia quanto a lógica financeira que impulsiona a alocação de capital — e que possam usar dados e IA para tomar melhores decisões sob incerteza.',
     about_p4:'Fora do trabalho, componho música — oito anos de estudos de piano em nível conservatório. Também desenvolvo ferramentas: <em>Forager</em>, uma plataforma de mapeamento interativo para ativos solares, eólicos e de infraestrutura, nasceu como projeto pessoal e se tornou um instrumento útil em papéis profissionais subsequentes.',
     lang_pt:'Português', lang_en:'Inglês', lang_fr:'Francês', lang_it:'Italiano', lang_es:'Espanhol',
@@ -2163,7 +2436,7 @@ const translations = {
     skill_data:'Análise de Dados', skill_prog:'Programação', skill_finance:'Finanças',
     skill_ai_list:'Engenharia de Prompts, IA Agêntica, Aprendizado Supervisionado, Aprendizado Não Supervisionado',
     skill_domain:'Expertise por Domínio',
-    skill_domain_list:'Transição Energética, Hidrogênio Verde, M&A Solar/Eólico, Infrastructure PE, Pesquisa de Ações, Gestão de Portfólio',
+    skill_domain_list:'Transição Energética, Hidrogênio Verde, M&A Solar/Eólico, Infrastructure PE, Equity Research, Gestão de Portfólio',
     map_based:'Baseado atualmente', map_lived:'Onde já morei', footer_note:'Londres · Paris · São Paulo',
     edu_tag:'Formação Acadêmica', edu_title:'Construído sobre <em>rigor</em>',
     edu1_deg:'MBA em Gestão Internacional',
@@ -2192,7 +2465,7 @@ const translations = {
     exp3_b1:'Liderou a alocação estratégica de ativos e posicionamento tático para a carteira offshore, representando mais de 30% do AUM total.',
     exp3_b2:'Construiu um framework de avaliação cobrindo mais de 2.000 ETFs, fundos mútuos e hedge funds usando ferramentas de programação customizadas.',
     exp3_b3:'Implementou portfólios estratégicos para <strong>mais de 70 famílias</strong> e mais de US$300M em ativos.',
-    exp4_role:'Analista de Pesquisa de Ações — Ações Globais',
+    exp4_role:'Analista de Equity Research — Ações Globais',
     exp4_b1:'Cobriu empresas de tecnologia e de alto crescimento para um portfólio long-biased de ações, índices e debêntures corporativas.',
     exp4_b2:'Construiu e geriu um portfólio long-only de 10 empresas usando metodologia de primeiros princípios: biografias, channel checks, ligações com clientes, reuniões com gestão — depois valuation.',
     exp4_b3:'Visita à Gigafactory da Tesla na Califórnia; reuniões de relações com investidores com a liderança executiva.',
@@ -2237,6 +2510,7 @@ const translations = {
     pm_title:'Capital em <em>ação</em>',
     pm_intro:'Como gestor de portfólio de um MFO, era responsável pela carteira de investimentos offshore — desenvolvendo e gerenciando portfólios para mais de 70 famílias em ações globais, renda fixa e ativos alternativos nos EUA e na Europa.',
     pm_aum_label:'Capital Sob Gestão', pm_aum_sub:'AUM Offshore · Gerenciado diretamente',
+    pm_map_label:'Para onde o capital foi investido',
     pm_aum_families:'Para mais de 70 famílias e estruturas patrimoniais',
     pm_s1_title:'Framework analítico construído do zero',
     pm_s1_body:'A carteira offshore não tinha infraestrutura de avaliação sistemática quando ingressei. Projetei e codifiquei uma ferramenta de triagem proprietária cobrindo mais de 2.000 ETFs, fundos mútuos e hedge funds — combinando pontuação quantitativa com due diligence qualitativa. O que era um processo manual tornou-se um <strong>framework orientado a dados aplicado consistentemente em toda a carteira</strong>.',
@@ -2273,7 +2547,7 @@ const translations = {
     proj3_desc:'Estudei piano por oito anos em nível conservatório — uma educação em precisão, paciência e a disciplina de construir algo complexo ao longo de um longo período. Ainda toco regularmente e componho minhas próprias peças. Música não é um interesse secundário; é o contrapeso a tudo que é analítico na minha vida.',
     proj3_tags:'Piano, Composição, Conservatório, 8 Anos',
     contact_title:'Vamos iniciar uma <em>conversa</em>',
-    contact_sub:'Aberto a conversas sobre infraestrutura, transição energética, pesquisa de ações e ventures empreendedores na interseção entre energia e tecnologia. Baseado entre Londres e Paris, atuando internacionalmente.',
+    contact_sub:'Aberto a conversas sobre infraestrutura, transição energética, equity research e ventures empreendedores na interseção entre energia e tecnologia. Baseado entre Londres e Paris, atuando internacionalmente.',
     contact_email:'✉ Enviar e-mail',
   }
 };
