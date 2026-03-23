@@ -332,18 +332,7 @@ footer{border-top:1px solid var(--border);padding:1.8rem 3rem;display:flex;align
   transition:opacity .2s;
 }
 .phone-link:hover{opacity:.75}
-.phone-flag{
-  display:inline-flex;
-  align-items:center;
-  flex-shrink:0;
-}
-.phone-flag svg{
-  width:26px;
-  height:17px;
-  border-radius:2px;
-  opacity:.45;
-  display:block;
-}
+
 .phone-num{
   font-family:var(--mono);
   font-size:.72rem;
@@ -460,25 +449,6 @@ section{
   transition:background .3s ease;
 }
 
-
-
-/* ── LANGUAGE SWITCHER ── */
-.nav-brand{display:flex;align-items:center;gap:1.1rem}
-.lang-switcher{display:flex;align-items:center;gap:.5rem}
-.lang-btn{
-  background:none;border:none;cursor:pointer;padding:0;
-  display:flex;align-items:center;border-radius:3px;overflow:hidden;
-  opacity:.3;transition:opacity .25s,transform .2s,box-shadow .2s;
-  outline:none;
-}
-.lang-btn svg{width:28px;height:19px;display:block;border-radius:2px}
-.lang-btn:hover{opacity:.65;transform:scale(1.08)}
-.lang-btn.active{opacity:1;box-shadow:0 0 0 1.5px var(--accent)}
-
-/* ── LANG FADE ── */
-[data-i18n]{transition:opacity .15s ease}
-.lang-switching [data-i18n]{opacity:0}
-
 /* ── SCROLL PROGRESS BAR ── */
 #scroll-progress{
   position:fixed;
@@ -581,85 +551,40 @@ footer{
 
 <nav>
   <div class="nav-brand">
-    <a href="#hero" class="nav-logo" data-i18n="nav_logo">Joao Victor Creste</a>
-    <div class="lang-switcher">
-      <!-- UK flag -->
-      <button class="lang-btn active" data-lang="en" title="English">
-        <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-          <rect width="60" height="40" fill="#012169"/>
-          <!-- White saltire (St Andrew + St Patrick diagonals) -->
-          <polygon points="0,0 7,0 30,15.5 53,0 60,0 60,6 37,20 60,34 60,40 53,40 30,24.5 7,40 0,40 0,34 23,20 0,6" fill="#fff"/>
-          <!-- Red saltire (St Patrick, offset) -->
-          <polygon points="0,0 3.5,0 30,17 56.5,0 60,0 60,3 34,20 60,37 60,40 56.5,40 30,23 3.5,40 0,40 0,37 26,20 0,3" fill="#C8102E"/>
-          <!-- White cross (St George) -->
-          <rect x="24" y="0" width="12" height="40" fill="#fff"/>
-          <rect x="0" y="14" width="60" height="12" fill="#fff"/>
-          <!-- Red cross (St George) -->
-          <rect x="26" y="0" width="8" height="40" fill="#C8102E"/>
-          <rect x="0" y="16" width="60" height="8" fill="#C8102E"/>
-        </svg>
-      </button>
-      <!-- French flag -->
-      <button class="lang-btn" data-lang="fr" title="Français">
-        <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-          <rect width="60" height="40" fill="#ED2939"/>
-          <rect width="40" height="40" fill="#fff"/>
-          <rect width="20" height="40" fill="#002395"/>
-        </svg>
-      </button>
-      <!-- Brazilian flag -->
-      <button class="lang-btn" data-lang="pt" title="Português">
-        <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-          <!-- Green background -->
-          <rect width="60" height="40" fill="#009C3B"/>
-          <!-- Yellow diamond -->
-          <polygon points="30,3 57,20 30,37 3,20" fill="#FFDF00"/>
-          <!-- Blue circle -->
-          <circle cx="30" cy="20" r="11" fill="#002776"/>
-          <!-- White band across circle -->
-          <path d="M19.5,15.5 Q30,12 40.5,15.5" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
-          <!-- Stars (simplified - 5 visible) -->
-          <circle cx="24" cy="20" r="1" fill="#fff"/>
-          <circle cx="28" cy="24" r="1" fill="#fff"/>
-          <circle cx="32" cy="19" r="1" fill="#fff"/>
-          <circle cx="36" cy="22" r="1" fill="#fff"/>
-          <circle cx="30" cy="27" r="1" fill="#fff"/>
-        </svg>
-      </button>
-    </div>
+    <a href="#hero" class="nav-logo">Joao Victor Creste</a>
   </div>
   <ul class="nav-links">
-    <li><a href="#about" data-i18n="nav_profile">Profile</a></li>
-    <li><a href="#experience" data-i18n="nav_career">Career</a></li>
-    <li><a href="#deals" data-i18n="nav_ma">M&amp;A</a></li>
-    <li><a href="#coverage" data-i18n="nav_research">Equity Research</a></li>
-    <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio Management</a></li>
-    <li><a href="#focus" data-i18n="nav_focus">Next Steps</a></li>
-    <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+    <li><a href="#about">Profile</a></li>
+    <li><a href="#experience">Career</a></li>
+    <li><a href="#deals">M&amp;A</a></li>
+    <li><a href="#coverage">Equity Research</a></li>
+    <li><a href="#portfolio">Portfolio Management</a></li>
+    <li><a href="#focus">Next Steps</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
   <button class="nav-mobile-toggle" aria-label="Menu" onclick="this.classList.toggle('open');document.getElementById('mobile-menu').classList.toggle('open')">
     <span></span><span></span><span></span>
   </button>
 </nav>
 <div id="mobile-menu" class="mobile-menu">
-  <a href="#about" data-i18n="nav_profile" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Profile</a>
-  <a href="#experience" data-i18n="nav_career" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Career</a>
-  <a href="#deals" data-i18n="nav_ma" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">M&amp;A</a>
-  <a href="#coverage" data-i18n="nav_research" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Equity Research</a>
-  <a href="#portfolio" data-i18n="nav_portfolio" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Portfolio Management</a>
-  <a href="#focus" data-i18n="nav_focus" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Next Steps</a>
-  <a href="#contact" data-i18n="nav_contact" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Contact</a>
+  <a href="#about" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Profile</a>
+  <a href="#experience" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Career</a>
+  <a href="#deals" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">M&amp;A</a>
+  <a href="#coverage" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Equity Research</a>
+  <a href="#portfolio" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Portfolio Management</a>
+  <a href="#focus" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Next Steps</a>
+  <a href="#contact" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Contact</a>
 </div>
 
 <section id="hero">
   <div class="hero-vline"></div>
   <div class="hero-left">
-    <p class="hero-eyebrow" data-i18n="hero_eyebrow">Engineer · Financier · Energy</p>
-    <h1 class="hero-name" data-i18n="hero_name">Joao Victor<br><em>Creste</em></h1>
-    <p class="hero-tagline" data-i18n="hero_tagline">From electrical engineering to renewable energy M&amp;A, equity research, and portfolio management — built at the intersection of <strong>energy, finance, and technology</strong>.</p>
+    <p class="hero-eyebrow">Engineer · Financier · Energy</p>
+    <h1 class="hero-name">Joao Victor<br><em>Creste</em></h1>
+    <p class="hero-tagline">From electrical engineering to renewable energy M&amp;A, equity research, and portfolio management — built at the intersection of <strong>energy, finance, and technology</strong>.</p>
     <div class="hero-cta">
-      <a href="#experience" class="btn btn-primary" data-i18n="hero_cta_exp">View Experience</a>
-      <a href="#contact" class="btn btn-ghost" data-i18n="hero_cta_contact">Get in Touch</a>
+      <a href="#experience" class="btn btn-primary">View Experience</a>
+      <a href="#contact" class="btn btn-ghost">Get in Touch</a>
     </div>
   </div>
   <div class="hero-right">
@@ -714,55 +639,55 @@ footer{
     </svg>
   </div>
   <div class="hero-stats">
-    <div style="text-align:right"><div class="stat-val">5</div><div class="stat-lbl" data-i18n="stat_countries">Countries · Studied &amp; worked</div></div>
-    <div style="text-align:right"><div class="stat-val">3</div><div class="stat-lbl" data-i18n="stat_deals">M&amp;A deals closed</div></div>
-    <div style="text-align:right"><div class="stat-val">50+ GW</div><div class="stat-lbl" data-i18n="stat_pipeline">Pipeline evaluated</div></div>
-    <div style="text-align:right"><div class="stat-val">$1B+</div><div class="stat-lbl" data-i18n="stat_aum">AUM managed</div></div>
-    <div style="text-align:right"><div class="stat-val">20+</div><div class="stat-lbl" data-i18n="stat_memos">Investment memos</div></div>
+    <div style="text-align:right"><div class="stat-val">5</div><div class="stat-lbl">Countries · Studied &amp; worked</div></div>
+    <div style="text-align:right"><div class="stat-val">3</div><div class="stat-lbl">M&amp;A deals closed</div></div>
+    <div style="text-align:right"><div class="stat-val">50+ GW</div><div class="stat-lbl">Pipeline evaluated</div></div>
+    <div style="text-align:right"><div class="stat-val">$1B+</div><div class="stat-lbl">AUM managed</div></div>
+    <div style="text-align:right"><div class="stat-val">20+</div><div class="stat-lbl">Investment memos</div></div>
   </div>
 </section>
 
 <section id="about">
   <div class="si">
-    <p class="s-tag reveal" data-i18n="nav_profile">Profile</p>
-    <h2 class="s-title reveal reveal-delay-1" data-i18n="about_title">An unusual <em>intersection</em></h2>
+    <p class="s-tag reveal">Profile</p>
+    <h2 class="s-title reveal reveal-delay-1">An unusual <em>intersection</em></h2>
     <div class="about-grid">
       <div class="about-text">
-        <p data-i18n="about_p1">I am an Italian-Brazilian engineer educated in France and Brazil, currently completing an MBA at ESCP Business School across Paris and London. Raised in a family of academics, I have always been drawn to first-principles thinking — the habit of understanding not just <strong>what</strong> is happening, but <strong>why</strong> and <strong>what it implies</strong>.</p>
-        <p data-i18n="about_p2">My career has followed an unusual arc: from electrical engineering and applied research, to M&amp;A and greenfield development in renewable energy, to equity research covering high-growth technology companies, to portfolio management at a multi-family office. Each chapter has been different in function, but unified by a consistent pull toward the same three domains — energy, finance, and the analytical tools that connect them.</p>
-        <p data-i18n="about_p3">I am convinced that the <strong>energy transition is the defining challenge of our generation, and that it cannot be solved by engineers or financiers working in isolation.</strong> What it demands is people who understand both the technical complexity of energy systems and the financial logic that drives capital allocation — and who can harness data and AI to make better decisions under uncertainty. That convergence is where I want to operate.</p>
-        <p data-i18n="about_p4">Outside of work, I compose music — eight years of conservatory-level piano studies. I also build tools: <em>Forager</em>, an interactive mapping platform for solar, wind, and infrastructure assets, started as a side project and has since become a useful real-world instrument.</p>
+        <p>I am an Italian-Brazilian engineer educated in France and Brazil, currently completing an MBA at ESCP Business School across Paris and London. Raised in a family of academics, I have always been drawn to first-principles thinking — the habit of understanding not just <strong>what</strong> is happening, but <strong>why</strong> and <strong>what it implies</strong>.</p>
+        <p>My career has followed an unusual arc: from electrical engineering and applied research, to M&amp;A and greenfield development in renewable energy, to equity research covering high-growth technology companies, to portfolio management at a multi-family office. Each chapter has been different in function, but unified by a consistent pull toward the same three domains — energy, finance, and the analytical tools that connect them.</p>
+        <p>I am convinced that the <strong>energy transition is the defining challenge of our generation, and that it cannot be solved by engineers or financiers working in isolation.</strong> What it demands is people who understand both the technical complexity of energy systems and the financial logic that drives capital allocation — and who can harness data and AI to make better decisions under uncertainty. That convergence is where I want to operate.</p>
+        <p>Outside of work, I compose music — eight years of conservatory-level piano studies. I also build tools: <em>Forager</em>, an interactive mapping platform for solar, wind, and infrastructure assets, started as a side project and has since become a useful real-world instrument.</p>
         <div class="lang-list">
-          <div class="lang-item"><span class="lang-name" data-i18n="lang_pt">Portuguese</span><span class="lang-lvl" data-i18n="lang_bilingual">Bilingual</span></div>
-          <div class="lang-item"><span class="lang-name" data-i18n="lang_en">English</span><span class="lang-lvl" data-i18n="lang_bilingual2">Bilingual</span></div>
-          <div class="lang-item"><span class="lang-name" data-i18n="lang_fr">French</span><span class="lang-lvl" data-i18n="lang_fluent">Fluent</span></div>
-          <div class="lang-item"><span class="lang-name" data-i18n="lang_it">Italian</span><span class="lang-lvl" data-i18n="lang_fluent2">Fluent</span></div>
-          <div class="lang-item"><span class="lang-name" data-i18n="lang_es">Spanish</span><span class="lang-lvl" data-i18n="lang_intermediate">Intermediate</span></div>
+          <div class="lang-item"><span class="lang-name">Portuguese</span><span class="lang-lvl">Bilingual</span></div>
+          <div class="lang-item"><span class="lang-name">English</span><span class="lang-lvl">Bilingual</span></div>
+          <div class="lang-item"><span class="lang-name">French</span><span class="lang-lvl">Fluent</span></div>
+          <div class="lang-item"><span class="lang-name">Italian</span><span class="lang-lvl">Fluent</span></div>
+          <div class="lang-item"><span class="lang-name">Spanish</span><span class="lang-lvl">Intermediate</span></div>
         </div>
       </div>
       <div class="sidebar">
         <div class="skill-group">
-          <p class="skill-lbl" data-i18n="skill_data">Data Analysis</p>
+          <p class="skill-lbl">Data Analysis</p>
           <p class="skill-list">Tableau, PowerBI, SQL, MATLAB, GIS</p>
         </div>
         <div class="skill-group">
-          <p class="skill-lbl" data-i18n="skill_prog">Programming</p>
+          <p class="skill-lbl">Programming</p>
           <p class="skill-list">Python, R, JavaScript, C++, VBA</p>
         </div>
         <div class="skill-group">
-          <p class="skill-lbl" data-i18n="skill_finance">Finance</p>
+          <p class="skill-lbl">Finance</p>
           <p class="skill-list">Bloomberg Terminal, Pitchbook, FactSet</p>
         </div>
         <div class="skill-group">
           <p class="skill-lbl">AI</p>
-          <p class="skill-list" data-i18n="skill_ai_list">Prompt Engineering, Agentic AI, Supervised Learning, Unsupervised Learning</p>
+          <p class="skill-list">Prompt Engineering, Agentic AI, Supervised Learning, Unsupervised Learning</p>
         </div>
         <div class="skill-group">
-          <p class="skill-lbl" data-i18n="skill_domain">Domain Expertise</p>
-          <p class="skill-list domain" data-i18n="skill_domain_list">Energy Transition, Green Hydrogen, Solar / Wind M&amp;A, Infrastructure PE, Equity Research, Portfolio Management</p>
+          <p class="skill-lbl">Domain Expertise</p>
+          <p class="skill-list domain">Energy Transition, Green Hydrogen, Solar / Wind M&amp;A, Infrastructure PE, Equity Research, Portfolio Management</p>
         </div>
         <div class="map-wrap">
-          <p class="map-lbl" data-i18n="map_based">Currently Based</p>
+          <p class="map-lbl">Currently Based</p>
           <svg viewBox="0 0 160 215" xmlns="http://www.w3.org/2000/svg" style="width:37.5%;display:block;margin:.6rem auto 0">
 
             <!-- Ireland — faint context, no filter -->
@@ -824,7 +749,7 @@ footer{
           </svg>
         </div>
         <div class="map-wrap" style="margin-top:2.4rem">
-          <p class="map-lbl" data-i18n="map_lived">Where I have lived</p>
+          <p class="map-lbl">Where I have lived</p>
           <svg viewBox="60 55 780 430" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;margin-top:.8rem">
 
             <!-- ── SOUTH AMERICA — accurate outline ── -->
@@ -1073,10 +998,37 @@ footer{
   </div>
 </section>
 
+<section id="focus">
+  <div class="si">
+    <p class="s-tag reveal">What I care about</p>
+    <h2 class="s-title reveal reveal-delay-1">Three domains, <em>one thesis</em></h2>
+    <div class="focus-cols">
+      <div class="focus-col reveal reveal-delay-1">
+        <div class="focus-num">I</div>
+        <div class="focus-ttl">Energy Transition</div>
+        <p class="focus-desc">The energy transition is the defining infrastructure challenge of our generation — a full rewiring of how the world produces and consumes energy. I have worked across its value chain: closing renewable energy M&A in Brazil, assessing green hydrogen feasibility, and studying the capital structures that make large-scale clean energy projects bankable.</p>
+      </div>
+      <div class="focus-col reveal reveal-delay-2">
+        <div class="focus-num">II</div>
+        <div class="focus-ttl">Technology &amp; AI</div>
+        <p class="focus-desc">I covered 30+ high-growth technology companies as an equity analyst, and I have built data tools — from GIS mapping platforms to automated fund screening systems — that convert raw information into decisions. AI will not replace decision-makers, but the decision-makers of tomorrow will be the ones who know how to work with it.</p>
+      </div>
+      <div class="focus-col reveal reveal-delay-3">
+        <div class="focus-num">III</div>
+        <div class="focus-ttl">Finance &amp; Capital Allocation</div>
+        <p class="focus-desc">Capital determines which technologies get built and which transitions happen. I have been on both sides — allocating capital across global markets as a portfolio manager, and deploying it into real assets as an M&A practitioner. Finance is not a support function for the energy transition; it is a core driver of it.</p>
+      </div>
+    </div>
+    <div style="margin-top:4rem;padding-top:3rem;border-top:1px solid rgba(255,255,255,.06);max-width:780px">
+      <p style="font-family:var(--serif);font-size:1.35rem;font-weight:300;font-style:italic;color:var(--sub);line-height:1.8">To tackle the energy transition in a world shaped by AI, <strong>we must bring together technical and financial knowledge to make the right decisions. Will the decision-makers be AIs? No — but the people behind them will be the ones who understand both the complexity of energy systems and the logic of capital.</strong> That is the convergence I am building toward.</p>
+    </div>
+  </div>
+</section>
+
 <section id="education">
   <div class="si">
-    <p class="s-tag reveal" data-i18n="edu_tag">Academic Formation</p>
-    <h2 class="s-title reveal reveal-delay-1" data-i18n="edu_title">Built on <em>rigour</em></h2>
+    <p class="s-tag reveal">Academic Formation</p>
+    <h2 class="s-title reveal reveal-delay-1">Built on <em>rigour</em></h2>
     <div class="edu-list">
 
       <div class="edu-entry">
@@ -1085,9 +1037,9 @@ footer{
           <p class="edu-where">ESCP Business School<br>Paris &amp; London</p>
         </div>
         <div class="edu-right">
-          <p class="edu-deg" data-i18n="edu1_deg">MBA in International Management</p>
-          <p class="edu-school" data-i18n="edu1_school">Finance, Strategy &amp; Organisation, Economics, Accounting, Leadership</p>
-          <p class="edu-note" data-i18n="edu1_note">Entrepreneurship track — developing frameworks for sustainable finance and energy-sector ventures.</p>
+          <p class="edu-deg">MBA in International Management</p>
+          <p class="edu-school">Finance, Strategy &amp; Organisation, Economics, Accounting, Leadership</p>
+          <p class="edu-note">Entrepreneurship track — developing frameworks for sustainable finance and energy-sector ventures.</p>
         </div>
       </div>
 
@@ -1098,8 +1050,8 @@ footer{
         </div>
         <div class="edu-right">
           <p class="edu-deg">MSc Engineering &mdash; <em style="font-style:italic;color:var(--muted)">Diplôme d'Ingénieur</em></p>
-          <p class="edu-school" data-i18n="edu2_school">Mathematics, Control Systems, Applied Physics</p>
-          <p class="edu-note" data-i18n="edu2_note">Thesis: Energy Monitoring Systems for Hybrid Solar Panels.</p>
+          <p class="edu-school">Mathematics, Control Systems, Applied Physics</p>
+          <p class="edu-note">Thesis: Energy Monitoring Systems for Hybrid Solar Panels.</p>
         </div>
       </div>
 
@@ -1110,8 +1062,8 @@ footer{
         </div>
         <div class="edu-right">
           <p class="edu-deg">BSc Electrical Engineering &mdash; <em style="font-style:italic;color:var(--muted)">Automation &amp; Control</em></p>
-          <p class="edu-school" data-i18n="edu3_school">Control Systems, Optimisation, Signal Processing</p>
-          <p class="edu-note" data-i18n="edu3_note">Thesis: Coordination of EV Charging using Reinforcement Learning.</p>
+          <p class="edu-school">Control Systems, Optimisation, Signal Processing</p>
+          <p class="edu-note">Thesis: Coordination of EV Charging using Reinforcement Learning.</p>
         </div>
       </div>
 
@@ -1121,19 +1073,19 @@ footer{
 
 <section id="research">
   <div class="si">
-    <p class="s-tag reveal" data-i18n="research_tag">Research Work</p>
-    <h2 class="s-title reveal reveal-delay-1" data-i18n="research_title">Academic <em>research</em></h2>
+    <p class="s-tag reveal">Research Work</p>
+    <h2 class="s-title reveal reveal-delay-1">Academic <em>research</em></h2>
     <div class="research-grid">
 
       <div class="research-card">
-        <p class="research-tag" data-i18n="r1_tag">Computer Vision · Robotics</p>
-        <h3 class="research-title" data-i18n="r1_title">Indoor Environment Mapping Using RGB-D Cameras</h3>
+        <p class="research-tag">Computer Vision · Robotics</p>
+        <h3 class="research-title">Indoor Environment Mapping Using RGB-D Cameras</h3>
         <p class="research-body">RGB-D cameras are systems capable of capturing RGB images along with distance measurements, pixel by pixel, and can be used to build dense 3D maps. The goal of the project was to study the use of these cameras in indoor environment mapping by robots, in order to develop a system that autonomously creates a detailed map of the studied area. Frame alignment algorithms for environment mapping were evaluated, with special attention to their accuracy and efficiency in predetermined scenarios.</p>
       </div>
 
       <div class="research-card">
-        <p class="research-tag" data-i18n="r2_tag">Reinforcement Learning · Smart Grid</p>
-        <h3 class="research-title" data-i18n="r2_title">Coordination of Electric Vehicle Charging through Multiagent Reinforcement Learning</h3>
+        <p class="research-tag">Reinforcement Learning · Smart Grid</p>
+        <h3 class="research-title">Coordination of Electric Vehicle Charging through Multiagent Reinforcement Learning</h3>
         <p class="research-body">The increasing adoption of plug-in electric vehicles (PEVs) presents significant challenges to residential power distribution grids, including transformer overloads and undesirable demand peaks caused by uncoordinated home charging. This work proposed <strong>MASCO</strong> (MultiAgent Selfish-COllaborative architecture), a distributed multiagent reinforcement learning framework for coordinating PEV charging in residential neighborhoods. Each agent autonomously learns both a selfish policy — optimising its own objectives such as minimising electricity costs and maintaining battery charge — and collaborative policies that account for the goals of neighbouring agents. A cooperation criterion based on W-Learning dynamically arbitrates between selfish and collaborative behaviour at each decision step. Experiments simulating a 15-house neighbourhood demonstrated that MASCO significantly reduced daily transformer overloads compared to an always-charging baseline, while maintaining battery charge levels above 99.9% in most configurations.</p>
       </div>
 
@@ -1143,61 +1095,61 @@ footer{
 
 <section id="experience">
   <div class="si">
-    <p class="s-tag reveal" data-i18n="nav_career">Career</p>
-    <h2 class="s-title reveal reveal-delay-1" data-i18n="exp_title">Where I have <em>been</em></h2>
+    <p class="s-tag reveal">Career</p>
+    <h2 class="s-title reveal reveal-delay-1">Where I have <em>been</em></h2>
     <div class="tl">
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-meta"><span class="tl-period">2025 — Present</span><span class="tl-loc">Paris &amp; London</span></div>
-        <div class="tl-role" data-i18n="exp1_role">MBA in International Management</div>
+        <div class="tl-role">MBA in International Management</div>
         <div class="tl-co">ESCP Business School</div>
         <ul class="tl-bullets">
-          <li data-i18n="exp1_b1">Full-time programme across Paris and London campuses covering Finance, Strategy, Economics, Accounting, and Leadership.</li>
-          <li data-i18n="exp1_b2">Entrepreneurship track; developing frameworks for sustainable finance and energy-sector ventures.</li>
+          <li>Full-time programme across Paris and London campuses covering Finance, Strategy, Economics, Accounting, and Leadership.</li>
+          <li>Entrepreneurship track; developing frameworks for sustainable finance and energy-sector ventures.</li>
         </ul>
       </div>
       <div class="tl-item">
         <div class="tl-dot h"></div>
         <div class="tl-meta"><span class="tl-period">Jan — Apr 2025</span><span class="tl-loc">Oxford, UK</span></div>
-        <div class="tl-role" data-i18n="exp2_role">Business Development Consultant</div>
-        <div class="tl-co" data-i18n="exp2_co">Independent — British PE Fund mandate</div>
+        <div class="tl-role">Business Development Consultant</div>
+        <div class="tl-co">Independent — British PE Fund mandate</div>
         <ul class="tl-bullets">
-          <li data-i18n="exp2_b1">Led all business development initiatives in Brazil with a strategic focus on large-scale green hydrogen production.</li>
-          <li data-i18n="exp2_b2">Developed a full due diligence framework that diverged materially from the remote team's initial perspective after engaging local legal counsel and environmental licensing specialists.</li>
+          <li>Led all business development initiatives in Brazil with a strategic focus on large-scale green hydrogen production.</li>
+          <li>Developed a full due diligence framework that diverged materially from the remote team's initial perspective after engaging local legal counsel and environmental licensing specialists.</li>
         </ul>
       </div>
       <div class="tl-item">
         <div class="tl-dot h"></div>
         <div class="tl-meta"><span class="tl-period">May 2023 — Dec 2024</span><span class="tl-loc">São Paulo, Brazil</span></div>
-        <div class="tl-role" data-i18n="exp3_role">Portfolio Manager — Offshore Investments</div>
-        <div class="tl-co" data-i18n="exp3_co">est GP — Multi Family Office (~$1B AUM)</div>
+        <div class="tl-role">Portfolio Manager — Offshore Investments</div>
+        <div class="tl-co">est GP — Multi Family Office (~$1B AUM)</div>
         <ul class="tl-bullets">
-          <li data-i18n="exp3_b1">Led strategic asset allocation and tactical positioning for the offshore book, representing 30%+ of total AUM.</li>
-          <li data-i18n="exp3_b2">Built an evaluation framework covering 2,000+ ETFs, mutual funds, and hedge funds using custom programming tools.</li>
-          <li data-i18n="exp3_b3">Implemented strategic portfolios for <strong>70+ families</strong> and more than $300M in assets.</li>
+          <li>Led strategic asset allocation and tactical positioning for the offshore book, representing 30%+ of total AUM.</li>
+          <li>Built an evaluation framework covering 2,000+ ETFs, mutual funds, and hedge funds using custom programming tools.</li>
+          <li>Implemented strategic portfolios for <strong>70+ families</strong> and more than $300M in assets.</li>
         </ul>
       </div>
       <div class="tl-item">
         <div class="tl-dot h"></div>
         <div class="tl-meta"><span class="tl-period">Jan 2021 — Nov 2022</span><span class="tl-loc">São Paulo, Brazil</span></div>
-        <div class="tl-role" data-i18n="exp4_role">Equity Research Analyst — Global Equities</div>
+        <div class="tl-role">Equity Research Analyst — Global Equities</div>
         <div class="tl-co">Kapitalo Investimentos</div>
         <ul class="tl-bullets">
-          <li data-i18n="exp4_b1">Covered technology and high-growth companies for a long-biased portfolio of stocks, indices, and corporate bonds.</li>
-          <li data-i18n="exp4_b2">Built and managed a long-only portfolio of 10 companies using a first-principles methodology: biographies, channel checks, customer calls, management meetings — then valuation.</li>
-          <li data-i18n="exp4_b3">Site visit to Tesla's California Gigafactory; investor relations meetings with executive leadership.</li>
-          <li data-i18n="exp4_b4">Led internal data research: ETF/index decomposition, bottom-up earnings reviews, country risk premium comparatives.</li>
+          <li>Covered technology and high-growth companies for a long-biased portfolio of stocks, indices, and corporate bonds.</li>
+          <li>Built and managed a long-only portfolio of 10 companies using a first-principles methodology: biographies, channel checks, customer calls, management meetings — then valuation.</li>
+          <li>Site visit to Tesla's California Gigafactory; investor relations meetings with executive leadership.</li>
+          <li>Led internal data research: ETF/index decomposition, bottom-up earnings reviews, country risk premium comparatives.</li>
         </ul>
       </div>
       <div class="tl-item">
         <div class="tl-dot h"></div>
         <div class="tl-meta"><span class="tl-period">May 2018 — Dec 2020</span><span class="tl-loc">São Paulo, Brazil</span></div>
-        <div class="tl-role" data-i18n="exp5_role">M&amp;A and Business Development Manager</div>
+        <div class="tl-role">M&amp;A and Business Development Manager</div>
         <div class="tl-co">Eren Groupe (now Total Eren / TotalEnergies)</div>
         <ul class="tl-bullets">
-          <li data-i18n="exp5_b1">Responsible for prospection, acquisition, and greenfield project development for a leading French independent power producer active in solar and wind.</li>
-          <li data-i18n="exp5_b2">Created an internal project database covering 50+ GW of evaluated opportunities — first of its kind across all Total Eren country operations.</li>
-          <li data-i18n="exp5_b3">Led the first two wind acquisitions with bilateral PPAs for Total Eren in Brazil, managing the full transaction lifecycle from NBO through shareholders' agreements.</li>
+          <li>Responsible for prospection, acquisition, and greenfield project development for a leading French independent power producer active in solar and wind.</li>
+          <li>Created an internal project database covering 50+ GW of evaluated opportunities — first of its kind across all Total Eren country operations.</li>
+          <li>Led the first two wind acquisitions with bilateral PPAs for Total Eren in Brazil, managing the full transaction lifecycle from NBO through shareholders' agreements.</li>
         </ul>
       </div>
     </div>
@@ -1206,14 +1158,14 @@ footer{
 
 <section id="deals">
   <div class="si">
-    <p class="s-tag reveal" data-i18n="nav_ma_long">M&amp;A Projects</p>
-    <h2 class="s-title reveal reveal-delay-1" data-i18n="deals_title">Deals, <em>end-to-end</em></h2>
-    <p class="deals-intro reveal reveal-delay-2" data-i18n="deals_intro">Through my buy-side M&A experience, I played a direct role in the origination, negotiation, and successful closing of three renewable energy projects in Brazil — two wind farms and one solar complex. These assets are now fully operational and account for roughly <strong>232 million USD</strong> in aggregate investment. Across these transactions, I led or supported key workstreams including financial modelling, negotiation of SPAs and offtake agreements, and end-to-end project coordination. I was also actively engaged with public-sector stakeholders at both the state and federal levels, contributing to the regulatory and institutional efforts required to bring the projects to life.</p>
+    <p class="s-tag reveal">M&amp;A Projects</p>
+    <h2 class="s-title reveal reveal-delay-1">Deals, <em>end-to-end</em></h2>
+    <p class="deals-intro reveal reveal-delay-2">Through my buy-side M&A experience, I played a direct role in the origination, negotiation, and successful closing of three renewable energy projects in Brazil — two wind farms and one solar complex. These assets are now fully operational and account for roughly <strong>232 million USD</strong> in aggregate investment. Across these transactions, I led or supported key workstreams including financial modelling, negotiation of SPAs and offtake agreements, and end-to-end project coordination. I was also actively engaged with public-sector stakeholders at both the state and federal levels, contributing to the regulatory and institutional efforts required to bring the projects to life.</p>
     <div class="stat-bar">
-      <div class="sb-item"><div class="sb-val">3</div><div class="sb-lbl" data-i18n="deal_stat1">Projects closed &amp; operational</div></div>
-      <div class="sb-item"><div class="sb-val">251.8 MW</div><div class="sb-lbl" data-i18n="deal_stat2">Combined installed capacity</div></div>
-      <div class="sb-item"><div class="sb-val">~$232M</div><div class="sb-lbl" data-i18n="deal_stat3">Combined total investment (USD)</div></div>
-      <div class="sb-item"><div class="sb-val">20 yr</div><div class="sb-lbl" data-i18n="deal_stat4">PPA tenors across all assets</div></div>
+      <div class="sb-item"><div class="sb-val">3</div><div class="sb-lbl">Projects closed &amp; operational</div></div>
+      <div class="sb-item"><div class="sb-val">251.8 MW</div><div class="sb-lbl">Combined installed capacity</div></div>
+      <div class="sb-item"><div class="sb-val">~$232M</div><div class="sb-lbl">Combined total investment (USD)</div></div>
+      <div class="sb-item"><div class="sb-val">20 yr</div><div class="sb-lbl">PPA tenors across all assets</div></div>
     </div>
 
     <div class="deal">
@@ -1228,37 +1180,37 @@ footer{
           </svg>
         </div>
         <div class="deal-title">
-          <div class="deal-badge wind" data-i18n="badge_wind_acq">Wind · Acquisition</div>
+          <div class="deal-badge wind">Wind · Acquisition</div>
           <div class="deal-name">Terra Santa Wind Farm</div>
           <div class="deal-loc">Rio Grande do Norte · Brazil</div>
         </div>
         <div class="deal-right">
           <div class="deal-mw">92.3 MW</div>
-          <span class="deal-status" data-i18n="deal_operational">Operational</span>
+          <span class="deal-status">Operational</span>
           <span class="deal-comm">Commissioned Feb 2022</span>
         </div>
       </div>
       <div class="deal-body">
         <div class="deal-metrics">
-          <div class="dm"><span class="dm-k" data-i18n="dm_capacity">Capacity</span><span class="dm-v">92.3 MW</span></div>
-          <div class="dm"><span class="dm-k" data-i18n="dm_offtaker">Offtaker</span><span class="dm-v">Cemig GT · 20-yr private PPA</span></div>
-          <div class="dm"><span class="dm-k" data-i18n="dm_investment">Total Investment</span><span class="dm-v">BRL 829M (~USD 154M)*</span></div>
-          <div class="dm"><span class="dm-k" data-i18n="dm_ownership">Ownership</span><span class="dm-v">Total Eren 90% / Vila Energia 10%</span></div>
-          <div class="dm"><span class="dm-k" data-i18n="dm_commissioned">Commissioned</span><span class="dm-v">February 2022</span></div>
+          <div class="dm"><span class="dm-k">Capacity</span><span class="dm-v">92.3 MW</span></div>
+          <div class="dm"><span class="dm-k">Offtaker</span><span class="dm-v">Cemig GT · 20-yr private PPA</span></div>
+          <div class="dm"><span class="dm-k">Total Investment</span><span class="dm-v">BRL 829M (~USD 154M)*</span></div>
+          <div class="dm"><span class="dm-k">Ownership</span><span class="dm-v">Total Eren 90% / Vila Energia 10%</span></div>
+          <div class="dm"><span class="dm-k">Commissioned</span><span class="dm-v">February 2022</span></div>
         </div>
         <div class="deal-narr">
           <div>
-            <p class="narr-lbl" data-i18n="narr_overview">Transaction Overview</p>
-            <p class="narr-body" data-i18n="d1_overview">Terra Santa was Total Eren's first wind asset in Brazil, developed in partnership with Vila Energia Renovável. Structured with a bilateral 20-year private PPA with Cemig GT — a creditworthy state-owned offtaker — the project provided long-term revenue visibility for project finance. Construction began late 2019; commercial operation commenced February 2022, marking a pivotal diversification of Total Eren's Brazilian portfolio beyond solar.</p>
+            <p class="narr-lbl">Transaction Overview</p>
+            <p class="narr-body">Terra Santa was Total Eren's first wind asset in Brazil, developed in partnership with Vila Energia Renovável. Structured with a bilateral 20-year private PPA with Cemig GT — a creditworthy state-owned offtaker — the project provided long-term revenue visibility for project finance. Construction began late 2019; commercial operation commenced February 2022, marking a pivotal diversification of Total Eren's Brazilian portfolio beyond solar.</p>
           </div>
           <div>
-            <p class="narr-lbl" data-i18n="narr_role">My Role</p>
+            <p class="narr-lbl">My Role</p>
             <ul class="narr-list">
-              <li data-i18n="d1_r1">Originated the opportunity within the 50+ GW pipeline database I built for Total Eren Brazil and recommended the acquisition to Paris.</li>
-              <li data-i18n="d1_r2">Led bilateral PPA negotiation and all transaction documentation from NBO through binding MOU to shareholders' and shares purchase agreements.</li>
-              <li data-i18n="d1_r3">Coordinated due diligence workstreams with legal, technical, and financial advisors across French and Brazilian teams.</li>
-              <li data-i18n="d1_r4">Led financial modelling and debt financing negotiations with private and public lenders.</li>
-              <li data-i18n="d1_r5">Represented Total Eren in partner negotiations with Vila Energia to establish the 90/10 joint ownership structure, including negotiation of shareholders agreement.</li>
+              <li>Originated the opportunity within the 50+ GW pipeline database I built for Total Eren Brazil and recommended the acquisition to Paris.</li>
+              <li>Led bilateral PPA negotiation and all transaction documentation from NBO through binding MOU to shareholders' and shares purchase agreements.</li>
+              <li>Coordinated due diligence workstreams with legal, technical, and financial advisors across French and Brazilian teams.</li>
+              <li>Led financial modelling and debt financing negotiations with private and public lenders.</li>
+              <li>Represented Total Eren in partner negotiations with Vila Energia to establish the 90/10 joint ownership structure, including negotiation of shareholders agreement.</li>
             </ul>
           </div>
         </div>
@@ -1291,22 +1243,22 @@ footer{
         <div class="deal-metrics">
           <div class="dm"><span class="dm-k">Capacity</span><span class="dm-v">67.5 MW</span></div>
           <div class="dm"><span class="dm-k">Offtaker</span><span class="dm-v">Cemig GT · 20-yr private PPA</span></div>
-          <div class="dm"><span class="dm-k" data-i18n="dm_vendor">Vendor</span><span class="dm-v">Voltalia SA (EPA: VLTSA)</span></div>
+          <div class="dm"><span class="dm-k">Vendor</span><span class="dm-v">Voltalia SA (EPA: VLTSA)</span></div>
           <div class="dm"><span class="dm-k">Ownership</span><span class="dm-v">Total Eren 100%</span></div>
-          <div class="dm"><span class="dm-k" data-i18n="dm_regulatory">Regulatory</span><span class="dm-v">CADE cleared · no restrictions</span></div>
+          <div class="dm"><span class="dm-k">Regulatory</span><span class="dm-v">CADE cleared · no restrictions</span></div>
           <div class="dm"><span class="dm-k">Commissioned</span><span class="dm-v">2022</span></div>
         </div>
         <div class="deal-narr">
           <div>
             <p class="narr-lbl">Transaction Overview</p>
-            <p class="narr-body" data-i18n="d2_overview">The Maral acquisition involved the purchase of two wind project SPEs from the Brazilian unit of Voltalia SA, a publicly listed French renewable energy developer. At the time of acquisition both projects had yet to break ground — a pre-construction buy-side deal requiring robust technical and regulatory diligence. Cleared without restrictions by CADE. Both phases entered operation in 2021 under a 20-year private PPA with Cemig GT, Total Eren holding 100% ownership.</p>
+            <p class="narr-body">The Maral acquisition involved the purchase of two wind project SPEs from the Brazilian unit of Voltalia SA, a publicly listed French renewable energy developer. At the time of acquisition both projects had yet to break ground — a pre-construction buy-side deal requiring robust technical and regulatory diligence. Cleared without restrictions by CADE. Both phases entered operation in 2021 under a 20-year private PPA with Cemig GT, Total Eren holding 100% ownership.</p>
           </div>
           <div>
             <p class="narr-lbl">My Role</p>
             <ul class="narr-list">
-              <li data-i18n="d2_r1">Identified Maral within the proprietary pipeline database and recommended it to Paris as a strategic pre-construction entry into wind.</li>
-              <li data-i18n="d2_r2">Led buy-side negotiation with Voltalia Brazil from initial NBO through final shares purchase agreement.</li>
-              <li data-i18n="d2_r3">Structured the 100% ownership approach, assessing and rejecting partnership options to maintain full control for Total Eren.</li>
+              <li>Identified Maral within the proprietary pipeline database and recommended it to Paris as a strategic pre-construction entry into wind.</li>
+              <li>Led buy-side negotiation with Voltalia Brazil from initial NBO through final shares purchase agreement.</li>
+              <li>Structured the 100% ownership approach, assessing and rejecting partnership options to maintain full control for Total Eren.</li>
             </ul>
           </div>
         </div>
@@ -1326,7 +1278,7 @@ footer{
           </svg>
         </div>
         <div class="deal-title">
-          <div class="deal-badge solar" data-i18n="badge_solar_dev">Solar · Development</div>
+          <div class="deal-badge solar">Solar · Development</div>
           <div class="deal-name">Dracena Solar Complex</div>
           <div class="deal-loc">Dracena Municipality, São Paulo · Brazil</div>
         </div>
@@ -1339,25 +1291,25 @@ footer{
       <div class="deal-body">
         <div class="deal-metrics">
           <div class="dm"><span class="dm-k">Capacity</span><span class="dm-v">90 MW</span></div>
-          <div class="dm"><span class="dm-k" data-i18n="dm_offtake">Offtake</span><span class="dm-v">CCEE · 20-yr PPA (reserve auction 2014)</span></div>
+          <div class="dm"><span class="dm-k">Offtake</span><span class="dm-v">CCEE · 20-yr PPA (reserve auction 2014)</span></div>
           <div class="dm"><span class="dm-k">Total Investment</span><span class="dm-v">BRL 350M (~USD 78M)</span></div>
-          <div class="dm"><span class="dm-k" data-i18n="dm_projfinance">Project Finance</span><span class="dm-v">BRL 280M · 17-yr infra debentures</span></div>
-          <div class="dm"><span class="dm-k" data-i18n="dm_debt">Debt Investor</span><span class="dm-v">Kinea Investimentos (100%)</span></div>
+          <div class="dm"><span class="dm-k">Project Finance</span><span class="dm-v">BRL 280M · 17-yr infra debentures</span></div>
+          <div class="dm"><span class="dm-k">Debt Investor</span><span class="dm-v">Kinea Investimentos (100%)</span></div>
           <div class="dm"><span class="dm-k">Commissioned</span><span class="dm-v">2019</span></div>
         </div>
         <div class="deal-narr">
           <div>
             <p class="narr-lbl">Transaction Overview</p>
-            <p class="narr-body" data-i18n="d3_overview">Dracena is a 90 MW solar photovoltaic complex comprising three 30 MW units in São Paulo State — one of Total Eren's foundational Brazilian assets and the platform from which wind expansion was pursued. The project secured a 20-year PPA through Brazil's federal reserve energy auction (ANEEL, 2014). Project finance achieved via BRL 280M in long-term infrastructure debentures subscribed in full by Kinea Investimentos, with BNP and XP Investimentos as financial advisors.</p>
+            <p class="narr-body">Dracena is a 90 MW solar photovoltaic complex comprising three 30 MW units in São Paulo State — one of Total Eren's foundational Brazilian assets and the platform from which wind expansion was pursued. The project secured a 20-year PPA through Brazil's federal reserve energy auction (ANEEL, 2014). Project finance achieved via BRL 280M in long-term infrastructure debentures subscribed in full by Kinea Investimentos, with BNP and XP Investimentos as financial advisors.</p>
           </div>
           <div>
             <p class="narr-lbl">My Role</p>
             <ul class="narr-list">
-              <li data-i18n="d3_r1">Supported business development and project delivery during construction and ramp-up, working directly under the Managing Director of Total Eren Brazil.</li>
-              <li data-i18n="d3_r2">Contributed to the internal project database that benchmarked Dracena against the broader solar pipeline, informing capital allocation decisions.</li>
-              <li data-i18n="d3_r3">Coordinated with local teams, contractors, and regulators during the transition to commercial operation, tracking KPIs and reporting to Paris headquarters.</li>
+              <li>Supported business development and project delivery during construction and ramp-up, working directly under the Managing Director of Total Eren Brazil.</li>
+              <li>Contributed to the internal project database that benchmarked Dracena against the broader solar pipeline, informing capital allocation decisions.</li>
+              <li>Coordinated with local teams, contractors, and regulators during the transition to commercial operation, tracking KPIs and reporting to Paris headquarters.</li>
             </ul>
-            <p class="deal-fn" data-i18n="deal_fn">* BRL 829M covers Terra Santa and Maral combined, per Total Eren public announcement (Feb 2022).</p>
+            <p class="deal-fn">* BRL 829M covers Terra Santa and Maral combined, per Total Eren public announcement (Feb 2022).</p>
           </div>
         </div>
       </div>
@@ -1368,16 +1320,16 @@ footer{
 
 <section id="coverage">
   <div class="si">
-    <p class="s-tag reveal" data-i18n="nav_research_long">Equity Research Coverage</p>
-    <h2 class="s-title reveal reveal-delay-1" data-i18n="cov_title">Companies I <em>studied</em></h2>
-    <p class="cov-intro reveal reveal-delay-2" data-i18n="cov_intro">As an equity analyst, I covered the <strong>US technology sector with a focus on high-growth, disruptive businesses</strong>. My <strong>research methodology went beyond standard DCF modelling</strong> — I read founder biographies, ran channel checks with customers, engaged directly with management teams, and built thesis-driven memos from first principles. The portfolio I managed held 10 positions drawn from this 30+ company universe.<br>A few examples of complete investment opportunities include:</p>
+    <p class="s-tag reveal">Equity Research Coverage</p>
+    <h2 class="s-title reveal reveal-delay-1">Companies I <em>studied</em></h2>
+    <p class="cov-intro reveal reveal-delay-2">As an equity analyst, I covered the <strong>US technology sector with a focus on high-growth, disruptive businesses</strong>. My <strong>research methodology went beyond standard DCF modelling</strong> — I read founder biographies, ran channel checks with customers, engaged directly with management teams, and built thesis-driven memos from first principles. The portfolio I managed held 10 positions drawn from this 30+ company universe.<br>A few examples of complete investment opportunities include:</p>
 
     <div class="cov-table">
 
       <div class="cov-row">
         <div class="cov-sector">
-          <div class="cov-sname" data-i18n="cov_saas">Enterprise SaaS</div>
-          <div class="cov-sdesc" data-i18n="cov_saas_desc">CRM · HR · Procurement · Comms · eSign · Support · Automation</div>
+          <div class="cov-sname">Enterprise SaaS</div>
+          <div class="cov-sdesc">CRM · HR · Procurement · Comms · eSign · Support · Automation</div>
         </div>
         <div class="cov-names">
           <div class="co-name">Adobe</div>
@@ -1397,8 +1349,8 @@ footer{
 
       <div class="cov-row">
         <div class="cov-sector">
-          <div class="cov-sname" data-i18n="cov_cloud">Cloud &amp; Data Infrastructure</div>
-          <div class="cov-sdesc" data-i18n="cov_cloud_desc">Data warehousing · Observability · DevOps · Databases</div>
+          <div class="cov-sname">Cloud &amp; Data Infrastructure</div>
+          <div class="cov-sdesc">Data warehousing · Observability · DevOps · Databases</div>
         </div>
         <div class="cov-names">
           <div class="co-name">Datadog</div>
@@ -1411,8 +1363,8 @@ footer{
 
       <div class="cov-row">
         <div class="cov-sector">
-          <div class="cov-sname" data-i18n="cov_fintech">Fintech &amp; Crypto</div>
-          <div class="cov-sdesc" data-i18n="cov_fintech_desc">Consumer finance · Digital assets · Tax &amp; accounting</div>
+          <div class="cov-sname">Fintech &amp; Crypto</div>
+          <div class="cov-sdesc">Consumer finance · Digital assets · Tax &amp; accounting</div>
         </div>
         <div class="cov-names">
           <div class="co-name">Coinbase</div>
@@ -1423,8 +1375,8 @@ footer{
 
       <div class="cov-row">
         <div class="cov-sector">
-          <div class="cov-sname" data-i18n="cov_cyber">Cybersecurity</div>
-          <div class="cov-sdesc" data-i18n="cov_cyber_desc">Endpoint protection · AI-driven threat intelligence</div>
+          <div class="cov-sname">Cybersecurity</div>
+          <div class="cov-sdesc">Endpoint protection · AI-driven threat intelligence</div>
         </div>
         <div class="cov-names">
           <div class="co-name">CrowdStrike</div>
@@ -1435,8 +1387,8 @@ footer{
 
       <div class="cov-row">
         <div class="cov-sector">
-          <div class="cov-sname" data-i18n="cov_commerce">Commerce &amp; Marketplace</div>
-          <div class="cov-sdesc" data-i18n="cov_commerce_desc">E-commerce infrastructure · Proptech platforms</div>
+          <div class="cov-sname">Commerce &amp; Marketplace</div>
+          <div class="cov-sdesc">E-commerce infrastructure · Proptech platforms</div>
         </div>
         <div class="cov-names">
           <div class="co-name">Shopify</div>
@@ -1446,8 +1398,8 @@ footer{
 
       <div class="cov-row">
         <div class="cov-sector">
-          <div class="cov-sname" data-i18n="cov_emerging">Emerging &amp; Thematic</div>
-          <div class="cov-sdesc" data-i18n="cov_emerging_desc">EV · AI platforms · AgTech · Healthtech · IoT · Gaming · EDA</div>
+          <div class="cov-sname">Emerging &amp; Thematic</div>
+          <div class="cov-sdesc">EV · AI platforms · AgTech · Healthtech · IoT · Gaming · EDA</div>
         </div>
         <div class="cov-names">
           <div class="co-name">Aerofarms</div>
@@ -1466,19 +1418,19 @@ footer{
 
 <section id="portfolio">
   <div class="si">
-    <p class="s-tag reveal" data-i18n="nav_portfolio_long">Portfolio Management</p>
-    <h2 class="s-title reveal reveal-delay-1" data-i18n="pm_title">Capital at <em>work</em></h2>
-    <p class="pm-intro reveal reveal-delay-2" data-i18n="pm_intro">As portfolio manager of a MFO, I was responsible for the offshore investment book — designing and managing portfolios for 70+ families across global equities, fixed income, and alternative assets in the US and Europe.</p>
+    <p class="s-tag reveal">Portfolio Management</p>
+    <h2 class="s-title reveal reveal-delay-1">Capital at <em>work</em></h2>
+    <p class="pm-intro reveal reveal-delay-2">As portfolio manager of a MFO, I was responsible for the offshore investment book — designing and managing portfolios for 70+ families across global equities, fixed income, and alternative assets in the US and Europe.</p>
 
     <div class="pm-grid">
 
       <!-- Left: AUM + Capital Flows Map -->
       <div>
-        <p class="pm-visual-label" data-i18n="pm_aum_label">Capital Under Management</p>
+        <p class="pm-visual-label">Capital Under Management</p>
         <div class="aum-block">
           <div class="aum-number">$300M+</div>
-          <div class="aum-sub" data-i18n="pm_aum_sub">Offshore AUM · Directly Managed</div>
-          <div class="aum-families" data-i18n="pm_aum_families">Across 70+ families and wealth structures</div>
+          <div class="aum-sub">Offshore AUM · Directly Managed</div>
+          <div class="aum-families">Across 70+ families and wealth structures</div>
         </div>
 
         <!-- Capital Flows Map -->
@@ -1752,14 +1704,14 @@ footer{
       <div class="pm-story">
         <div class="story-item">
           <div class="story-num">01</div>
-          <div class="story-ttl" data-i18n="pm_s1_title">Built the analytical framework from scratch</div>
-          <p class="story-body" data-i18n="pm_s1_body">The offshore book had no systematic evaluation infrastructure when I joined. I designed and coded a proprietary screening tool covering 2,000+ ETFs, mutual funds, and hedge funds — combining quantitative scoring (risk-adjusted returns, drawdown, factor exposures) with qualitative diligence. What had been a manual, judgment-driven process became a <strong>data-driven framework that could be consistently applied across the entire book</strong>.</p>
+          <div class="story-ttl">Built the analytical framework from scratch</div>
+          <p class="story-body">The offshore book had no systematic evaluation infrastructure when I joined. I designed and coded a proprietary screening tool covering 2,000+ ETFs, mutual funds, and hedge funds — combining quantitative scoring (risk-adjusted returns, drawdown, factor exposures) with qualitative diligence. What had been a manual, judgment-driven process became a <strong>data-driven framework that could be consistently applied across the entire book</strong>.</p>
         </div>
         <div class="story-div"></div>
         <div class="story-item">
           <div class="story-num">02</div>
-          <div class="story-ttl" data-i18n="pm_s2_title">Deployed strategic portfolios at scale</div>
-          <p class="story-body" data-i18n="pm_s2_body">Using the framework, I implemented tailored strategic portfolios for each family — calibrated to their risk profile, liquidity needs, currency exposure, and time horizon. Beyond strategic allocation, I managed tactical positioning in response to market conditions, adjusting weights across equities, fixed income, and alternatives across <strong>$300M+ in offshore capital serving 70+ families</strong>.</p>
+          <div class="story-ttl">Deployed strategic portfolios at scale</div>
+          <p class="story-body">Using the framework, I implemented tailored strategic portfolios for each family — calibrated to their risk profile, liquidity needs, currency exposure, and time horizon. Beyond strategic allocation, I managed tactical positioning in response to market conditions, adjusting weights across equities, fixed income, and alternatives across <strong>$300M+ in offshore capital serving 70+ families</strong>.</p>
         </div>
       </div>
 
@@ -1767,20 +1719,20 @@ footer{
 
     <!-- ── The Innovation Framework ── -->
     <div class="pm-framework">
-      <p class="s-tag" style="margin-bottom:1rem" data-i18n="pm_framework_tag">A new way to approach wealth management</p>
+      <p class="s-tag" style="margin-bottom:1rem">A new way to approach wealth management</p>
       <h3 style="font-family:var(--serif);font-size:clamp(1.5rem,2.2vw,2rem);font-weight:300;color:var(--text);margin-bottom:.3rem">A data-driven framework, <em style="color:var(--accent);font-style:italic">built from scratch</em></h3>
 
       <div class="pm-pipeline">
 
         <div class="pm-stage">
           <p class="pm-stage-num">I</p>
-          <p class="pm-stage-title" data-i18n="pm_stage1_title">Opportunity<br>Identification</p>
+          <p class="pm-stage-title">Opportunity<br>Identification</p>
           <ul class="pm-stage-items">
-            <li class="hl" data-i18n="pm_s1_i1">Systematic screening of 2,000+ funds</li>
-            <li class="hl" data-i18n="pm_s1_i2">Custom Python &amp; R scoring models</li>
-            <li data-i18n="pm_s1_i3">ETFs, mutual funds &amp; hedge funds</li>
-            <li data-i18n="pm_s1_i4">Risk-adjusted return ranking</li>
-            <li data-i18n="pm_s1_i5">Factor exposure mapping</li>
+            <li class="hl">Systematic screening of 2,000+ funds</li>
+            <li class="hl">Custom Python &amp; R scoring models</li>
+            <li>ETFs, mutual funds &amp; hedge funds</li>
+            <li>Risk-adjusted return ranking</li>
+            <li>Factor exposure mapping</li>
           </ul>
         </div>
 
@@ -1792,13 +1744,13 @@ footer{
 
         <div class="pm-stage">
           <p class="pm-stage-num">II</p>
-          <p class="pm-stage-title" data-i18n="pm_stage2_title">Investment<br>Analysis</p>
+          <p class="pm-stage-title">Investment<br>Analysis</p>
           <ul class="pm-stage-items">
-            <li class="hl" data-i18n="pm_s2_i1">Quantitative + qualitative diligence</li>
-            <li class="hl" data-i18n="pm_s2_i2">Drawdown &amp; volatility analytics</li>
-            <li data-i18n="pm_s2_i3">Manager track record review</li>
-            <li data-i18n="pm_s2_i4">Liquidity &amp; structure analysis</li>
-            <li data-i18n="pm_s2_i5">Benchmark comparison tools</li>
+            <li class="hl">Quantitative + qualitative diligence</li>
+            <li class="hl">Drawdown &amp; volatility analytics</li>
+            <li>Manager track record review</li>
+            <li>Liquidity &amp; structure analysis</li>
+            <li>Benchmark comparison tools</li>
           </ul>
         </div>
 
@@ -1810,13 +1762,13 @@ footer{
 
         <div class="pm-stage">
           <p class="pm-stage-num">III</p>
-          <p class="pm-stage-title" data-i18n="pm_stage3_title">Portfolio<br>Construction</p>
+          <p class="pm-stage-title">Portfolio<br>Construction</p>
           <ul class="pm-stage-items">
-            <li class="hl" data-i18n="pm_s3_i1">Risk-return optimisation per family</li>
-            <li class="hl" data-i18n="pm_s3_i2">Dynamic tactical positioning</li>
-            <li data-i18n="pm_s3_i3">Currency exposure calibration</li>
-            <li data-i18n="pm_s3_i4">Liquidity-horizon matching</li>
-            <li data-i18n="pm_s3_i5">Continuous rebalancing logic</li>
+            <li class="hl">Risk-return optimisation per family</li>
+            <li class="hl">Dynamic tactical positioning</li>
+            <li>Currency exposure calibration</li>
+            <li>Liquidity-horizon matching</li>
+            <li>Continuous rebalancing logic</li>
           </ul>
         </div>
 
@@ -1824,24 +1776,24 @@ footer{
 
       <div class="pm-ba">
         <div class="pm-ba-card before">
-          <p class="pm-ba-lbl" data-i18n="pm_before">Before</p>
-          <p class="pm-ba-text" data-i18n="pm_before_text">Manual, judgment-driven process. No evaluation infrastructure. Decisions made case-by-case with no repeatable framework across the offshore book.</p>
+          <p class="pm-ba-lbl">Before</p>
+          <p class="pm-ba-text">Manual, judgment-driven process. No evaluation infrastructure. Decisions made case-by-case with no repeatable framework across the offshore book.</p>
         </div>
         <div class="pm-ba-card after">
-          <p class="pm-ba-lbl" data-i18n="pm_after">After</p>
-          <p class="pm-ba-text" data-i18n="pm_after_text">Proprietary data-driven framework — coded from scratch — consistently applied across all portfolios. Analytical rigour previously reserved for institutional desks, brought to a family office.</p>
+          <p class="pm-ba-lbl">After</p>
+          <p class="pm-ba-text">Proprietary data-driven framework — coded from scratch — consistently applied across all portfolios. Analytical rigour previously reserved for institutional desks, brought to a family office.</p>
         </div>
       </div>
 
       <div class="pm-stats">
-        <div class="pm-stat"><div class="pm-stat-val">2,000+</div><div class="pm-stat-lbl" data-i18n="pm_stat1">Funds in screening universe</div></div>
-        <div class="pm-stat"><div class="pm-stat-val">$300M+</div><div class="pm-stat-lbl" data-i18n="pm_stat2">Offshore AUM managed</div></div>
-        <div class="pm-stat"><div class="pm-stat-val">70+</div><div class="pm-stat-lbl" data-i18n="pm_stat3">Families served</div></div>
+        <div class="pm-stat"><div class="pm-stat-val">2,000+</div><div class="pm-stat-lbl">Funds in screening universe</div></div>
+        <div class="pm-stat"><div class="pm-stat-val">$300M+</div><div class="pm-stat-lbl">Offshore AUM managed</div></div>
+        <div class="pm-stat"><div class="pm-stat-val">70+</div><div class="pm-stat-lbl">Families served</div></div>
       </div>
       <div class="pm-tools">
         <div class="pm-tools-hd">
           <div class="pm-tools-line"></div>
-          <span class="pm-tools-lbl" data-i18n="pm_tools_label">Back-office infrastructure levers</span>
+          <span class="pm-tools-lbl">Back-office infrastructure levers</span>
           <div class="pm-tools-line"></div>
         </div>
         <div class="pm-tools-grid">
@@ -1861,56 +1813,30 @@ footer{
   </div>
 </section>
 
-<section id="focus">
-  <div class="si">
-    <p class="s-tag reveal" data-i18n="focus_tag">What I care about</p>
-    <h2 class="s-title reveal reveal-delay-1" data-i18n="focus_title">Three domains, <em>one thesis</em></h2>
-    <div class="focus-cols">
-      <div class="focus-col reveal reveal-delay-1">
-        <div class="focus-num">I</div>
-        <div class="focus-ttl" data-i18n="focus1_ttl">Energy Transition</div>
-        <p class="focus-desc" data-i18n="focus1_desc">The energy transition is the defining infrastructure challenge of our generation — a full rewiring of how the world produces and consumes energy. I have worked across its value chain: closing renewable energy M&A in Brazil, assessing green hydrogen feasibility, and studying the capital structures that make large-scale clean energy projects bankable.</p>
-      </div>
-      <div class="focus-col reveal reveal-delay-2">
-        <div class="focus-num">II</div>
-        <div class="focus-ttl" data-i18n="focus2_ttl">Technology &amp; AI</div>
-        <p class="focus-desc" data-i18n="focus2_desc">I covered 30+ high-growth technology companies as an equity analyst, and I have built data tools — from GIS mapping platforms to automated fund screening systems — that convert raw information into decisions. AI will not replace decision-makers, but the decision-makers of tomorrow will be the ones who know how to work with it.</p>
-      </div>
-      <div class="focus-col reveal reveal-delay-3">
-        <div class="focus-num">III</div>
-        <div class="focus-ttl" data-i18n="focus3_ttl">Finance &amp; Capital Allocation</div>
-        <p class="focus-desc" data-i18n="focus3_desc">Capital determines which technologies get built and which transitions happen. I have been on both sides — allocating capital across global markets as a portfolio manager, and deploying it into real assets as an M&A practitioner. Finance is not a support function for the energy transition; it is a core driver of it.</p>
-      </div>
-    </div>
-    <div style="margin-top:4rem;padding-top:3rem;border-top:1px solid rgba(255,255,255,.06);max-width:780px">
-      <p style="font-family:var(--serif);font-size:1.35rem;font-weight:300;font-style:italic;color:var(--sub);line-height:1.8" data-i18n="focus_closing">To tackle the energy transition in a world shaped by AI, <strong>we must bring together technical and financial knowledge to make the right decisions. Will the decision-makers be AIs? No — but the people behind them will be the ones who understand both the complexity of energy systems and the logic of capital.</strong> That is the convergence I am building toward.</p>
-    </div>
-  </div>
-</section>
 
 <section id="projects">
   <div class="si">
-    <p class="s-tag reveal" data-i18n="proj_tag">Ventures &amp; Side Projects</p>
-    <h2 class="s-title reveal reveal-delay-1" data-i18n="proj_title">Things I <em>built</em></h2>
+    <p class="s-tag reveal">Ventures &amp; Side Projects</p>
+    <h2 class="s-title reveal reveal-delay-1">Things I <em>built</em></h2>
     <div class="proj-cols">
       <div class="proj-col reveal reveal-delay-1">
-        <p class="proj-kicker" data-i18n="proj1_kicker">Community · Co-founded in Paris</p>
+        <p class="proj-kicker">Community · Co-founded in Paris</p>
         <h3 class="proj-name">BRASA Europe</h3>
-        <p class="proj-desc" data-i18n="proj1_desc">BRASA — the Brazilian Student Association — is a network connecting Brazilian students and young professionals across top universities and cities worldwide. I co-founded the European chapter in Paris, building a community from scratch for Brazilians studying and working across Europe. The network spans multiple cities and serves as a platform for professional exchange, mentorship, and cross-border connection.</p>
-        <p class="proj-tags" data-i18n="proj1_tags">Co-founder, Paris, Community Building, Brazilian Diaspora</p>
+        <p class="proj-desc">BRASA — the Brazilian Student Association — is a network connecting Brazilian students and young professionals across top universities and cities worldwide. I co-founded the European chapter in Paris, building a community from scratch for Brazilians studying and working across Europe. The network spans multiple cities and serves as a platform for professional exchange, mentorship, and cross-border connection.</p>
+        <p class="proj-tags">Co-founder, Paris, Community Building, Brazilian Diaspora</p>
       </div>
       <div class="proj-col reveal reveal-delay-2">
-        <p class="proj-kicker" data-i18n="proj2_kicker">Infrastructure Intelligence Tool</p>
+        <p class="proj-kicker">Infrastructure Intelligence Tool</p>
         <h3 class="proj-name">Forager</h3>
-        <p class="proj-desc" data-i18n="proj2_desc">An interactive mapping platform for solar, wind, and infrastructure assets. Born from a data-science approach I pioneered at Total Eren — where mapping 50+ GW of renewable opportunities in Brazil transformed M&amp;A pipeline quality — Forager generalises that methodology into a usable product. Still live; added material value in subsequent roles.</p>
+        <p class="proj-desc">An interactive mapping platform for solar, wind, and infrastructure assets. Born from a data-science approach I pioneered at Total Eren — where mapping 50+ GW of renewable opportunities in Brazil transformed M&amp;A pipeline quality — Forager generalises that methodology into a usable product. Still live; added material value in subsequent roles.</p>
         <p class="proj-tags">GIS, JavaScript, Renewable Energy, M&amp;A</p>
         <a href="https://joaocreste.github.io/forager/" target="_blank" style="display:inline-flex;align-items:center;gap:.4rem;margin-top:.9rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);text-decoration:none;opacity:.8;transition:opacity .2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.8'">↗ View Forager</a>
       </div>
       <div class="proj-col reveal reveal-delay-3">
-        <p class="proj-kicker" data-i18n="proj3_kicker">Music · Personal Practice</p>
-        <h3 class="proj-name" data-i18n="proj3_name">A Lot of Music</h3>
-        <p class="proj-desc" data-i18n="proj3_desc">I have studied piano for eight years at conservatory level — an education in precision, patience, and the discipline of building something complex over a long period of time. I still play regularly and compose my own pieces. Music is not a side interest; it is the counterweight to everything analytical in my life, and the place where I think most freely.</p>
-        <p class="proj-tags" data-i18n="proj3_tags">Piano, Composition, Conservatory, 8 Years</p>
+        <p class="proj-kicker">Music · Personal Practice</p>
+        <h3 class="proj-name">A Lot of Music</h3>
+        <p class="proj-desc">I have studied piano for eight years at conservatory level — an education in precision, patience, and the discipline of building something complex over a long period of time. I still play regularly and compose my own pieces. Music is not a side interest; it is the counterweight to everything analytical in my life, and the place where I think most freely.</p>
+        <p class="proj-tags">Piano, Composition, Conservatory, 8 Years</p>
       </div>
     </div>
   </div>
@@ -1918,45 +1844,19 @@ footer{
 
 <section id="contact">
   <div class="contact-wrap">
-    <p class="s-tag" style="justify-content:center" data-i18n="nav_contact">Contact</p>
-    <h2 class="contact-ttl" data-i18n="contact_title">Let's start a <em>conversation</em></h2>
-    <p class="contact-sub" data-i18n="contact_sub">Open to conversations about infrastructure, energy transition, equity research, and entrepreneurial ventures at the intersection of energy and technology. Based between London and Paris, operating internationally.</p>
+    <p class="s-tag" style="justify-content:center">Contact</p>
+    <h2 class="contact-ttl">Let's start a <em>conversation</em></h2>
+    <p class="contact-sub">Open to conversations about infrastructure, energy transition, equity research, and entrepreneurial ventures at the intersection of energy and technology. Based between London and Paris, operating internationally.</p>
     <div class="contact-links">
-      <a href="/cdn-cgi/l/email-protection#e08a8f818fce839285939485a0858495ce85938390ce8595" class="c-link c-link-primary" data-i18n="contact_email">✉ Email me</a>
+      <a href="/cdn-cgi/l/email-protection#e08a8f818fce839285939485a0858495ce85938390ce8595" class="c-link c-link-primary">✉ Email me</a>
       <a href="https://www.linkedin.com/in/joaocreste/" target="_blank" class="c-link">↗ LinkedIn</a>
     </div>
     <div class="contact-phones">
       <a href="tel:+447417400683" class="phone-link">
-        <span class="phone-flag">
-          <!-- UK flag -->
-          <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-            <rect width="60" height="40" fill="#012169"/>
-            <!-- White diagonals -->
-            <line x1="0" y1="0" x2="60" y2="40" stroke="#fff" stroke-width="8"/>
-            <line x1="60" y1="0" x2="0" y2="40" stroke="#fff" stroke-width="8"/>
-            <!-- Red diagonals -->
-            <line x1="0" y1="0" x2="60" y2="40" stroke="#C8102E" stroke-width="4.5"/>
-            <line x1="60" y1="0" x2="0" y2="40" stroke="#C8102E" stroke-width="4.5"/>
-            <!-- White cross -->
-            <rect x="24" y="0" width="12" height="40" fill="#fff"/>
-            <rect x="0" y="14" width="60" height="12" fill="#fff"/>
-            <!-- Red cross -->
-            <rect x="26" y="0" width="8" height="40" fill="#C8102E"/>
-            <rect x="0" y="16" width="60" height="8" fill="#C8102E"/>
-          </svg>
-        </span>
         <span class="phone-num">+44 7417 400683</span>
       </a>
       <div class="phone-divider"></div>
       <a href="tel:+33768316752" class="phone-link">
-        <span class="phone-flag">
-          <!-- France flag -->
-          <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-            <rect width="20" height="40" fill="#002395"/>
-            <rect x="20" width="20" height="40" fill="#fff"/>
-            <rect x="40" width="20" height="40" fill="#ED2939"/>
-          </svg>
-        </span>
         <span class="phone-num">+33 7 68 31 67 52</span>
       </a>
     </div>
@@ -1965,12 +1865,10 @@ footer{
 </section>
 
 <footer>
-  <span class="ft-name" data-i18n="nav_logo">Joao Victor Creste</span>
+  <span class="ft-name">Joao Victor Creste</span>
   <span class="ft-copy">© 2025</span>
-  <span class="ft-note" data-i18n="footer_note">London · Paris · São Paulo</span>
+  <span class="ft-note">London · Paris · São Paulo</span>
 </footer>
-
-
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // ── Active nav link on scroll ──
@@ -2135,445 +2033,6 @@ footer{
       document.querySelector('.nav-mobile-toggle').classList.remove('open');
     }
   });
-
-// ═══════════════════════════════════════════════════════════════
-// i18n TRANSLATIONS
-// ═══════════════════════════════════════════════════════════════
-const translations = {
-  en: {
-    nav_profile:'Profile', nav_career:'Career', nav_ma:'M&A', nav_ma_long:'M&A Projects',
-    nav_logo:'Joao Victor Creste',
-    hero_name:'Joao Victor<br><em>Creste</em>',
-    nav_research:'Equity Research', nav_research_long:'Equity Research Coverage',
-    nav_portfolio:'Portfolio Management', nav_portfolio_long:'Portfolio Management',
-    nav_focus:'Next Steps', nav_contact:'Contact',
-    hero_eyebrow:'Engineer · Financier · Energy',
-    hero_tagline:'From electrical engineering to renewable energy M&A, equity research, and portfolio management — built at the intersection of <strong>energy, finance, and technology</strong>.',
-    hero_cta_exp:'View Experience', hero_cta_contact:'Get in Touch',
-    stat_countries:'Countries · Studied & worked', stat_deals:'M&A deals closed',
-    stat_pipeline:'Pipeline evaluated', stat_aum:'AUM managed', stat_memos:'Investment memos',
-    about_title:'An unusual <em>intersection</em>',
-    about_p1:'I am an Italian-Brazilian engineer educated in France and Brazil, currently completing an MBA at ESCP Business School across Paris and London. Raised in a family of academics, I have always been drawn to first-principles thinking — the habit of understanding not just <strong>what</strong> is happening, but <strong>why</strong> and <strong>what it implies</strong>.',
-    about_p2:'My career has followed an unusual arc: from electrical engineering and applied research, to M&A and greenfield development in renewable energy, to equity research covering high-growth technology companies, to portfolio management at a multi-family office. Each chapter has been different in function, but unified by a consistent pull toward the same three domains — energy, finance, and the analytical tools that connect them.',
-    about_p3:'I am convinced that the <strong>energy transition is the defining challenge of our generation, and that it cannot be solved by engineers or financiers working in isolation.</strong> What it demands is people who understand both the technical complexity of energy systems and the financial logic that drives capital allocation — and who can harness data and AI to make better decisions under uncertainty. That convergence is where I want to operate.',
-    about_p4:'Outside of work, I compose music — eight years of conservatory-level piano studies. I also build tools: <em>Forager</em>, an interactive mapping platform for solar, wind, and infrastructure assets, started as a side project and has since become a useful real-world instrument.',
-    lang_pt:'Portuguese', lang_en:'English', lang_fr:'French', lang_it:'Italian', lang_es:'Spanish',
-    lang_bilingual:'Bilingual', lang_bilingual2:'Bilingual', lang_fluent:'Fluent', lang_fluent2:'Fluent', lang_intermediate:'Intermediate',
-    skill_data:'Data Analysis', skill_prog:'Programming', skill_finance:'Finance',
-    skill_ai_list:'Prompt Engineering, Agentic AI, Supervised Learning, Unsupervised Learning',
-    skill_domain:'Domain Expertise',
-    skill_domain_list:'Energy Transition, Green Hydrogen, Solar / Wind M&A, Infrastructure PE, Equity Research, Portfolio Management',
-    map_based:'Currently Based', map_lived:'Where I have lived', footer_note:'London · Paris · São Paulo',
-    edu_tag:'Academic Formation', edu_title:'Built on <em>rigour</em>',
-    edu1_deg:'MBA in International Management',
-    edu1_school:'Finance, Strategy & Organisation, Economics, Accounting, Leadership',
-    edu1_note:'Entrepreneurship track — developing frameworks for sustainable finance and energy-sector ventures.',
-    edu2_school:'Mathematics, Control Systems, Applied Physics',
-    edu2_note:'Thesis: Energy Monitoring Systems for Hybrid Solar Panels.',
-    edu3_deg:'BSc Electrical Engineering — <em style="font-style:italic;color:var(--muted)">Automation & Control</em>',
-    edu3_school:'Control Systems, Optimisation, Signal Processing',
-    edu3_note:'Thesis: Coordination of EV Charging using Reinforcement Learning.',
-    research_tag:'Research Work', research_title:'Academic <em>research</em>',
-    r1_tag:'Computer Vision · Robotics',
-    r1_title:'Indoor Environment Mapping Using RGB-D Cameras',
-    r1_body:'RGB-D cameras are systems capable of capturing RGB images along with distance measurements, pixel by pixel, and can be used to build dense 3D maps. The goal of the project was to study the use of these cameras in indoor environment mapping by robots, in order to develop a system that autonomously creates a detailed map of the studied area. Frame alignment algorithms for environment mapping were evaluated, with special attention to their accuracy and efficiency in predetermined scenarios.',
-    r2_tag:'Reinforcement Learning · Smart Grid',
-    r2_title:'Coordination of Electric Vehicle Charging through Multiagent Reinforcement Learning',
-    r2_body:'The increasing adoption of plug-in electric vehicles (PEVs) presents significant challenges to residential power distribution grids, including transformer overloads and undesirable demand peaks caused by uncoordinated home charging. This work proposed <strong>MASCO</strong> (MultiAgent Selfish-COllaborative architecture), a distributed multiagent reinforcement learning framework for coordinating PEV charging in residential neighborhoods. Each agent autonomously learns both a selfish policy — optimising its own objectives such as minimising electricity costs and maintaining battery charge — and collaborative policies that account for the goals of neighbouring agents. A cooperation criterion based on W-Learning dynamically arbitrates between selfish and collaborative behaviour at each decision step.',
-    exp_title:'Where I have <em>been</em>',
-    exp1_role:'MBA in International Management',
-    exp1_b1:'Full-time programme across Paris and London campuses covering Finance, Strategy, Economics, Accounting, and Leadership.',
-    exp1_b2:'Entrepreneurship track; developing frameworks for sustainable finance and energy-sector ventures.',
-    exp2_role:'Business Development Consultant', exp2_co:'Independent — British PE Fund mandate',
-    exp2_b1:'Led all business development initiatives in Brazil with a strategic focus on large-scale green hydrogen production.',
-    exp2_b2:"Developed a full due diligence framework that diverged materially from the remote team's initial perspective after engaging local legal counsel and environmental licensing specialists.",
-    exp3_role:'Portfolio Manager — Offshore Investments', exp3_co:'est GP — Multi Family Office (~$1B AUM)',
-    exp3_b1:'Led strategic asset allocation and tactical positioning for the offshore book, representing 30%+ of total AUM.',
-    exp3_b2:'Built an evaluation framework covering 2,000+ ETFs, mutual funds, and hedge funds using custom programming tools.',
-    exp3_b3:'Implemented strategic portfolios for <strong>70+ families</strong> and more than $300M in assets.',
-    exp4_role:'Equity Research Analyst — Global Equities',
-    exp4_b1:'Covered technology and high-growth companies for a long-biased portfolio of stocks, indices, and corporate bonds.',
-    exp4_b2:'Built and managed a long-only portfolio of 10 companies using a first-principles methodology: biographies, channel checks, customer calls, management meetings — then valuation.',
-    exp4_b3:"Site visit to Tesla's California Gigafactory; investor relations meetings with executive leadership.",
-    exp4_b4:'Led internal data research: ETF/index decomposition, bottom-up earnings reviews, country risk premium comparatives.',
-    exp5_role:'M&A and Business Development Manager',
-    exp5_b1:'Responsible for prospection, acquisition, and greenfield project development for a leading French independent power producer active in solar and wind.',
-    exp5_b2:'Created an internal project database covering 50+ GW of evaluated opportunities — first of its kind across all Total Eren country operations.',
-    exp5_b3:"Led the first two wind acquisitions with bilateral PPAs for Total Eren in Brazil, managing the full transaction lifecycle from NBO through shareholders' agreements.",
-    deals_title:'Deals, <em>end-to-end</em>',
-    deals_intro:'Through my buy-side M&A experience, I played a direct role in the origination, negotiation, and successful closing of three renewable energy projects in Brazil — two wind farms and one solar complex. These assets are now fully operational and account for roughly <strong>232 million USD</strong> in aggregate investment. Across these transactions, I led or supported key workstreams including financial modelling, negotiation of SPAs and offtake agreements, and end-to-end project coordination. I was also actively engaged with public-sector stakeholders at both the state and federal levels, contributing to the regulatory and institutional efforts required to bring the projects to life.',
-    deal_stat1:'Projects closed & operational', deal_stat2:'Combined installed capacity',
-    deal_stat3:'Combined total investment (USD)', deal_stat4:'PPA tenors across all assets',
-    badge_wind_acq:'Wind · Acquisition', badge_solar_dev:'Solar · Development',
-    deal_operational:'Operational',
-    narr_overview:'Transaction Overview', narr_role:'My Role',
-    dm_capacity:'Capacity', dm_offtaker:'Offtaker', dm_investment:'Total Investment',
-    dm_ownership:'Ownership', dm_commissioned:'Commissioned', dm_vendor:'Vendor',
-    dm_regulatory:'Regulatory', dm_offtake:'Offtake', dm_projfinance:'Project Finance', dm_debt:'Debt Investor',
-    d1_overview:"Terra Santa was Total Eren's first wind asset in Brazil, developed in partnership with Vila Energia Renovável. Structured with a bilateral 20-year private PPA with Cemig GT — a creditworthy state-owned offtaker — the project provided long-term revenue visibility for project finance. Construction began late 2019; commercial operation commenced February 2022, marking a pivotal diversification of Total Eren's Brazilian portfolio beyond solar.",
-    d1_r1:'Originated the opportunity within the 50+ GW pipeline database I built for Total Eren Brazil and recommended the acquisition to Paris.',
-    d1_r2:"Led bilateral PPA negotiation and all transaction documentation from NBO through binding MOU to shareholders' and shares purchase agreements.",
-    d1_r3:'Coordinated due diligence workstreams with legal, technical, and financial advisors across French and Brazilian teams.',
-    d1_r4:'Led financial modelling and debt financing negotiations with private and public lenders.',
-    d1_r5:'Represented Total Eren in partner negotiations with Vila Energia to establish the 90/10 joint ownership structure, including negotiation of shareholders agreement.',
-    d2_overview:"The Maral acquisition involved the purchase of two wind project SPEs from the Brazilian unit of Voltalia SA, a publicly listed French renewable energy developer. At the time of acquisition both projects had yet to break ground — a pre-construction buy-side deal requiring robust technical and regulatory diligence. Cleared without restrictions by CADE. Both phases entered operation in 2021 under a 20-year private PPA with Cemig GT, Total Eren holding 100% ownership.",
-    d2_r1:'Identified Maral within the proprietary pipeline database and recommended it to Paris as a strategic pre-construction entry into wind.',
-    d2_r2:'Led buy-side negotiation with Voltalia Brazil from initial NBO through final shares purchase agreement.',
-    d2_r3:'Structured the 100% ownership approach, assessing and rejecting partnership options to maintain full control for Total Eren.',
-    d3_overview:"Dracena is a 90 MW solar photovoltaic complex comprising three 30 MW units in São Paulo State — one of Total Eren's foundational Brazilian assets and the platform from which wind expansion was pursued. The project secured a 20-year PPA through Brazil's federal reserve energy auction (ANEEL, 2014). Project finance achieved via BRL 280M in long-term infrastructure debentures subscribed in full by Kinea Investimentos, with BNP and XP Investimentos as financial advisors.",
-    d3_r1:'Supported business development and project delivery during construction and ramp-up, working directly under the Managing Director of Total Eren Brazil.',
-    d3_r2:'Contributed to the internal project database that benchmarked Dracena against the broader solar pipeline, informing capital allocation decisions.',
-    d3_r3:'Coordinated with local teams, contractors, and regulators during the transition to commercial operation, tracking KPIs and reporting to Paris headquarters.',
-    deal_fn:'* BRL 829M covers Terra Santa and Maral combined, per Total Eren public announcement (Feb 2022).',
-    cov_title:'Companies I <em>studied</em>',
-    cov_intro:'As an equity analyst, I covered the <strong>US technology sector with a focus on high-growth, disruptive businesses</strong>. My <strong>research methodology went beyond standard DCF modelling</strong> — I read founder biographies, ran channel checks with customers, engaged directly with management teams, and built thesis-driven memos from first principles. The portfolio I managed held 10 positions drawn from this 30+ company universe.<br>A few examples of complete investment opportunities include:',
-    cov_saas:'Enterprise SaaS', cov_saas_desc:'CRM · HR · Procurement · Comms · eSign · Support · Automation',
-    cov_cloud:'Cloud & Data Infrastructure', cov_cloud_desc:'Data warehousing · Observability · DevOps · Databases',
-    cov_fintech:'Fintech & Crypto', cov_fintech_desc:'Consumer finance · Digital assets · Tax & accounting',
-    cov_cyber:'Cybersecurity', cov_cyber_desc:'Endpoint protection · AI-driven threat intelligence',
-    cov_commerce:'Commerce & Marketplace', cov_commerce_desc:'E-commerce infrastructure · Proptech platforms',
-    cov_emerging:'Emerging & Thematic', cov_emerging_desc:'EV · AI platforms · AgTech · Healthtech · IoT · Gaming · EDA',
-    pm_title:'Capital at <em>work</em>',
-    pm_intro:'As portfolio manager of a MFO, I was responsible for the offshore investment book — designing and managing portfolios for 70+ families across global equities, fixed income, and alternative assets in the US and Europe.',
-    pm_aum_label:'Capital Under Management', pm_aum_sub:'Offshore AUM · Directly Managed',
-
-    pm_aum_families:'Across 70+ families and wealth structures',
-    pm_s1_title:'Built the analytical framework from scratch',
-    pm_s1_body:'The offshore book had no systematic evaluation infrastructure when I joined. I designed and coded a proprietary screening tool covering 2,000+ ETFs, mutual funds, and hedge funds — combining quantitative scoring (risk-adjusted returns, drawdown, factor exposures) with qualitative diligence. What had been a manual, judgment-driven process became a <strong>data-driven framework that could be consistently applied across the entire book</strong>.',
-    pm_s2_title:'Deployed strategic portfolios at scale',
-    pm_s2_body:'Using the framework, I implemented tailored strategic portfolios for each family — calibrated to their risk profile, liquidity needs, currency exposure, and time horizon. Beyond strategic allocation, I managed tactical positioning in response to market conditions, adjusting weights across equities, fixed income, and alternatives across <strong>$300M+ in offshore capital serving 70+ families</strong>.',
-    pm_framework_tag:'A new way to approach wealth management',
-    pm_stage1_title:'Opportunity<br>Identification', pm_stage2_title:'Investment<br>Analysis', pm_stage3_title:'Portfolio<br>Construction',
-    pm_before:'Before', pm_before_text:'Manual, judgment-driven process. No evaluation infrastructure. Decisions made case-by-case with no repeatable framework across the offshore book.',
-    pm_after:'After', pm_after_text:'Proprietary data-driven framework — coded from scratch — consistently applied across all portfolios. Analytical rigour previously reserved for institutional desks, brought to a family office.',
-    pm_stat1:'Funds in screening universe', pm_stat2:'Offshore AUM managed', pm_stat3:'Families served',
-    pm_tools_label:'Back-office infrastructure levers',
-    pm_s1_i1:'Systematic screening of 2,000+ funds', pm_s1_i2:'Custom Python & R scoring models',
-    pm_s1_i3:'ETFs, mutual funds & hedge funds', pm_s1_i4:'Risk-adjusted return ranking', pm_s1_i5:'Factor exposure mapping',
-    pm_s2_i1:'Quantitative + qualitative diligence', pm_s2_i2:'Drawdown & volatility analytics',
-    pm_s2_i3:'Manager track record review', pm_s2_i4:'Liquidity & structure analysis', pm_s2_i5:'Benchmark comparison tools',
-    pm_s3_i1:'Risk-return optimisation per family', pm_s3_i2:'Dynamic tactical positioning',
-    pm_s3_i3:'Currency exposure calibration', pm_s3_i4:'Liquidity-horizon matching', pm_s3_i5:'Continuous rebalancing logic',
-    focus_tag:'What I care about', focus_title:'Three domains, <em>one thesis</em>',
-    focus1_ttl:'Energy Transition',
-    focus1_desc:'The energy transition is the defining infrastructure challenge of our generation — a full rewiring of how the world produces and consumes energy. I have worked across its value chain: closing renewable energy M&A in Brazil, assessing green hydrogen feasibility, and studying the capital structures that make large-scale clean energy projects bankable.',
-    focus2_ttl:'Technology & AI',
-    focus2_desc:'I covered 30+ high-growth technology companies as an equity analyst, and I have built data tools — from GIS mapping platforms to automated fund screening systems — that convert raw information into decisions. AI will not replace decision-makers, but the decision-makers of tomorrow will be the ones who know how to work with it.',
-    focus3_ttl:'Finance & Capital Allocation',
-    focus3_desc:'Capital determines which technologies get built and which transitions happen. I have been on both sides — allocating capital across global markets as a portfolio manager, and deploying it into real assets as an M&A practitioner. Finance is not a support function for the energy transition; it is a core driver of it.',
-    focus_closing:'To tackle the energy transition in a world shaped by AI, <strong>we must bring together technical and financial knowledge to make the right decisions. Will the decision-makers be AIs? No — but the people behind them will be the ones who understand both the complexity of energy systems and the logic of capital.</strong> That is the convergence I am building toward.',
-    proj_tag:'Ventures & Side Projects', proj_title:'Things I <em>built</em>',
-    proj1_kicker:'Community · Co-founded in Paris',
-    proj1_desc:'BRASA — the Brazilian Student Association — is a network connecting Brazilian students and young professionals across top universities and cities worldwide. I co-founded the European chapter in Paris, building a community from scratch for Brazilians studying and working across Europe. The network spans multiple cities and serves as a platform for professional exchange, mentorship, and cross-border connection.',
-    proj1_tags:'Co-founder, Paris, Community Building, Brazilian Diaspora',
-    proj2_kicker:'Infrastructure Intelligence Tool',
-    proj2_desc:'An interactive mapping platform for solar, wind, and infrastructure assets. Born from a data-science approach I pioneered at Total Eren — where mapping 50+ GW of renewable opportunities in Brazil transformed M&A pipeline quality — Forager generalises that methodology into a usable product. Still live; added material value in subsequent roles.',
-    proj2_link:'↗ View Forager',
-    proj3_kicker:'Music · Personal Practice', proj3_name:'A Lot of Music',
-    proj3_desc:'I have studied piano for eight years at conservatory level — an education in precision, patience, and the discipline of building something complex over a long period of time. I still play regularly and compose my own pieces. Music is not a side interest; it is the counterweight to everything analytical in my life, and the place where I think most freely.',
-    proj3_tags:'Piano, Composition, Conservatory, 8 Years',
-    contact_title:"Let's start a <em>conversation</em>",
-    contact_sub:'Open to conversations about infrastructure, energy transition, equity research, and entrepreneurial ventures at the intersection of energy and technology. Based between London and Paris, operating internationally.',
-    contact_email:'✉ Email me',
-  },
-
-  fr: {
-    nav_profile:'Profil', nav_career:'Carrière', nav_ma:'M&A', nav_ma_long:'Projets M&A',
-    nav_logo:'Joao Victor CRESTE',
-    hero_name:'Joao Victor<br><em>CRESTE</em>',
-    nav_research:'Recherche Actions', nav_research_long:'Couverture Recherche Actions',
-    nav_portfolio:'Gestion de Portefeuille', nav_portfolio_long:'Gestion de Portefeuille',
-    nav_focus:'Prochaines Étapes', nav_contact:'Contact',
-    hero_eyebrow:'Ingénieur · Financier · Énergie',
-    hero_tagline:"De l'ingénierie électrique au M&A en énergies renouvelables, à la recherche actions et à la gestion de portefeuille — construit à l'intersection de l'<strong>énergie, de la finance et de la technologie</strong>.",
-    hero_cta_exp:'Voir Expérience', hero_cta_contact:'Me Contacter',
-    stat_countries:'Pays · Étudié & travaillé', stat_deals:'Transactions M&A clôturées',
-    stat_pipeline:'Pipeline évalué', stat_aum:'AUM géré', stat_memos:"Mémos d'investissement",
-    about_title:'Une <em>intersection</em> atypique',
-    about_p1:"Je suis un ingénieur italo-brésilien formé en France et au Brésil, actuellement en cours de MBA à l'ESCP Business School entre Paris et Londres. Élevé dans une famille d'universitaires, j'ai toujours été attiré par le raisonnement de premiers principes — l'habitude de comprendre non seulement <strong>ce qui</strong> se passe, mais <strong>pourquoi</strong> et <strong>ce que cela implique</strong>.",
-    about_p2:"Mon parcours a suivi une trajectoire atypique : de l'ingénierie électrique et de la recherche appliquée, aux fusions-acquisitions et au développement greenfield dans les énergies renouvelables, à la recherche actions sur des entreprises technologiques à forte croissance, jusqu'à la gestion de portefeuille dans un multi-family office. Chaque chapitre a été différent dans sa fonction, mais unifié par une attraction constante vers les mêmes trois domaines — énergie, finance et les outils analytiques qui les connectent.",
-    about_p3:"Je suis convaincu que la <strong>transition énergétique est le défi définissant notre génération, et qu'elle ne peut pas être résolue par des ingénieurs ou des financiers travaillant isolément.</strong> Ce qu'elle exige, ce sont des personnes qui comprennent à la fois la complexité technique des systèmes énergétiques et la logique financière qui guide l'allocation du capital — et qui peuvent exploiter les données et l'IA pour prendre de meilleures décisions dans l'incertitude. C'est cette convergence dans laquelle je veux opérer.",
-    about_p4:"En dehors du travail, je compose de la musique — huit ans d'études de piano au conservatoire. Je développe également des outils : <em>Forager</em>, une plateforme de cartographie interactive pour les actifs solaires, éoliens et d'infrastructure, né comme projet personnel et devenu un instrument utile dans mes rôles professionnels.",
-    lang_pt:'Portugais', lang_en:'Anglais', lang_fr:'Français', lang_it:'Italien', lang_es:'Espagnol',
-    lang_bilingual:'Bilingue', lang_bilingual2:'Bilingue', lang_fluent:'Courant', lang_fluent2:'Courant', lang_intermediate:'Intermédiaire',
-    skill_data:'Analyse de Données', skill_prog:'Programmation', skill_finance:'Finance',
-    skill_ai_list:"Prompt Engineering, IA Agentique, Apprentissage Supervisé, Apprentissage Non Supervisé",
-    skill_domain:"Domaines d'Expertise",
-    skill_domain_list:"Transition Énergétique, Hydrogène Vert, M&A Solaire/Éolien, Infrastructure PE, Recherche Actions, Gestion de Portefeuille",
-    map_based:'Basé actuellement', map_lived:"Où j'ai vécu", footer_note:'Londres · Paris · São Paulo',
-    edu_tag:'Formation Académique', edu_title:'Fondé sur la <em>rigueur</em>',
-    edu1_deg:'MBA en Management International',
-    edu1_school:'Finance, Stratégie & Organisation, Économie, Comptabilité, Leadership',
-    edu1_note:"Parcours entrepreneuriat — développement de cadres pour la finance durable et les ventures dans le secteur de l'énergie.",
-    edu2_school:'Mathématiques, Systèmes de Contrôle, Physique Appliquée',
-    edu2_note:'Thèse : Systèmes de Monitoring Énergétique pour Panneaux Solaires Hybrides.',
-    edu3_deg:'Licence Génie Électrique — <em style="font-style:italic;color:var(--muted)">Automatique & Contrôle</em>',
-    edu3_school:'Systèmes de Contrôle, Optimisation, Traitement du Signal',
-    edu3_note:"Thèse : Coordination de la Recharge de VE par Apprentissage par Renforcement Multiagent.",
-    research_tag:'Travaux de Recherche', research_title:'Recherche <em>académique</em>',
-    r1_tag:'Vision par Ordinateur · Robotique',
-    r1_title:"Cartographie d'Environnements Intérieurs par Caméras RGB-D",
-    r1_body:"Les caméras RGB-D capturent simultanément des images RGB et des mesures de profondeur, pixel par pixel, permettant de construire des cartes 3D denses. L'objectif du projet était d'étudier l'utilisation de ces caméras pour la cartographie d'environnements intérieurs par des robots, afin de développer un système créant automatiquement une carte détaillée de la zone étudiée.",
-    r2_tag:'Apprentissage par Renforcement · Réseau Intelligent',
-    r2_title:"Coordination de la Recharge de Véhicules Électriques par Apprentissage par Renforcement Multiagent",
-    r2_body:"L'adoption croissante de véhicules électriques présente des défis significatifs pour les réseaux de distribution résidentiels. Ce travail propose <strong>MASCO</strong> (architecture MultiAgent Selfish-COllaborative), un cadre d'apprentissage par renforcement multiagent distribué pour coordonner la recharge dans des quartiers résidentiels. Un critère de coopération basé sur le W-Learning arbitre dynamiquement entre comportements égoïstes et collaboratifs.",
-    exp_title:"Où j'ai <em>été</em>",
-    exp1_role:'MBA en Management International',
-    exp1_b1:'Programme plein temps sur les campus de Paris et Londres couvrant Finance, Stratégie, Économie, Comptabilité et Leadership.',
-    exp1_b2:"Parcours entrepreneuriat ; développement de cadres pour la finance durable et les ventures dans l'énergie.",
-    exp2_role:'Consultant en Développement Commercial', exp2_co:'Indépendant — Mandat fonds PE britannique',
-    exp2_b1:"Piloté toutes les initiatives de développement commercial au Brésil avec un focus stratégique sur la production d'hydrogène vert à grande échelle.",
-    exp2_b2:"Développé un cadre de due diligence complet qui divergeait matériellement de la perspective initiale de l'équipe distante après engagement de conseillers juridiques locaux.",
-    exp3_role:'Gérant de Portefeuille — Investissements Offshore', exp3_co:'est GP — Multi Family Office (~1 Md$ AUM)',
-    exp3_b1:"Piloté l'allocation stratégique d'actifs et le positionnement tactique pour le portefeuille offshore, représentant plus de 30% de l'AUM total.",
-    exp3_b2:"Construit un cadre d'évaluation couvrant plus de 2 000 ETFs, fonds communs et hedge funds à l'aide d'outils de programmation sur mesure.",
-    exp3_b3:'Mis en œuvre des portefeuilles stratégiques pour <strong>plus de 70 familles</strong> et plus de 300 M$ d\'actifs.',
-    exp4_role:'Analyste Recherche Actions — Actions Mondiales',
-    exp4_b1:'Couverture de sociétés technologiques et à forte croissance pour un portefeuille long-biaisé d\'actions, indices et obligations.',
-    exp4_b2:'Construit et géré un portefeuille long-only de 10 sociétés en utilisant une méthodologie fondamentale : biographies, channel checks, appels clients, réunions management — puis valorisation.',
-    exp4_b3:"Visite du Gigafactory Tesla en Californie ; réunions relations investisseurs avec la direction exécutive.",
-    exp4_b4:"Mené la recherche interne sur les données : décomposition ETF/indices, revues de résultats bottom-up, comparatifs de primes de risque pays.",
-    exp5_role:'Responsable M&A et Développement Commercial',
-    exp5_b1:"Responsable de la prospection, acquisition et développement de projets greenfield pour un producteur d'énergie indépendant français actif dans le solaire et l'éolien.",
-    exp5_b2:"Créé une base de données interne de projets couvrant plus de 50 GW d'opportunités évaluées — première du genre dans toutes les opérations pays de Total Eren.",
-    exp5_b3:"Piloté les deux premières acquisitions éoliennes avec PPA bilatéraux pour Total Eren au Brésil, gérant l'intégralité du cycle transactionnel du NBO aux accords d'actionnaires.",
-    deals_title:'Transactions, <em>de A à Z</em>',
-    deals_intro:"Grâce à mon expérience M&A côté acheteur, j'ai joué un rôle direct dans l'origination, la négociation et la clôture réussie de trois projets d'énergies renouvelables au Brésil — deux parcs éoliens et un complexe solaire. Ces actifs sont désormais pleinement opérationnels et représentent environ <strong>232 millions USD</strong> d'investissement agrégé. Dans ces transactions, j'ai dirigé ou soutenu des workstreams clés incluant la modélisation financière, la négociation de SPA et de contrats d'offtake, et la coordination de bout en bout.",
-    deal_stat1:'Projets clôturés & opérationnels', deal_stat2:'Capacité installée combinée',
-    deal_stat3:'Investissement total combiné (USD)', deal_stat4:'Durées PPA sur tous les actifs',
-    badge_wind_acq:'Éolien · Acquisition', badge_solar_dev:'Solaire · Développement',
-    deal_operational:'Opérationnel',
-    narr_overview:"Vue d'ensemble", narr_role:'Mon Rôle',
-    dm_capacity:'Capacité', dm_offtaker:'Acheteur', dm_investment:'Investissement Total',
-    dm_ownership:'Détention', dm_commissioned:'Mise en service', dm_vendor:'Vendeur',
-    dm_regulatory:'Réglementaire', dm_offtake:"Contrat d'offtake", dm_projfinance:'Financement de Projet', dm_debt:'Investisseur Dette',
-    d1_overview:"Terra Santa fut le premier actif éolien de Total Eren au Brésil, développé en partenariat avec Vila Energia Renovável. Structuré avec un PPA privé bilatéral de 20 ans avec Cemig GT — un offtaker public solvable — le projet offrait une visibilité long terme sur les revenus. La construction a débuté fin 2019 ; la mise en service commerciale est intervenue en février 2022.",
-    d1_r1:"Originé l'opportunité dans la base de données pipeline 50+ GW construite pour Total Eren Brésil et recommandé l'acquisition à Paris.",
-    d1_r2:"Piloté la négociation du PPA bilatéral et toute la documentation transactionnelle du NBO à la MOU contraignante jusqu'aux accords d'actionnaires.",
-    d1_r3:"Coordonné les workstreams de due diligence avec conseillers juridiques, techniques et financiers des équipes françaises et brésiliennes.",
-    d1_r4:"Piloté la modélisation financière et les négociations de financement par dette avec prêteurs privés et publics.",
-    d1_r5:"Représenté Total Eren dans les négociations avec Vila Energia pour établir la structure de détention 90/10.",
-    d2_overview:"L'acquisition Maral portait sur l'achat de deux SPE de projets éoliens auprès de l'unité brésilienne de Voltalia SA. Au moment de l'acquisition, les deux projets n'avaient pas encore démarré la construction. Autorisé sans restrictions par le CADE. Les deux phases sont entrées en exploitation en 2021 sous un PPA privé de 20 ans avec Cemig GT.",
-    d2_r1:"Identifié Maral dans la base de données pipeline propriétaire et recommandé à Paris comme entrée stratégique pré-construction dans l'éolien.",
-    d2_r2:"Piloté la négociation buy-side avec Voltalia Brésil du NBO initial jusqu'à l'accord de cession de parts final.",
-    d2_r3:"Structuré l'approche de détention à 100%, évaluant et rejetant les options de partenariat pour maintenir le contrôle total de Total Eren.",
-    d3_overview:"Dracena est un complexe photovoltaïque de 90 MW composé de trois unités de 30 MW dans l'État de São Paulo. Le projet a obtenu un PPA de 20 ans via l'enchère fédérale d'énergie de réserve (ANEEL, 2014). Financement via 280 M BRL en débentures d'infrastructure long terme souscrites intégralement par Kinea Investimentos.",
-    d3_r1:"Soutenu le développement commercial et la livraison du projet pendant la construction, travaillant directement sous la direction du Directeur Général de Total Eren Brésil.",
-    d3_r2:"Contribué à la base de données interne de projets qui a évalué Dracena par rapport au pipeline solaire plus large.",
-    d3_r3:"Coordonné avec les équipes locales, les entrepreneurs et les régulateurs lors de la transition vers l'exploitation commerciale.",
-    deal_fn:'* BRL 829M couvre Terra Santa et Maral combinés, selon l\'annonce publique de Total Eren (Fév 2022).',
-    cov_title:'Entreprises que j\'ai <em>analysées</em>',
-    cov_intro:"En tant qu'analyste actions, j'ai couvert le <strong>secteur technologique américain avec un focus sur les entreprises à forte croissance et disruptives</strong>. Ma <strong>méthodologie de recherche allait au-delà de la modélisation DCF standard</strong> — je lisais des biographies de fondateurs, effectuais des channel checks avec les clients, rencontrais les équipes de direction et construisais des mémos thématiques à partir des fondamentaux.",
-    cov_saas:'SaaS Entreprise', cov_saas_desc:'CRM · RH · Achats · Comms · eSign · Support · Automatisation',
-    cov_cloud:'Infrastructure Cloud & Données', cov_cloud_desc:'Entrepôts de données · Observabilité · DevOps · Bases de données',
-    cov_fintech:'Fintech & Crypto', cov_fintech_desc:'Finance grand public · Actifs numériques · Fiscalité & comptabilité',
-    cov_cyber:'Cybersécurité', cov_cyber_desc:'Protection endpoint · Threat intelligence par IA',
-    cov_commerce:'Commerce & Marketplace', cov_commerce_desc:'Infrastructure e-commerce · Plateformes proptech',
-    cov_emerging:'Émergent & Thématique', cov_emerging_desc:'VE · Plateformes IA · AgTech · Healthtech · IoT · Gaming · EDA',
-    pm_title:'Capital en <em>action</em>',
-    pm_intro:"En tant que gérant de portefeuille d'un MFO, j'étais responsable du portefeuille d'investissements offshore — concevant et gérant des portefeuilles pour 70+ familles en actions mondiales, obligations et actifs alternatifs.",
-    pm_aum_label:'Capital Sous Gestion', pm_aum_sub:'AUM Offshore · Géré directement',
-
-    pm_aum_families:'Pour 70+ familles et structures patrimoniales',
-    pm_s1_title:'Cadre analytique construit de zéro',
-    pm_s1_body:"Le portefeuille offshore ne disposait d'aucune infrastructure d'évaluation systématique à mon arrivée. J'ai conçu et codé un outil de screening propriétaire couvrant 2 000+ ETFs, fonds communs et hedge funds — combinant scoring quantitatif avec une due diligence qualitative. Ce qui était un processus manuel est devenu un <strong>cadre data-driven appliqué systématiquement à l'ensemble du portefeuille</strong>.",
-    pm_s2_title:"Portefeuilles stratégiques déployés à l'échelle",
-    pm_s2_body:"Grâce au cadre, j'ai mis en œuvre des portefeuilles stratégiques sur mesure pour chaque famille — calibrés selon leur profil de risque, besoins de liquidité et horizon temporel. Au-delà de l'allocation stratégique, j'ai géré le positionnement tactique sur <strong>300 M$+ de capital offshore pour 70+ familles</strong>.",
-    pm_framework_tag:'Une nouvelle approche de la gestion de patrimoine',
-    pm_stage1_title:"Identification<br>d'Opportunités", pm_stage2_title:"Analyse<br>d'Investissement", pm_stage3_title:'Construction<br>de Portefeuille',
-    pm_before:'Avant', pm_before_text:"Processus manuel fondé sur le jugement. Aucune infrastructure d'évaluation. Décisions prises au cas par cas sans cadre reproductible.",
-    pm_after:'Après', pm_after_text:"Cadre data-driven propriétaire — codé de zéro — appliqué de manière cohérente à tous les portefeuilles. Rigueur analytique précédemment réservée aux desks institutionnels, apportée à un family office.",
-    pm_stat1:"Fonds dans l'univers de screening", pm_stat2:'AUM offshore gérés', pm_stat3:'Familles accompagnées',
-    pm_tools_label:"Leviers d'infrastructure back-office",
-    pm_s1_i1:'Screening systématique de 2 000+ fonds', pm_s1_i2:'Modèles de scoring Python & R sur mesure',
-    pm_s1_i3:'ETFs, fonds communs & hedge funds', pm_s1_i4:'Classement par rendement ajusté au risque', pm_s1_i5:"Cartographie des expositions factorielles",
-    pm_s2_i1:'Due diligence quantitative + qualitative', pm_s2_i2:'Analytique drawdown & volatilité',
-    pm_s2_i3:"Revue du track record des gérants", pm_s2_i4:'Analyse liquidité & structure', pm_s2_i5:'Outils de comparaison aux benchmarks',
-    pm_s3_i1:'Optimisation risque-rendement par famille', pm_s3_i2:'Positionnement tactique dynamique',
-    pm_s3_i3:"Calibrage de l'exposition aux devises", pm_s3_i4:'Adéquation liquidité-horizon', pm_s3_i5:'Logique de rééquilibrage continu',
-    focus_tag:"Ce qui m'anime", focus_title:'Trois domaines, <em>une thèse</em>',
-    focus1_ttl:'Transition Énergétique',
-    focus1_desc:"La transition énergétique est le défi d'infrastructure définissant notre génération — un recâblage complet de la façon dont le monde produit et consomme de l'énergie. J'ai travaillé tout au long de sa chaîne de valeur : clôture de M&A dans les énergies renouvelables au Brésil, évaluation de la faisabilité de l'hydrogène vert, et étude des structures de capital qui rendent les projets d'énergie propre bankables.",
-    focus2_ttl:'Technologie & IA',
-    focus2_desc:"J'ai couvert plus de 30 entreprises technologiques à forte croissance en tant qu'analyste actions, et j'ai construit des outils de données — des plateformes de cartographie GIS aux systèmes automatisés de screening de fonds — qui convertissent l'information brute en décisions. L'IA ne remplacera pas les décideurs, mais les décideurs de demain seront ceux qui savent travailler avec elle.",
-    focus3_ttl:'Finance & Allocation du Capital',
-    focus3_desc:"Le capital détermine quelles technologies sont construites et quelles transitions se produisent. J'ai été des deux côtés — allouant du capital sur les marchés mondiaux en tant que gérant de portefeuille, et le déployant dans des actifs réels en tant que praticien M&A. La finance n'est pas une fonction support pour la transition énergétique ; elle en est un moteur central.",
-    focus_closing:"Pour aborder la transition énergétique dans un monde façonné par l'IA, <strong>nous devons rassembler les connaissances techniques et financières pour prendre les bonnes décisions. Les décideurs seront-ils des IA ? Non — mais les personnes derrière elles seront celles qui comprennent à la fois la complexité des systèmes énergétiques et la logique du capital.</strong> C'est cette convergence que je construis.",
-    proj_tag:'Projets & Initiatives', proj_title:"Ce que j'ai <em>construit</em>",
-    proj1_kicker:'Communauté · Co-fondé à Paris',
-    proj1_desc:"BRASA — la Brazilian Student Association — est un réseau connectant étudiants et jeunes professionnels brésiliens dans les meilleures universités et villes du monde. J'ai co-fondé le chapitre européen à Paris, construisant une communauté de zéro pour les Brésiliens étudiant et travaillant en Europe.",
-    proj1_tags:'Co-fondateur, Paris, Création de Communauté, Diaspora Brésilienne',
-    proj2_kicker:"Outil d'Intelligence Infrastructurelle",
-    proj2_desc:"Une plateforme de cartographie interactive pour les actifs solaires, éoliens et d'infrastructure. Née d'une approche data science que j'ai initiée chez Total Eren — où la cartographie de 50+ GW d'opportunités au Brésil a transformé la qualité du pipeline M&A — Forager généralise cette méthodologie en un produit utilisable.",
-    proj2_link:'↗ Voir Forager',
-    proj3_kicker:'Musique · Pratique Personnelle', proj3_name:'Beaucoup de Musique',
-    proj3_desc:"J'ai étudié le piano pendant huit ans au niveau conservatoire — une éducation en précision, patience et discipline. Je joue encore régulièrement et compose mes propres pièces. La musique n'est pas un intérêt secondaire ; c'est le contrepoids à tout ce qui est analytique dans ma vie.",
-    proj3_tags:'Piano, Composition, Conservatoire, 8 Ans',
-    contact_title:'Commençons une <em>conversation</em>',
-    contact_sub:"Ouvert aux conversations sur les infrastructures, la transition énergétique, la recherche actions et les ventures entrepreneuriaux à l'intersection de l'énergie et de la technologie. Basé entre Londres et Paris, opérant à l'international.",
-    contact_email:"✉ M'écrire",
-  },
-
-  pt: {
-    nav_profile:'Perfil', nav_career:'Carreira', nav_ma:'M&A', nav_ma_long:'Projetos de M&A',
-    nav_logo:'Joao Victor Creste',
-    hero_name:'Joao Victor<br><em>Creste</em>',
-    nav_research:'Equity Research', nav_research_long:'Cobertura de Equity Research',
-    nav_portfolio:'Gestão de Portfólio', nav_portfolio_long:'Gestão de Portfólio',
-    nav_focus:'Próximos Passos', nav_contact:'Contato',
-    hero_eyebrow:'Engenheiro · Financista · Energia',
-    hero_tagline:'Da engenharia elétrica ao M&A em energias renováveis, equity research e gestão de portfólio — construído na interseção de <strong>energia, finanças e tecnologia</strong>.',
-    hero_cta_exp:'Ver Experiência', hero_cta_contact:'Entre em Contato',
-    stat_countries:'Países · Estudou & trabalhou', stat_deals:'Transações M&A fechadas',
-    stat_pipeline:'Pipeline avaliado', stat_aum:'AUM gerenciado', stat_memos:'Memorandos de investimento',
-    about_title:'Uma <em>interseção</em> incomum',
-    about_p1:'Sou um engenheiro ítalo-brasileiro formado na França e no Brasil, atualmente concluindo um MBA na ESCP Business School entre Paris e Londres. Criado em uma família de acadêmicos, sempre fui atraído pelo raciocínio de primeiros princípios — o hábito de entender não apenas <strong>o que</strong> está acontecendo, mas <strong>por que</strong> e <strong>o que isso implica</strong>.',
-    about_p2:'Minha carreira seguiu um arco incomum: da engenharia elétrica e pesquisa aplicada, ao M&A e desenvolvimento greenfield em energia renovável, à equity research cobrindo empresas de tecnologia de alto crescimento, até a gestão de portfólio em um multi-family office. Cada capítulo foi diferente em função, mas unificado por uma atração constante pelos mesmos três domínios — energia, finanças e as ferramentas analíticas que os conectam.',
-    about_p3:'Estou convicto de que a <strong>transição energética é o desafio definidor de nossa geração, e que não pode ser resolvido por engenheiros ou financistas trabalhando isoladamente.</strong> O que exige são pessoas que entendam tanto a complexidade técnica dos sistemas de energia quanto a lógica financeira que impulsiona a alocação de capital — e que possam usar dados e IA para tomar melhores decisões sob incerteza.',
-    about_p4:'Fora do trabalho, componho música — oito anos de estudos de piano em nível conservatório. Também desenvolvo ferramentas: <em>Forager</em>, uma plataforma de mapeamento interativo para ativos solares, eólicos e de infraestrutura, nasceu como projeto pessoal e se tornou um instrumento útil em papéis profissionais subsequentes.',
-    lang_pt:'Português', lang_en:'Inglês', lang_fr:'Francês', lang_it:'Italiano', lang_es:'Espanhol',
-    lang_bilingual:'Bilíngue', lang_bilingual2:'Bilíngue', lang_fluent:'Fluente', lang_fluent2:'Fluente', lang_intermediate:'Intermediário',
-    skill_data:'Análise de Dados', skill_prog:'Programação', skill_finance:'Finanças',
-    skill_ai_list:'Engenharia de Prompts, IA Agêntica, Aprendizado Supervisionado, Aprendizado Não Supervisionado',
-    skill_domain:'Expertise por Domínio',
-    skill_domain_list:'Transição Energética, Hidrogênio Verde, M&A Solar/Eólico, Infrastructure PE, Equity Research, Gestão de Portfólio',
-    map_based:'Baseado atualmente', map_lived:'Onde já morei', footer_note:'Londres · Paris · São Paulo',
-    edu_tag:'Formação Acadêmica', edu_title:'Construído sobre <em>rigor</em>',
-    edu1_deg:'MBA em Gestão Internacional',
-    edu1_school:'Finanças, Estratégia & Organização, Economia, Contabilidade, Liderança',
-    edu1_note:'Trilha de empreendedorismo — desenvolvendo frameworks para finanças sustentáveis e ventures no setor de energia.',
-    edu2_school:'Matemática, Sistemas de Controle, Física Aplicada',
-    edu2_note:'TCC: Sistemas de Monitoramento Energético para Painéis Solares Híbridos.',
-    edu3_deg:'Bacharel em Engenharia Elétrica — <em style="font-style:italic;color:var(--muted)">Automação & Controle</em>',
-    edu3_school:'Sistemas de Controle, Otimização, Processamento de Sinais',
-    edu3_note:'TCC: Coordenação do Carregamento de Veículos Elétricos via Aprendizado por Reforço Multiagente.',
-    research_tag:'Pesquisa Científica', research_title:'Pesquisa <em>acadêmica</em>',
-    r1_tag:'Visão Computacional · Robótica',
-    r1_title:'Mapeamento de Ambientes Internos com Câmeras RGB-D',
-    r1_body:'Câmeras RGB-D são sistemas capazes de capturar imagens RGB juntamente com medições de distância, pixel por pixel, podendo ser usadas para construir mapas 3D densos. O objetivo do projeto foi estudar o uso dessas câmeras no mapeamento de ambientes internos por robôs, desenvolvendo um sistema que cria autonomamente um mapa detalhado da área estudada.',
-    r2_tag:'Aprendizado por Reforço · Rede Inteligente',
-    r2_title:'Coordenação do Carregamento de Veículos Elétricos por Aprendizado por Reforço Multiagente',
-    r2_body:'A crescente adoção de veículos elétricos recarregáveis apresenta desafios significativos para as redes de distribuição residenciais. Este trabalho propôs o <strong>MASCO</strong> (arquitetura MultiAgent Selfish-COllaborative), um framework de aprendizado por reforço multiagente distribuído para coordenar o carregamento em bairros residenciais. Experimentos simulando um bairro de 15 casas demonstraram que o MASCO reduziu significativamente as sobrecargas diárias dos transformadores.',
-    exp_title:'Onde já <em>estive</em>',
-    exp1_role:'MBA em Gestão Internacional',
-    exp1_b1:'Programa em tempo integral nos campi de Paris e Londres cobrindo Finanças, Estratégia, Economia, Contabilidade e Liderança.',
-    exp1_b2:'Trilha de empreendedorismo; desenvolvendo frameworks para finanças sustentáveis e ventures no setor de energia.',
-    exp2_role:'Consultor de Desenvolvimento de Negócios', exp2_co:'Independente — Mandato de fundo PE britânico',
-    exp2_b1:'Liderou todas as iniciativas de desenvolvimento de negócios no Brasil com foco estratégico na produção de hidrogênio verde em larga escala.',
-    exp2_b2:'Desenvolveu um framework completo de due diligence que divergiu materialmente da perspectiva inicial da equipe remota após engajar assessores jurídicos locais e especialistas em licenciamento ambiental.',
-    exp3_role:'Gestor de Portfólio — Investimentos Offshore', exp3_co:'est GP — Multi Family Office (~US$1B AUM)',
-    exp3_b1:'Liderou a alocação estratégica de ativos e posicionamento tático para a carteira offshore, representando mais de 30% do AUM total.',
-    exp3_b2:'Construiu um framework de avaliação cobrindo mais de 2.000 ETFs, fundos mútuos e hedge funds usando ferramentas de programação customizadas.',
-    exp3_b3:'Implementou portfólios estratégicos para <strong>mais de 70 famílias</strong> e mais de US$300M em ativos.',
-    exp4_role:'Analista de Equity Research — Ações Globais',
-    exp4_b1:'Cobriu empresas de tecnologia e de alto crescimento para um portfólio long-biased de ações, índices e debêntures corporativas.',
-    exp4_b2:'Construiu e geriu um portfólio long-only de 10 empresas usando metodologia de primeiros princípios: biografias, channel checks, ligações com clientes, reuniões com gestão — depois valuation.',
-    exp4_b3:'Visita à Gigafactory da Tesla na Califórnia; reuniões de relações com investidores com a liderança executiva.',
-    exp4_b4:'Liderou pesquisa interna de dados: decomposição de ETF/índices, revisões de resultados bottom-up, comparativos de prêmio de risco país.',
-    exp5_role:'Gerente de M&A e Desenvolvimento de Negócios',
-    exp5_b1:'Responsável pela prospecção, aquisição e desenvolvimento de projetos greenfield para uma das principais produtoras independentes de energia francesa atuante em solar e eólico.',
-    exp5_b2:'Criou um banco de dados interno de projetos cobrindo mais de 50 GW de oportunidades avaliadas — o primeiro em todas as operações de países da Total Eren.',
-    exp5_b3:'Liderou as duas primeiras aquisições eólicas com PPAs bilaterais para a Total Eren no Brasil, gerenciando o ciclo completo da transação do NBO até os acordos de acionistas.',
-    deals_title:'Transações, <em>do início ao fim</em>',
-    deals_intro:'Por meio da minha experiência de M&A no lado comprador, desempenhei papel direto na originação, negociação e fechamento bem-sucedido de três projetos de energia renovável no Brasil — dois parques eólicos e um complexo solar. Esses ativos estão agora totalmente operacionais e representam aproximadamente <strong>US$232 milhões</strong> em investimento agregado. Nessas transações, liderei ou apoiei workstreams-chave incluindo modelagem financeira, negociação de SPAs e contratos de offtake, e coordenação de ponta a ponta.',
-    deal_stat1:'Projetos fechados & operacionais', deal_stat2:'Capacidade instalada combinada',
-    deal_stat3:'Investimento total combinado (USD)', deal_stat4:'Prazos de PPA em todos os ativos',
-    badge_wind_acq:'Eólico · Aquisição', badge_solar_dev:'Solar · Desenvolvimento',
-    deal_operational:'Operacional',
-    narr_overview:'Visão Geral da Transação', narr_role:'Meu Papel',
-    dm_capacity:'Capacidade', dm_offtaker:'Comprador de Energia', dm_investment:'Investimento Total',
-    dm_ownership:'Participação', dm_commissioned:'Comissionamento', dm_vendor:'Vendedor',
-    dm_regulatory:'Regulatório', dm_offtake:'Contrato de Offtake', dm_projfinance:'Financiamento de Projeto', dm_debt:'Investidor em Dívida',
-    d1_overview:'Terra Santa foi o primeiro ativo eólico da Total Eren no Brasil, desenvolvido em parceria com a Vila Energia Renovável. Estruturado com um PPA privado bilateral de 20 anos com a Cemig GT — uma empresa estatal credível — o projeto proporcionou visibilidade de receita de longo prazo. A construção começou no final de 2019; a operação comercial iniciou em fevereiro de 2022.',
-    d1_r1:'Originou a oportunidade no banco de dados de pipeline 50+ GW construído para a Total Eren Brasil e recomendou a aquisição para Paris.',
-    d1_r2:'Liderou a negociação do PPA bilateral e toda a documentação transacional do NBO até a MOU vinculante e os acordos de acionistas.',
-    d1_r3:'Coordenou os workstreams de due diligence com assessores jurídicos, técnicos e financeiros das equipes francesa e brasileira.',
-    d1_r4:'Liderou a modelagem financeira e as negociações de financiamento por dívida com credores privados e públicos.',
-    d1_r5:'Representou a Total Eren nas negociações com a Vila Energia para estabelecer a estrutura de propriedade 90/10, incluindo a negociação do acordo de acionistas.',
-    d2_overview:'A aquisição Maral envolveu a compra de duas SPEs de projetos eólicos da unidade brasileira da Voltalia SA, desenvolvedora francesa de energia renovável listada em bolsa. No momento da aquisição, os dois projetos ainda não haviam iniciado a construção. Aprovado sem restrições pelo CADE. Ambas as fases entraram em operação em 2021 sob um PPA privado de 20 anos com a Cemig GT.',
-    d2_r1:'Identificou a Maral no banco de dados de pipeline proprietário e recomendou a Paris como entrada estratégica pré-construção no segmento eólico.',
-    d2_r2:'Liderou a negociação buy-side com a Voltalia Brasil do NBO inicial até o acordo de compra de participações final.',
-    d2_r3:'Estruturou a abordagem de propriedade de 100%, avaliando e rejeitando opções de parceria para manter o controle total da Total Eren.',
-    d3_overview:'Dracena é um complexo fotovoltaico de 90 MW composto por três unidades de 30 MW no Estado de São Paulo — um dos ativos fundadores da Total Eren no Brasil. O projeto obteve um PPA de 20 anos via leilão federal de energia de reserva (ANEEL, 2014). Financiamento via BRL 280M em debêntures de infraestrutura de longo prazo subscritas integralmente pela Kinea Investimentos.',
-    d3_r1:'Apoiou o desenvolvimento comercial e a entrega do projeto durante a construção, trabalhando diretamente sob a direção do Diretor Geral da Total Eren Brasil.',
-    d3_r2:'Contribuiu para o banco de dados interno de projetos que comparou Dracena com o pipeline solar mais amplo, informando decisões de alocação de capital.',
-    d3_r3:'Coordenou com equipes locais, empreiteiros e reguladores durante a transição para operação comercial, acompanhando KPIs e reportando à sede em Paris.',
-    deal_fn:'* BRL 829M cobre Terra Santa e Maral combinados, conforme comunicado público da Total Eren (Fev 2022).',
-    cov_title:'Empresas que <em>estudei</em>',
-    cov_intro:'Como analista de ações, cobri o <strong>setor de tecnologia dos EUA com foco em empresas de alto crescimento e disruptivas</strong>. Minha <strong>metodologia de pesquisa foi além da modelagem DCF padrão</strong> — li biografias de fundadores, realizei channel checks com clientes, me envolvi diretamente com equipes de gestão e construí memorandos temáticos a partir dos fundamentos.',
-    cov_saas:'SaaS Empresarial', cov_saas_desc:'CRM · RH · Compras · Comms · eSign · Suporte · Automação',
-    cov_cloud:'Infraestrutura Cloud & Dados', cov_cloud_desc:'Data warehousing · Observabilidade · DevOps · Bancos de dados',
-    cov_fintech:'Fintech & Cripto', cov_fintech_desc:'Finanças pessoais · Ativos digitais · Tributação & contabilidade',
-    cov_cyber:'Cibersegurança', cov_cyber_desc:'Proteção de endpoint · Threat intelligence por IA',
-    cov_commerce:'Comércio & Marketplace', cov_commerce_desc:'Infraestrutura de e-commerce · Plataformas proptech',
-    cov_emerging:'Emergente & Temático', cov_emerging_desc:'VE · Plataformas IA · AgTech · Healthtech · IoT · Gaming · EDA',
-    pm_title:'Capital em <em>ação</em>',
-    pm_intro:'Como gestor de portfólio de um MFO, era responsável pela carteira de investimentos offshore — desenvolvendo e gerenciando portfólios para mais de 70 famílias em ações globais, renda fixa e ativos alternativos nos EUA e na Europa.',
-    pm_aum_label:'Capital Sob Gestão', pm_aum_sub:'AUM Offshore · Gerenciado diretamente',
-
-    pm_aum_families:'Para mais de 70 famílias e estruturas patrimoniais',
-    pm_s1_title:'Framework analítico construído do zero',
-    pm_s1_body:'A carteira offshore não tinha infraestrutura de avaliação sistemática quando ingressei. Projetei e codifiquei uma ferramenta de triagem proprietária cobrindo mais de 2.000 ETFs, fundos mútuos e hedge funds — combinando pontuação quantitativa com due diligence qualitativa. O que era um processo manual tornou-se um <strong>framework orientado a dados aplicado consistentemente em toda a carteira</strong>.',
-    pm_s2_title:'Portfólios estratégicos implantados em escala',
-    pm_s2_body:'Com o framework, implementei portfólios estratégicos personalizados para cada família — calibrados conforme perfil de risco, necessidades de liquidez, exposição cambial e horizonte temporal. Além da alocação estratégica, gerenciei o posicionamento tático em resposta às condições de mercado em <strong>mais de US$300M de capital offshore para mais de 70 famílias</strong>.',
-    pm_framework_tag:'Uma nova abordagem para a gestão de patrimônio',
-    pm_stage1_title:'Identificação<br>de Oportunidades', pm_stage2_title:'Análise<br>de Investimento', pm_stage3_title:'Construção<br>de Portfólio',
-    pm_before:'Antes', pm_before_text:'Processo manual baseado em julgamento. Sem infraestrutura de avaliação. Decisões tomadas caso a caso sem framework repetível em toda a carteira offshore.',
-    pm_after:'Depois', pm_after_text:'Framework proprietário orientado a dados — codificado do zero — aplicado de forma consistente em todos os portfólios. Rigor analítico antes reservado a mesas institucionais, trazido para um family office.',
-    pm_stat1:'Fundos no universo de triagem', pm_stat2:'AUM offshore gerenciado', pm_stat3:'Famílias atendidas',
-    pm_tools_label:'Infraestrutura de back-office',
-    pm_s1_i1:'Triagem sistemática de 2.000+ fundos', pm_s1_i2:'Modelos de pontuação Python & R customizados',
-    pm_s1_i3:'ETFs, fundos mútuos & hedge funds', pm_s1_i4:'Ranking por retorno ajustado ao risco', pm_s1_i5:'Mapeamento de exposições fatoriais',
-    pm_s2_i1:'Due diligence quantitativa + qualitativa', pm_s2_i2:'Análise de drawdown & volatilidade',
-    pm_s2_i3:'Revisão do track record dos gestores', pm_s2_i4:'Análise de liquidez & estrutura', pm_s2_i5:'Ferramentas de comparação com benchmarks',
-    pm_s3_i1:'Otimização risco-retorno por família', pm_s3_i2:'Posicionamento tático dinâmico',
-    pm_s3_i3:'Calibração de exposição cambial', pm_s3_i4:'Adequação liquidez-horizonte', pm_s3_i5:'Lógica de rebalanceamento contínuo',
-    focus_tag:'O que me move', focus_title:'Três domínios, <em>uma tese</em>',
-    focus1_ttl:'Transição Energética',
-    focus1_desc:'A transição energética é o desafio de infraestrutura definidor da nossa geração — uma reconfiguração completa de como o mundo produz e consome energia. Trabalhei ao longo de sua cadeia de valor: fechando M&A de energia renovável no Brasil, avaliando a viabilidade do hidrogênio verde e estudando as estruturas de capital que tornam projetos de energia limpa bankable.',
-    focus2_ttl:'Tecnologia & IA',
-    focus2_desc:'Cobri mais de 30 empresas de tecnologia de alto crescimento como analista de ações, e construí ferramentas de dados — de plataformas de mapeamento GIS a sistemas automatizados de triagem de fundos — que convertem informação bruta em decisões. A IA não substituirá os tomadores de decisão, mas os tomadores de decisão de amanhã serão aqueles que sabem trabalhar com ela.',
-    focus3_ttl:'Finanças & Alocação de Capital',
-    focus3_desc:'O capital determina quais tecnologias são construídas e quais transições acontecem. Estive dos dois lados — alocando capital nos mercados globais como gestor de portfólio, e implantando-o em ativos reais como profissional de M&A. Finanças não é uma função de suporte para a transição energética; é um motor central dela.',
-    focus_closing:'Para enfrentar a transição energética em um mundo moldado pela IA, <strong>precisamos reunir conhecimento técnico e financeiro para tomar as decisões certas. Os tomadores de decisão serão IAs? Não — mas as pessoas por trás delas serão aquelas que entendem tanto a complexidade dos sistemas de energia quanto a lógica do capital.</strong> É essa convergência que estou construindo.',
-    proj_tag:'Projetos & Iniciativas', proj_title:'O que <em>construí</em>',
-    proj1_kicker:'Comunidade · Co-fundado em Paris',
-    proj1_desc:'BRASA — a Brazilian Student Association — é uma rede que conecta estudantes e jovens profissionais brasileiros nas principais universidades e cidades do mundo. Co-fundei o capítulo europeu em Paris, construindo uma comunidade do zero para brasileiros estudando e trabalhando na Europa.',
-    proj1_tags:'Co-fundador, Paris, Construção de Comunidade, Diáspora Brasileira',
-    proj2_kicker:'Ferramenta de Inteligência em Infraestrutura',
-    proj2_desc:'Uma plataforma de mapeamento interativo para ativos solares, eólicos e de infraestrutura. Nascida de uma abordagem de ciência de dados que pioneirei na Total Eren — onde o mapeamento de 50+ GW de oportunidades renováveis no Brasil transformou a qualidade do pipeline de M&A — o Forager generaliza essa metodologia em um produto utilizável.',
-    proj2_link:'↗ Ver Forager',
-    proj3_kicker:'Música · Prática Pessoal', proj3_name:'Muita Música',
-    proj3_desc:'Estudei piano por oito anos em nível conservatório — uma educação em precisão, paciência e a disciplina de construir algo complexo ao longo de um longo período. Ainda toco regularmente e componho minhas próprias peças. Música não é um interesse secundário; é o contrapeso a tudo que é analítico na minha vida.',
-    proj3_tags:'Piano, Composição, Conservatório, 8 Anos',
-    contact_title:'Vamos iniciar uma <em>conversa</em>',
-    contact_sub:'Aberto a conversas sobre infraestrutura, transição energética, equity research e ventures empreendedores na interseção entre energia e tecnologia. Baseado entre Londres e Paris, atuando internacionalmente.',
-    contact_email:'✉ Enviar e-mail',
-  }
-};
-
-// ═══════════════════════════════════════════════════════════════
-// LANGUAGE ENGINE
-// ═══════════════════════════════════════════════════════════════
-let currentLang = 'en';
-
-function setLanguage(lang) {
-  if (lang === currentLang) return;
-  currentLang = lang;
-  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
-  document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
-  const els = document.querySelectorAll('[data-i18n]');
-  els.forEach(el => { el.style.opacity = '0'; el.style.transition = 'opacity .15s ease'; });
-  setTimeout(() => {
-    els.forEach(el => {
-      const str = translations[lang][el.dataset.i18n];
-      if (str !== undefined) el.innerHTML = str;
-    });
-    els.forEach(el => { el.style.opacity = '1'; });
-  }, 160);
-}
-
-document.querySelectorAll('.lang-btn').forEach(btn => btn.addEventListener('click', () => setLanguage(btn.dataset.lang)));
 
 </script>
 
