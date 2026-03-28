@@ -357,7 +357,8 @@ footer{border-top:1px solid var(--border);padding:1.8rem 3rem;display:flex;align
 }
 
 /* ── CONTACT IMPROVEMENTS ── */
-.c-link-primary{
+.c-link-linkedin{gap:.55rem}
+.c-link-linkedin svg{opacity:.8}
   background:var(--accent);
   color:#0b0c0e !important;
   border-color:var(--accent) !important;
@@ -487,6 +488,8 @@ section{
 .research-card:nth-child(2){transition-delay:.14s}
 .research-card:nth-child(3){transition-delay:.22s}
 .research-card:nth-child(4){transition-delay:.30s}
+.research-card:nth-child(5){transition-delay:.38s}
+.research-card:nth-child(6){transition-delay:.46s}
 
 /* ── EDU ENTRY REVEAL ── */
 .edu-entry{
@@ -1104,15 +1107,15 @@ footer{
     <div class="research-grid">
 
       <div class="research-card">
-        <p class="research-tag" data-i18n="r1_tag">Pico-Satellite · Hardware · Embedded Systems</p>
-        <h3 class="research-title" data-i18n="r1_title">TubeSat Personal Satellite</h3>
-        <p class="research-body" data-i18n="r1_body">Design, assembly, and launch of a TubeSat personal satellite developed by Interorbital Systems, in response to a government-driven initiative to train students and evaluate pico- and nanosatellite technologies in Brazil. The satellite was built around a four-tier PCB stack — Antenna, Power Management, Transceiver, and Microcontroller — housed in a cylindrical shell covered by eight solar cell panels. Subsystems included Spectrolab triple-junction solar cells, a Radiometrix UHF transceiver, and a BasicX-24 microcontroller. Payloads under study included a magnetometer, radiation hardness testing of integrated circuits, and Earth remote sensing. The team completed full assembly and integration; the satellite was subsequently launched aboard Interorbital Systems' NEPTUNE 30 deployment vehicle.</p>
+        <p class="research-tag">Strategy · Healthcare · IP Commercialisation</p>
+        <h3 class="research-title">GTM Strategy for a Self-Charging Wearable Health Patent</h3>
+        <p class="research-body">How do you turn a patent into a revenue stream? The project examined how to bring to market a self-charging wearable health device — determining how to monetise an energy-harvesting capability while avoiding a premature push into the competitive consumer wearables market. The analysis covered market structure, consumer expectations, product differentiation, technical constraints, go-to-market options, and priority partnership targets. The main recommendation was clear: monetise first through a <strong>B2B embedded model</strong> rather than a branded consumer launch. The device's strongest advantage — energy autonomy — is most valuable where charging is a reliability problem, not a consumer convenience feature. The recommended path was to license or embed with device makers, health-tech companies, and OEM partners first, then expand toward B2B2C once technical maturity and market-readiness thresholds are met. The project also outlined a commercial roadmap including paid feasibility work, per-unit or royalty-based economics, and lighthouse pilot partnerships.</p>
       </div>
 
       <div class="research-card">
-        <p class="research-tag" data-i18n="r2_tag">Computer Vision · Robotics · 3D Mapping</p>
-        <h3 class="research-title" data-i18n="r2_title">Indoor Environment Mapping Using RGB-D Cameras</h3>
-        <p class="research-body" data-i18n="r2_body">Study of how RGB-D cameras (Microsoft Kinect) can be used for autonomous indoor mapping in robotics, combining RGB image processing with depth information to build detailed 3D maps of unknown environments. The methodology integrated OpenCV image processing, SIFT and SURF keypoint detection, Point Cloud Library (PCL) processing, RANSAC preliminary alignment, and ICP (Iterative Closest Point) frame-to-frame registration. The project was originally designed for deployment on a TurtleBot mobile robot, but was resized after its importation was suspended. The outcome was a solid technical foundation including image-processing studies, feature-detection routines, Kinect setup, and an initial ICP implementation — a strong basis for future real-time execution and full robotic deployment.</p>
+        <p class="research-tag" data-i18n="r4_tag">Reinforcement Learning · Smart Grid · EVs</p>
+        <h3 class="research-title" data-i18n="r4_title">Coordination of EV Charging through Multiagent Reinforcement Learning</h3>
+        <p class="research-body" data-i18n="r4_body">Development of a distributed strategy for coordinating electric vehicle charging using multiagent reinforcement learning, balancing three competing objectives: keeping batteries charged, minimising electricity costs, and avoiding transformer overloads. The work proposed <strong>MASCO</strong> (MultiAgent Selfish-Collaborative Architecture), modelling the charging problem as a Markov Decision Process with defined agent states, actions, and rewards, and simulating a residential neighbourhood with realistic house loads, EV travel routines, transformer constraints, and electricity tariff regimes. Results showed MASCO could cut daily overload events from 33 (always-charging baseline) to as low as 6, while maintaining battery charge at ~99.96%. A strong proof of concept that decentralised reinforcement learning can improve EV charging coordination under realistic grid constraints.</p>
       </div>
 
       <div class="research-card">
@@ -1122,9 +1125,15 @@ footer{
       </div>
 
       <div class="research-card">
-        <p class="research-tag" data-i18n="r4_tag">Reinforcement Learning · Smart Grid · EVs</p>
-        <h3 class="research-title" data-i18n="r4_title">Coordination of EV Charging through Multiagent Reinforcement Learning</h3>
-        <p class="research-body" data-i18n="r4_body">Development of a distributed strategy for coordinating electric vehicle charging using multiagent reinforcement learning, balancing three competing objectives: keeping batteries charged, minimising electricity costs, and avoiding transformer overloads. The work proposed <strong>MASCO</strong> (MultiAgent Selfish-Collaborative Architecture), modelling the charging problem as a Markov Decision Process with defined agent states, actions, and rewards, and simulating a residential neighbourhood with realistic house loads, EV travel routines, transformer constraints, and electricity tariff regimes. Results showed MASCO could cut daily overload events from 33 (always-charging baseline) to as low as 6, while maintaining battery charge at ~99.96%. A strong proof of concept that decentralised reinforcement learning can improve EV charging coordination under realistic grid constraints.</p>
+        <p class="research-tag" data-i18n="r2_tag">Computer Vision · Robotics · 3D Mapping</p>
+        <h3 class="research-title" data-i18n="r2_title">Indoor Environment Mapping Using RGB-D Cameras</h3>
+        <p class="research-body" data-i18n="r2_body">Study of how RGB-D cameras (Microsoft Kinect) can be used for autonomous indoor mapping in robotics, combining RGB image processing with depth information to build detailed 3D maps of unknown environments. The methodology integrated OpenCV image processing, SIFT and SURF keypoint detection, Point Cloud Library (PCL) processing, RANSAC preliminary alignment, and ICP (Iterative Closest Point) frame-to-frame registration. The project was originally designed for deployment on a TurtleBot mobile robot, but was resized after its importation was suspended. The outcome was a solid technical foundation including image-processing studies, feature-detection routines, Kinect setup, and an initial ICP implementation — a strong basis for future real-time execution and full robotic deployment.</p>
+      </div>
+
+      <div class="research-card">
+        <p class="research-tag" data-i18n="r1_tag">Pico-Satellite · Hardware · Embedded Systems</p>
+        <h3 class="research-title" data-i18n="r1_title">TubeSat Personal Satellite</h3>
+        <p class="research-body" data-i18n="r1_body">Design, assembly, and launch of a TubeSat personal satellite developed by Interorbital Systems, in response to a government-driven initiative to train students and evaluate pico- and nanosatellite technologies in Brazil. The satellite was built around a four-tier PCB stack — Antenna, Power Management, Transceiver, and Microcontroller — housed in a cylindrical shell covered by eight solar cell panels. Subsystems included Spectrolab triple-junction solar cells, a Radiometrix UHF transceiver, and a BasicX-24 microcontroller. Payloads under study included a magnetometer, radiation hardness testing of integrated circuits, and Earth remote sensing. The team completed full assembly and integration; the satellite was subsequently launched aboard Interorbital Systems' NEPTUNE 30 deployment vehicle.</p>
       </div>
 
     </div>
@@ -1926,8 +1935,12 @@ footer{
     <h2 class="contact-ttl" data-i18n="contact_title">Let's start a <em>conversation</em></h2>
     <p class="contact-sub" data-i18n="contact_sub">Open to conversations about infrastructure, energy transition, equity research, and entrepreneurial ventures at the intersection of energy and technology. Based between London and Paris, operating internationally.</p>
     <div class="contact-links">
-      <a href="/cdn-cgi/l/email-protection#e08a8f818fce839285939485a0858495ce85938390ce8595" class="c-link c-link-primary" data-i18n="contact_email">✉ Email me</a>
-      <a href="https://www.linkedin.com/in/joaocreste/" target="_blank" class="c-link">↗ LinkedIn</a>
+      <a href="mailto:joaocreste@gmail.com" class="c-link c-link-primary">✉ joaocreste@gmail.com</a>
+      <a href="mailto:joao.creste@edu.escp.com" class="c-link c-link-primary">✉ joao.creste@edu.escp.com</a>
+      <a href="https://www.linkedin.com/in/joaocreste/" target="_blank" class="c-link c-link-linkedin">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:14px;height:14px;fill:currentColor;flex-shrink:0"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
     </div>
     <div class="contact-phones">
       <a href="tel:+447417400683" class="phone-link">
