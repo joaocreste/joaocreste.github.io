@@ -532,16 +532,6 @@ footer{
 .pm-map-wrap{margin-top:1.2rem}
 #pm-map{opacity:0;transition:opacity .8s ease}
 #pm-map.visible{opacity:1}
-@keyframes dashMove{to{stroke-dashoffset:-64}}
-.arc-line{animation:dashMove 6s linear infinite;stroke-dashoffset:0}
-.arc-line:nth-child(2){animation-delay:-.7s}
-.arc-line:nth-child(3){animation-delay:-1.4s}
-.arc-line:nth-child(4){animation-delay:-2.1s}
-.arc-line:nth-child(5){animation-delay:-2.8s}
-.arc-line:nth-child(6){animation-delay:-3.5s}
-.arc-line:nth-child(7){animation-delay:-4.2s}
-.arc-line:nth-child(8){animation-delay:-4.9s}
-.arc-line:nth-child(9){animation-delay:-.3s}
 
 .pm-framework{margin:3rem 0 0}
 .pm-pipeline{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:0;align-items:stretch;margin:2rem 0 2.5rem}
@@ -1160,6 +1150,15 @@ footer{
       </div>
       <div class="tl-item">
         <div class="tl-dot h"></div>
+        <div class="tl-meta"><span class="tl-period">Jan 2025 — Present</span><span class="tl-loc">Remote</span></div>
+        <div class="tl-role">Founder &amp; Principal Advisor</div>
+        <div class="tl-co">JC Consulting &amp; Advisory</div>
+        <ul class="tl-bullets">
+          <li>Independent advisory practice helping SMEs and early-stage ventures bridge the gap between proprietary technology and commercial viability.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot h"></div>
         <div class="tl-meta"><span class="tl-period">Jan — Apr 2025</span><span class="tl-loc">Oxford, UK</span></div>
         <div class="tl-role" data-i18n="exp2_role">Business Development Consultant</div>
         <div class="tl-co" data-i18n="exp2_co">Independent — British PE Fund mandate</div>
@@ -1695,78 +1694,82 @@ footer{
                      C171,89 171,83 175,80 Z"
               fill="none" stroke="#222730" stroke-width="0.8" stroke-linejoin="round"/>
 
-            <!-- ── FINANCIAL CENTRE DESTINATIONS ── -->
 
-            <!-- New York ~183,165 -->
-            <circle cx="183" cy="165" r="10" fill="#c8a96e" opacity=".06"/>
-            <circle cx="183" cy="165" r="6" fill="#c8a96e" opacity=".14"/>
-            <circle cx="183" cy="165" r="2.8" fill="#c8a96e" opacity=".9"/>
+            <!-- Layer 1 → Layer 2 (South America → Caribbean) -->
+            <path d="M288,382 Q265,297 243,252" fill="none" stroke="#c8a96e" stroke-width="0.85" stroke-dasharray="3,5" opacity=".55"/>
+            <path d="M288,382 Q273,293 258,240" fill="none" stroke="#c8a96e" stroke-width="0.85" stroke-dasharray="3,5" opacity=".50"/>
+            <path d="M288,382 Q279,299 270,248" fill="none" stroke="#c8a96e" stroke-width="0.85" stroke-dasharray="3,5" opacity=".46"/>
+            <path d="M315,355 Q279,287 243,252" fill="none" stroke="#c8a96e" stroke-width="0.85" stroke-dasharray="3,5" opacity=".44"/>
+            <path d="M315,355 Q292,287 270,248" fill="none" stroke="#c8a96e" stroke-width="0.85" stroke-dasharray="3,5" opacity=".40"/>
+            <path d="M278,418 Q260,313 243,252" fill="none" stroke="#c8a96e" stroke-width="0.85" stroke-dasharray="3,5" opacity=".42"/>
+            <path d="M262,445 Q252,324 243,252" fill="none" stroke="#c8a96e" stroke-width="0.85" stroke-dasharray="3,5" opacity=".38"/>
+            <path d="M262,445 Q266,326 270,248" fill="none" stroke="#c8a96e" stroke-width="0.85" stroke-dasharray="3,5" opacity=".34"/>
 
-            <!-- Miami ~178,195 -->
-            <circle cx="178" cy="195" r="9" fill="#c8a96e" opacity=".06"/>
-            <circle cx="178" cy="195" r="5" fill="#c8a96e" opacity=".12"/>
-            <circle cx="178" cy="195" r="2.5" fill="#c8a96e" opacity=".85"/>
+            <!-- Layer 2 → Layer 3 (Caribbean → Destinations) -->
+            <path d="M243,252 Q174,187 105,158" fill="none" stroke="#c8a96e" stroke-width="0.85" stroke-dasharray="3,5" opacity=".52"/>
+            <path d="M243,252 Q254,200 265,172" fill="none" stroke="#c8a96e" stroke-width="0.85" stroke-dasharray="3,5" opacity=".52"/>
+            <path d="M243,252 Q407,180 572,165" fill="none" stroke="#c8a96e" stroke-width="0.85" stroke-dasharray="3,5" opacity=".52"/>
+            <path d="M243,252 Q400,176 558,152" fill="none" stroke="#c8a96e" stroke-width="0.85" stroke-dasharray="3,5" opacity=".48"/>
+            <path d="M243,252 Q475,141 708,100" fill="none" stroke="#c8a96e" stroke-width="0.85" stroke-dasharray="3,5" opacity=".38"/>
+            <path d="M258,240 Q261,196 265,172" fill="none" stroke="#c8a96e" stroke-width="0.85" stroke-dasharray="3,5" opacity=".46"/>
+            <path d="M258,240 Q181,183 105,158" fill="none" stroke="#c8a96e" stroke-width="0.85" stroke-dasharray="3,5" opacity=".42"/>
+            <path d="M270,248 Q267,200 265,172" fill="none" stroke="#c8a96e" stroke-width="0.85" stroke-dasharray="3,5" opacity=".44"/>
+            <path d="M270,248 Q421,180 572,165" fill="none" stroke="#c8a96e" stroke-width="0.85" stroke-dasharray="3,5" opacity=".44"/>
+            <path d="M270,248 Q414,176 558,152" fill="none" stroke="#c8a96e" stroke-width="0.85" stroke-dasharray="3,5" opacity=".40"/>
 
-            <!-- London ~540,153 -->
-            <circle cx="540" cy="153" r="12" fill="#c8a96e" opacity=".07"/>
-            <circle cx="540" cy="153" r="7" fill="#c8a96e" opacity=".16"/>
-            <circle cx="540" cy="153" r="3.2" fill="#c8a96e" opacity=".95"/>
+            <!-- Layer 1 dots (on South America) -->
+            <!-- São Paulo -->
+            <circle cx="288" cy="382" r="14" fill="#c8a96e" opacity=".06"/>
+            <circle cx="288" cy="382" r="8" fill="#c8a96e" opacity=".14"/>
+            <circle cx="288" cy="382" r="3.8" fill="#c8a96e" opacity=".95"/>
+            <!-- Rio de Janeiro -->
+            <circle cx="315" cy="355" r="11" fill="#c8a96e" opacity=".06"/>
+            <circle cx="315" cy="355" r="6" fill="#c8a96e" opacity=".14"/>
+            <circle cx="315" cy="355" r="3" fill="#c8a96e" opacity=".88"/>
+            <!-- Uruguay -->
+            <circle cx="278" cy="418" r="10" fill="#c8a96e" opacity=".06"/>
+            <circle cx="278" cy="418" r="5" fill="#c8a96e" opacity=".14"/>
+            <circle cx="278" cy="418" r="2.5" fill="#c8a96e" opacity=".82"/>
+            <!-- Argentina -->
+            <circle cx="262" cy="445" r="10" fill="#c8a96e" opacity=".06"/>
+            <circle cx="262" cy="445" r="5" fill="#c8a96e" opacity=".14"/>
+            <circle cx="262" cy="445" r="2.5" fill="#c8a96e" opacity=".78"/>
 
-            <!-- Luxembourg ~558,160 -->
-            <circle cx="558" cy="160" r="9" fill="#c8a96e" opacity=".06"/>
-            <circle cx="558" cy="160" r="5" fill="#c8a96e" opacity=".12"/>
-            <circle cx="558" cy="160" r="2.5" fill="#c8a96e" opacity=".85"/>
+            <!-- Layer 2 dots (Caribbean — in ocean, intentional) -->
+            <!-- Cayman Islands -->
+            <circle cx="243" cy="252" r="11" fill="#c8a96e" opacity=".06"/>
+            <circle cx="243" cy="252" r="6" fill="#c8a96e" opacity=".14"/>
+            <circle cx="243" cy="252" r="3" fill="#c8a96e" opacity=".90"/>
+            <!-- Bahamas -->
+            <circle cx="258" cy="240" r="10" fill="#c8a96e" opacity=".06"/>
+            <circle cx="258" cy="240" r="5" fill="#c8a96e" opacity=".14"/>
+            <circle cx="258" cy="240" r="2.6" fill="#c8a96e" opacity=".84"/>
+            <!-- BVI -->
+            <circle cx="270" cy="248" r="10" fill="#c8a96e" opacity=".06"/>
+            <circle cx="270" cy="248" r="5" fill="#c8a96e" opacity=".14"/>
+            <circle cx="270" cy="248" r="2.6" fill="#c8a96e" opacity=".82"/>
 
-            <!-- Zurich ~580,168 -->
-            <circle cx="580" cy="168" r="9" fill="#c8a96e" opacity=".06"/>
-            <circle cx="580" cy="168" r="5" fill="#c8a96e" opacity=".12"/>
-            <circle cx="580" cy="168" r="2.5" fill="#c8a96e" opacity=".82"/>
-
-            <!-- Geneva ~840,280 (far-right dot in screenshot) -->
-            <circle cx="840" cy="165" r="9" fill="#c8a96e" opacity=".06"/>
-            <circle cx="840" cy="165" r="5" fill="#c8a96e" opacity=".12"/>
-            <circle cx="840" cy="165" r="2.5" fill="#c8a96e" opacity=".78"/>
-
-            <!-- Brazilian cities below São Paulo -->
-            <!-- Rio de Janeiro ~308,398 -->
-            <circle cx="308" cy="398" r="8" fill="#c8a96e" opacity=".06"/>
-            <circle cx="308" cy="398" r="4.5" fill="#c8a96e" opacity=".12"/>
-            <circle cx="308" cy="398" r="2.2" fill="#c8a96e" opacity=".8"/>
-
-            <!-- Curitiba ~290,415 -->
-            <circle cx="290" cy="415" r="8" fill="#c8a96e" opacity=".06"/>
-            <circle cx="290" cy="415" r="4.5" fill="#c8a96e" opacity=".12"/>
-            <circle cx="290" cy="415" r="2.2" fill="#c8a96e" opacity=".75"/>
-
-            <!-- Porto Alegre ~281,432 -->
-            <circle cx="281" cy="432" r="8" fill="#c8a96e" opacity=".06"/>
-            <circle cx="281" cy="432" r="4.5" fill="#c8a96e" opacity=".12"/>
-            <circle cx="281" cy="432" r="2.2" fill="#c8a96e" opacity=".7"/>
-
-            <!-- ── ARC LINES from São Paulo (288,382) ── -->
-
-            <!-- Down into Brazil — steep downward fans -->
-            <path class="arc-line" d="M288,382 Q298,390 308,398" fill="none" stroke="#c8a96e" stroke-width="0.8" stroke-dasharray="3,5" opacity=".5"/>
-            <path class="arc-line" d="M288,382 Q289,398 290,415" fill="none" stroke="#c8a96e" stroke-width="0.8" stroke-dasharray="3,5" opacity=".45"/>
-            <path class="arc-line" d="M288,382 Q285,407 281,432" fill="none" stroke="#c8a96e" stroke-width="0.8" stroke-dasharray="3,5" opacity=".4"/>
-
-            <!-- Up-left to North America -->
-            <path class="arc-line" d="M288,382 Q235,270 183,165" fill="none" stroke="#c8a96e" stroke-width="0.8" stroke-dasharray="3,5" opacity=".5"/>
-            <path class="arc-line" d="M288,382 Q232,285 178,195" fill="none" stroke="#c8a96e" stroke-width="0.8" stroke-dasharray="3,5" opacity=".42"/>
-
-            <!-- Right to Europe — flat tight bundle of 3 -->
-            <path class="arc-line" d="M288,382 Q414,240 540,153" fill="none" stroke="#c8a96e" stroke-width="0.8" stroke-dasharray="3,5" opacity=".52"/>
-            <path class="arc-line" d="M288,382 Q423,244 558,160" fill="none" stroke="#c8a96e" stroke-width="0.8" stroke-dasharray="3,5" opacity=".46"/>
-            <path class="arc-line" d="M288,382 Q434,248 580,168" fill="none" stroke="#c8a96e" stroke-width="0.8" stroke-dasharray="3,5" opacity=".40"/>
-
-            <!-- Long arc far right -->
-            <path class="arc-line" d="M288,382 Q564,210 840,165" fill="none" stroke="#c8a96e" stroke-width="0.8" stroke-dasharray="3,5" opacity=".35"/>
-
-            <!-- ── SÃO PAULO HUB — larger, glowing ── -->
-            <circle cx="288" cy="382" r="14" fill="#c8a96e" opacity=".07"/>
-            <circle cx="288" cy="382" r="9"  fill="#c8a96e" opacity=".15"/>
-            <circle cx="288" cy="382" r="4.5" fill="#c8a96e" opacity=".95"/>
-            <circle cx="288" cy="382" r="20" fill="none" stroke="#c8a96e" stroke-width=".6" opacity=".18"/>
+            <!-- Layer 3 dots -->
+            <!-- San Francisco -->
+            <circle cx="105" cy="158" r="11" fill="#c8a96e" opacity=".06"/>
+            <circle cx="105" cy="158" r="6" fill="#c8a96e" opacity=".14"/>
+            <circle cx="105" cy="158" r="3" fill="#c8a96e" opacity=".90"/>
+            <!-- New York -->
+            <circle cx="265" cy="172" r="11" fill="#c8a96e" opacity=".06"/>
+            <circle cx="265" cy="172" r="6" fill="#c8a96e" opacity=".14"/>
+            <circle cx="265" cy="172" r="3" fill="#c8a96e" opacity=".90"/>
+            <!-- Switzerland -->
+            <circle cx="572" cy="165" r="11" fill="#c8a96e" opacity=".06"/>
+            <circle cx="572" cy="165" r="6" fill="#c8a96e" opacity=".14"/>
+            <circle cx="572" cy="165" r="3" fill="#c8a96e" opacity=".90"/>
+            <!-- Luxembourg -->
+            <circle cx="558" cy="152" r="10" fill="#c8a96e" opacity=".06"/>
+            <circle cx="558" cy="152" r="5" fill="#c8a96e" opacity=".14"/>
+            <circle cx="558" cy="152" r="2.6" fill="#c8a96e" opacity=".84"/>
+            <!-- Japan -->
+            <circle cx="708" cy="100" r="11" fill="#c8a96e" opacity=".06"/>
+            <circle cx="708" cy="100" r="6" fill="#c8a96e" opacity=".14"/>
+            <circle cx="708" cy="100" r="3" fill="#c8a96e" opacity=".90"/>
 
           </svg>
         </div>
@@ -1890,7 +1893,7 @@ footer{
 <section id="projects">
   <div class="si">
     <p class="s-tag reveal" data-i18n="proj_tag">Ventures &amp; Side Projects</p>
-    <h2 class="s-title reveal reveal-delay-1" data-i18n="proj_title">Things I <em>built</em></h2>
+    <h2 class="s-title reveal reveal-delay-1" data-i18n="proj_title">Other things I've <em>built, so far...</em></h2>
     <div class="proj-cols">
       <div class="proj-col reveal reveal-delay-1">
         <p class="proj-kicker" data-i18n="proj1_kicker">Community · Co-founded in Paris</p>
