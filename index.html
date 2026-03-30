@@ -575,34 +575,36 @@ footer{
 <nav>
   <a href="#hero" class="nav-logo">Joao Victor Creste</a>
   <ul class="nav-links">
-    <li><a href="#about" data-i18n="nav_profile">Profile</a></li>
-    <li><a href="#experience" data-i18n="nav_career">Career</a></li>
-    <li><a href="#deals" data-i18n="nav_ma">M&amp;A</a></li>
-    <li><a href="#coverage" data-i18n="nav_research">Equity Research</a></li>
-    <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio Management</a></li>
-    <li><a href="#focus" data-i18n="nav_focus">Next Steps</a></li>
-    <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+    <li><a href="#about">Profile</a></li>
+    <li><a href="#experience">Career</a></li>
+    <li><a href="#deals">M&amp;A</a></li>
+    <li><a href="#coverage">Equity Research</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#projects">Ventures</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
   <button class="nav-mobile-toggle" aria-label="Menu" onclick="this.classList.toggle('open');document.getElementById('mobile-menu').classList.toggle('open')">
     <span></span><span></span><span></span>
   </button>
 </nav>
 <div id="mobile-menu" class="mobile-menu">
-  <a href="#about" data-i18n="nav_profile" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Profile</a>
-  <a href="#experience" data-i18n="nav_career" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Career</a>
-  <a href="#deals" data-i18n="nav_ma" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">M&amp;A</a>
-  <a href="#coverage" data-i18n="nav_research" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Equity Research</a>
-  <a href="#portfolio" data-i18n="nav_portfolio" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Portfolio Management</a>
-  <a href="#focus" data-i18n="nav_focus" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Next Steps</a>
-  <a href="#contact" data-i18n="nav_contact" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Contact</a>
+  <a href="#about" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Profile</a>
+  <a href="#experience" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Career</a>
+  <a href="#deals" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">M&amp;A</a>
+  <a href="#coverage" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Equity Research</a>
+  <a href="#portfolio" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Portfolio</a>
+  <a href="#education" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Education</a>
+  <a href="#projects" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Ventures</a>
+  <a href="#contact" onclick="document.getElementById('mobile-menu').classList.remove('open');document.querySelector('.nav-mobile-toggle').classList.remove('open')">Contact</a>
 </div>
 
 <section id="hero">
   <div class="hero-vline"></div>
   <div class="hero-left">
-    <p class="hero-eyebrow" data-i18n="hero_eyebrow">Engineer · Financier · Energy</p>
+    <p class="hero-eyebrow">Engineer · Investor · Energy Transition</p>
     <h1 class="hero-name" data-i18n="hero_name">Joao Victor<br><em>Creste</em></h1>
-    <p class="hero-tagline" data-i18n="hero_tagline">From electrical engineering to renewable energy M&amp;A, equity research, and portfolio management — built at the intersection of <strong>energy, finance, and technology</strong>.</p>
+    <p class="hero-tagline" >From electrical engineering to renewable energy M&amp;A, equity research, and capital allocation — six years investing across the <strong>energy transition</strong> value chain.</p>
     <div class="hero-cta">
       <a href="#experience" class="btn btn-primary" data-i18n="hero_cta_exp">View Experience</a>
       <a href="#contact" class="btn btn-ghost" data-i18n="hero_cta_contact">Get in Touch</a>
@@ -660,55 +662,33 @@ footer{
     </svg>
   </div>
   <div class="hero-stats">
-    <div style="text-align:right"><div class="stat-val">5</div><div class="stat-lbl" data-i18n="stat_countries">Countries · Studied &amp; worked</div></div>
-    <div style="text-align:right"><div class="stat-val">3</div><div class="stat-lbl" data-i18n="stat_deals">M&amp;A deals closed</div></div>
-    <div style="text-align:right"><div class="stat-val">50+ GW</div><div class="stat-lbl" data-i18n="stat_pipeline">Pipeline evaluated</div></div>
-    <div style="text-align:right"><div class="stat-val">$1B+</div><div class="stat-lbl" data-i18n="stat_aum">AUM managed</div></div>
-    <div style="text-align:right"><div class="stat-val">20+</div><div class="stat-lbl" data-i18n="stat_memos">Investment memos</div></div>
+    <div style="text-align:right"><div class="stat-val">3</div><div class="stat-lbl">Renewable energy deals closed</div></div>
+    <div style="text-align:right"><div class="stat-val">252 MW</div><div class="stat-lbl">Combined installed capacity</div></div>
+    <div style="text-align:right"><div class="stat-val">~$232M</div><div class="stat-lbl">Total capital deployed</div></div>
+    <div style="text-align:right"><div class="stat-val">50+ GW</div><div class="stat-lbl">Deal pipeline originated</div></div>
+    <div style="text-align:right"><div class="stat-val">$300M+</div><div class="stat-lbl">Offshore capital managed</div></div>
   </div>
 </section>
+
+
+
+
 
 
 
 <section id="about">
   <div class="si">
     <p class="s-tag reveal" data-i18n="nav_profile">Profile</p>
-    <h2 class="s-title reveal reveal-delay-1" data-i18n="about_title">An unusual <em>intersection</em></h2>
+    <h2 class="s-title reveal reveal-delay-1" >Who I am and <em>what I do</em></h2>
     <div class="about-grid">
       <div class="about-text">
-        <p data-i18n="about_p1">I am an Italian-Brazilian engineer educated in France and Brazil, currently completing an MBA at ESCP Business School across Paris and London. Raised in a family of academics, I have always been drawn to first-principles thinking — the habit of understanding not just <strong>what</strong> is happening, but <strong>why</strong> and <strong>what it implies</strong>.</p>
-        <p data-i18n="about_p2">My career has followed an unusual arc: from electrical engineering and applied research, to M&amp;A and greenfield development in renewable energy, to equity research covering high-growth technology companies, to portfolio management at a multi-family office. Each chapter has been different in function, but unified by a consistent pull toward the same three domains — energy, finance, and the analytical tools that connect them.</p>
-        <p data-i18n="about_p3">I am convinced that the <strong>energy transition is the defining challenge of our generation, and that it cannot be solved by engineers or financiers working in isolation.</strong> What it demands is people who understand both the technical complexity of energy systems and the financial logic that drives capital allocation — and who can harness data and AI to make better decisions under uncertainty. That convergence is where I want to operate.</p>
-        <p data-i18n="about_p4">Outside of work, I compose music — eight years of conservatory-level piano studies. I also build tools: <em>Forager</em>, an interactive mapping platform for solar, wind, and infrastructure assets, started as a side project and has since become a useful real-world instrument.</p>
-        <div class="lang-list">
-          <div class="lang-item"><span class="lang-name" data-i18n="lang_pt">Portuguese</span><span class="lang-lvl" data-i18n="lang_bilingual">Bilingual</span></div>
-          <div class="lang-item"><span class="lang-name" data-i18n="lang_en">English</span><span class="lang-lvl" data-i18n="lang_bilingual2">Bilingual</span></div>
-          <div class="lang-item"><span class="lang-name" data-i18n="lang_fr">French</span><span class="lang-lvl" data-i18n="lang_fluent">Fluent</span></div>
-          <div class="lang-item"><span class="lang-name" data-i18n="lang_it">Italian</span><span class="lang-lvl" data-i18n="lang_fluent2">Fluent</span></div>
-          <div class="lang-item"><span class="lang-name" data-i18n="lang_es">Spanish</span><span class="lang-lvl" data-i18n="lang_intermediate">Intermediate</span></div>
-        </div>
+        <p>Italian-Brazilian engineer and ESCP MBA candidate (Paris &amp; London), with six years of experience across renewable energy M&amp;A, equity research, and portfolio management. I hold an MSc in Engineering from CentraleSupélec and a BSc in Electrical Engineering from USP — a technical foundation that sharpens how I evaluate energy infrastructure, project finance structures, and the technologies reshaping power markets.</p>
+        <p>My early career spans the <em style="color:var(--accent);font-style:normal">full investment lifecycle</em>: origination and execution of three renewable energy transactions ($232M, 252 MW), fundamental equity research on 30+ US technology companies, and strategic asset allocation of $300M+ in offshore capital for 70+ families.</p>
+        <p>I am currently looking for investment roles in energy transition in London or Paris, even though I consider myself a global citizen. I look forward to applying buy-side transaction experience, financial modelling skills, and deep energy sector knowledge to originate, execute, and manage investments across the energy transition end-to-end.</p>
+        <p>Outside of work, I compose music at the piano and build apps that quietly improve my daily life — from health trackers to tools that make my work a little sharper.</p>
+
       </div>
       <div class="sidebar">
-        <div class="skill-group">
-          <p class="skill-lbl" data-i18n="skill_data">Data Analysis</p>
-          <p class="skill-list">Tableau, PowerBI, SQL, MATLAB, GIS</p>
-        </div>
-        <div class="skill-group">
-          <p class="skill-lbl" data-i18n="skill_prog">Programming</p>
-          <p class="skill-list">Python, R, JavaScript, C++, VBA</p>
-        </div>
-        <div class="skill-group">
-          <p class="skill-lbl" data-i18n="skill_finance">Finance</p>
-          <p class="skill-list">Bloomberg Terminal, Pitchbook, FactSet</p>
-        </div>
-        <div class="skill-group">
-          <p class="skill-lbl">AI</p>
-          <p class="skill-list" data-i18n="skill_ai_list">Prompt Engineering, Agentic AI, Supervised Learning, Unsupervised Learning</p>
-        </div>
-        <div class="skill-group">
-          <p class="skill-lbl" data-i18n="skill_domain">Domain Expertise</p>
-          <p class="skill-list domain" data-i18n="skill_domain_list">Energy Transition, Green Hydrogen, Solar / Wind M&amp;A, Infrastructure PE, Equity Research, Portfolio Management</p>
-        </div>
         <div class="map-wrap">
           <p class="map-lbl" data-i18n="map_based">Currently Based</p>
           <svg viewBox="0 0 160 215" xmlns="http://www.w3.org/2000/svg" style="width:37.5%;display:block;margin:.6rem auto 0">
@@ -1023,191 +1003,78 @@ footer{
 
 
 
-<section id="focus">
-  <div class="si">
-    <p class="s-tag reveal" data-i18n="focus_tag">What I care about</p>
-    <h2 class="s-title reveal reveal-delay-1" data-i18n="focus_title">Three domains, <em>one thesis</em></h2>
-    <div class="focus-cols">
-      <div class="focus-col reveal reveal-delay-1">
-        <div class="focus-num">I</div>
-        <div class="focus-ttl" data-i18n="focus1_ttl">Energy Transition</div>
-        <p class="focus-desc" data-i18n="focus1_desc">The energy transition is the defining infrastructure challenge of our generation — a full rewiring of how the world produces and consumes energy. I have worked across its value chain: closing renewable energy M&A in Brazil, assessing green hydrogen feasibility, and studying the capital structures that make large-scale clean energy projects bankable.</p>
-      </div>
-      <div class="focus-col reveal reveal-delay-2">
-        <div class="focus-num">II</div>
-        <div class="focus-ttl" data-i18n="focus2_ttl">Technology &amp; AI</div>
-        <p class="focus-desc" data-i18n="focus2_desc">I covered 30+ high-growth technology companies as an equity analyst, and I have built data tools — from GIS mapping platforms to automated fund screening systems — that convert raw information into decisions. AI will not replace decision-makers, but the decision-makers of tomorrow will be the ones who know how to work with it.</p>
-      </div>
-      <div class="focus-col reveal reveal-delay-3">
-        <div class="focus-num">III</div>
-        <div class="focus-ttl" data-i18n="focus3_ttl">Finance &amp; Capital Allocation</div>
-        <p class="focus-desc" data-i18n="focus3_desc">Capital determines which technologies get built and which transitions happen. I have been on both sides — allocating capital across global markets as a portfolio manager, and deploying it into real assets as an M&A practitioner. Finance is not a support function for the energy transition; it is a core driver of it.</p>
-      </div>
-    </div>
-    <div style="margin-top:4rem;padding-top:3rem;border-top:1px solid rgba(255,255,255,.06);max-width:780px">
-      <p style="font-family:var(--serif);font-size:1.35rem;font-weight:300;font-style:italic;color:var(--sub);line-height:1.8" data-i18n="focus_closing">To tackle the energy transition in a world shaped by AI, <strong>we must bring together technical and financial knowledge to make the right decisions. Will the decision-makers be AIs? No — but the people behind them will be the ones who understand both the complexity of energy systems and the logic of capital.</strong> That is the convergence I am building toward.</p>
-    </div>
-  </div>
-</section>
 
-
-
-<section id="education">
-  <div class="si">
-    <p class="s-tag reveal" data-i18n="edu_tag">Academic Formation</p>
-    <h2 class="s-title reveal reveal-delay-1" data-i18n="edu_title">Built on <em>rigour</em></h2>
-    <div class="edu-list">
-
-      <div class="edu-entry">
-        <div class="edu-left">
-          <p class="edu-period">2025 — Present</p>
-          <p class="edu-where">ESCP Business School<br>Paris &amp; London</p>
-        </div>
-        <div class="edu-right">
-          <p class="edu-deg" data-i18n="edu1_deg">MBA in International Management</p>
-          <p class="edu-school" data-i18n="edu1_school">Finance, Strategy &amp; Organisation, Economics, Accounting, Leadership</p>
-          <p class="edu-note" data-i18n="edu1_note">Entrepreneurship track — developing frameworks for sustainable finance and energy-sector ventures.</p>
-        </div>
-      </div>
-
-      <div class="edu-entry">
-        <div class="edu-left">
-          <p class="edu-period">2014 — 2017</p>
-          <p class="edu-where">École Centrale Paris<br>(CentraleSupélec) · France</p>
-        </div>
-        <div class="edu-right">
-          <p class="edu-deg">MSc Engineering &mdash; <em style="font-style:italic;color:var(--muted)">Diplôme d'Ingénieur</em></p>
-          <p class="edu-school" data-i18n="edu2_school">Mathematics, Control Systems, Applied Physics</p>
-          <p class="edu-note" data-i18n="edu2_note">Thesis: Energy Monitoring Systems for Hybrid Solar Panels.</p>
-        </div>
-      </div>
-
-      <div class="edu-entry">
-        <div class="edu-left">
-          <p class="edu-period">2012 — 2017</p>
-          <p class="edu-where">Escola Politécnica<br>da USP · São Paulo</p>
-        </div>
-        <div class="edu-right">
-          <p class="edu-deg">BSc Electrical Engineering &mdash; <em style="font-style:italic;color:var(--muted)">Automation &amp; Control</em></p>
-          <p class="edu-school" data-i18n="edu3_school">Control Systems, Optimisation, Signal Processing</p>
-          <p class="edu-note" data-i18n="edu3_note">Thesis: Coordination of EV Charging using Reinforcement Learning.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-<section id="research">
-  <div class="si">
-    <p class="s-tag reveal" data-i18n="research_tag">Academic Works</p>
-    <h2 class="s-title reveal reveal-delay-1" data-i18n="research_title">Academic <em>works</em></h2>
-    <div class="research-grid">
-
-      <div class="research-card">
-        <p class="research-tag">Strategy · Healthcare · IP Commercialisation</p>
-        <h3 class="research-title">GTM Strategy for a Self-Charging Wearable Health Patent</h3>
-        <p class="research-body">How do you turn a patent into a revenue stream? The project examined how to bring to market a self-charging wearable health device — determining how to monetise an energy-harvesting capability while avoiding a premature push into the competitive consumer wearables market. The analysis covered market structure, consumer expectations, product differentiation, technical constraints, go-to-market options, and priority partnership targets. The main recommendation was clear: monetise first through a <strong>B2B embedded model</strong> rather than a branded consumer launch. The device's strongest advantage — energy autonomy — is most valuable where charging is a reliability problem, not a consumer convenience feature. The recommended path was to license or embed with device makers, health-tech companies, and OEM partners first, then expand toward B2B2C once technical maturity and market-readiness thresholds are met. The project also outlined a commercial roadmap including paid feasibility work, per-unit or royalty-based economics, and lighthouse pilot partnerships.</p>
-      </div>
-
-      <div class="research-card">
-        <p class="research-tag" data-i18n="r4_tag">Reinforcement Learning · Smart Grid · EVs</p>
-        <h3 class="research-title" data-i18n="r4_title">Coordination of EV Charging through Multiagent Reinforcement Learning</h3>
-        <p class="research-body" data-i18n="r4_body">Development of a distributed strategy for coordinating electric vehicle charging using multiagent reinforcement learning, balancing three competing objectives: keeping batteries charged, minimising electricity costs, and avoiding transformer overloads. The work proposed <strong>MASCO</strong> (MultiAgent Selfish-Collaborative Architecture), modelling the charging problem as a Markov Decision Process with defined agent states, actions, and rewards, and simulating a residential neighbourhood with realistic house loads, EV travel routines, transformer constraints, and electricity tariff regimes. Results showed MASCO could cut daily overload events from 33 (always-charging baseline) to as low as 6, while maintaining battery charge at ~99.96%. A strong proof of concept that decentralised reinforcement learning can improve EV charging coordination under realistic grid constraints.</p>
-      </div>
-
-      <div class="research-card">
-        <p class="research-tag" data-i18n="r3_tag">Energy · Embedded Systems · IoT</p>
-        <h3 class="research-title" data-i18n="r3_title">Monitoring Architecture for Hybrid Solar Panels</h3>
-        <p class="research-body" data-i18n="r3_body">Design of a monitoring system for hybrid solar panels (DualSun) to measure both electrical output and thermal performance, integrated directly into the panels and hydraulic adapters. Requirements included fully automatic operation, industrial-grade reliability, and low enough cost for large-scale deployment, with performance data transmitted back to DualSun for analysis. The OpenEnergyMonitor / EmonTx platform was evaluated and rejected — designed for AC current rather than DC, and priced above the industrial target. The recommended architecture was a lower-cost system based on PIC microcontrollers, with wireless communication between panel-level sensors and a central base station transmitting via GSM. The project delivered a feasible technical direction and development roadmap rather than a finished product.</p>
-      </div>
-
-      <div class="research-card">
-        <p class="research-tag" data-i18n="r2_tag">Computer Vision · Robotics · 3D Mapping</p>
-        <h3 class="research-title" data-i18n="r2_title">Indoor Environment Mapping Using RGB-D Cameras</h3>
-        <p class="research-body" data-i18n="r2_body">Study of how RGB-D cameras (Microsoft Kinect) can be used for autonomous indoor mapping in robotics, combining RGB image processing with depth information to build detailed 3D maps of unknown environments. The methodology integrated OpenCV image processing, SIFT and SURF keypoint detection, Point Cloud Library (PCL) processing, RANSAC preliminary alignment, and ICP (Iterative Closest Point) frame-to-frame registration. The project was originally designed for deployment on a TurtleBot mobile robot, but was resized after its importation was suspended. The outcome was a solid technical foundation including image-processing studies, feature-detection routines, Kinect setup, and an initial ICP implementation — a strong basis for future real-time execution and full robotic deployment.</p>
-      </div>
-
-      <div class="research-card">
-        <p class="research-tag" data-i18n="r1_tag">Pico-Satellite · Hardware · Embedded Systems</p>
-        <h3 class="research-title" data-i18n="r1_title">TubeSat Personal Satellite</h3>
-        <p class="research-body" data-i18n="r1_body">Design, assembly, and launch of a TubeSat personal satellite developed by Interorbital Systems, in response to a government-driven initiative to train students and evaluate pico- and nanosatellite technologies in Brazil. The satellite was built around a four-tier PCB stack — Antenna, Power Management, Transceiver, and Microcontroller — housed in a cylindrical shell covered by eight solar cell panels. Subsystems included Spectrolab triple-junction solar cells, a Radiometrix UHF transceiver, and a BasicX-24 microcontroller. Payloads under study included a magnetometer, radiation hardness testing of integrated circuits, and Earth remote sensing. The team completed full assembly and integration; the satellite was subsequently launched aboard Interorbital Systems' NEPTUNE 30 deployment vehicle.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 
 
 <section id="experience">
   <div class="si">
-    <p class="s-tag reveal" data-i18n="nav_career">Career</p>
-    <h2 class="s-title reveal reveal-delay-1" data-i18n="exp_title">Where I have <em>worked</em></h2>
+    <p class="s-tag reveal" >Professional Experience</p>
+    <h2 class="s-title reveal reveal-delay-1" >What I have done <em>where I worked</em></h2>
     <div class="tl">
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-meta"><span class="tl-period">2025 — Present</span><span class="tl-loc">Paris &amp; London</span></div>
         <div class="tl-role" data-i18n="exp1_role">MBA in International Management</div>
-        <div class="tl-co">ESCP Business School</div>
+        <div class="tl-co"><a href="https://escp.eu/programmes/MBA" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid currentColor;opacity:.8;transition:opacity .2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.8'">ESCP Business School</a></div>
         <ul class="tl-bullets">
           <li data-i18n="exp1_b1">Full-time programme across Paris and London campuses covering Finance, Strategy, Economics, Accounting, and Leadership.</li>
-          <li data-i18n="exp1_b2">Entrepreneurship track; developing frameworks for sustainable finance and energy-sector ventures.</li>
+          <li>Entrepreneurship track with focus on sustainable finance, energy transition, and venture development.</li>
         </ul>
       </div>
       <div class="tl-item">
         <div class="tl-dot h"></div>
         <div class="tl-meta"><span class="tl-period">Jan 2025 — Present</span><span class="tl-loc">Remote</span></div>
         <div class="tl-role">Founder &amp; Principal Advisor</div>
-        <div class="tl-co">JC Consulting &amp; Advisory</div>
+        <div class="tl-co"><a href="https://joaocreste.github.io/consulting/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid currentColor;opacity:.8;transition:opacity .2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.8'">JC Consulting &amp; Advisory</a></div>
         <ul class="tl-bullets">
-          <li>Independent advisory practice helping SMEs and early-stage ventures bridge the gap between proprietary technology and commercial viability.</li>
+          <li>Independent advisory focused on business model development, market sizing, financial modelling, and go-to-market strategy for deep-tech and energy transition ventures.</li>
+          <li>Current engagement: strategic analysis for a patented technology — covering market sizing, competitive positioning, stakeholder mapping, and capital-raising materials.</li>
         </ul>
       </div>
       <div class="tl-item">
         <div class="tl-dot h"></div>
         <div class="tl-meta"><span class="tl-period">Jan — Apr 2025</span><span class="tl-loc">Oxford, UK</span></div>
-        <div class="tl-role" data-i18n="exp2_role">Business Development Consultant</div>
-        <div class="tl-co" data-i18n="exp2_co">Independent — British PE Fund mandate</div>
+        <div class="tl-role">Business Development Consultant — Green Hydrogen</div>
+        <div class="tl-co"><a href="https://www.yamna-co.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid currentColor;opacity:.8;transition:opacity .2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.8'">Independent mandate · UK-based infrastructure PE fund</a></div>
         <ul class="tl-bullets">
-          <li data-i18n="exp2_b1">Led all business development initiatives in Brazil with a strategic focus on large-scale green hydrogen production.</li>
-          <li data-i18n="exp2_b2">Developed a full due diligence framework that diverged materially from the remote team's initial perspective after engaging local legal counsel and environmental licensing specialists.</li>
+          <li>Led origination and market mapping for large-scale green hydrogen production opportunities in Brazil on behalf of a UK infrastructure private equity fund.</li>
+          <li>Developed an independent due diligence framework covering regulatory analysis, environmental licensing, and tax structuring — investment conclusions diverged materially from the remote team's initial thesis.</li>
         </ul>
       </div>
       <div class="tl-item">
         <div class="tl-dot h"></div>
         <div class="tl-meta"><span class="tl-period">May 2023 — Dec 2024</span><span class="tl-loc">São Paulo, Brazil</span></div>
         <div class="tl-role" data-i18n="exp3_role">Portfolio Manager — Offshore Investments</div>
-        <div class="tl-co" data-i18n="exp3_co">est GP — Multi Family Office (~$1B AUM)</div>
+        <div class="tl-co" data-i18n="exp3_co"><a href="https://estgp.com.br" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid currentColor;opacity:.8;transition:opacity .2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.8'">est GP — Multi Family Office (~$1B AUM)</a></div>
         <ul class="tl-bullets">
-          <li data-i18n="exp3_b1">Led strategic asset allocation and tactical positioning for the offshore book, representing 30%+ of total AUM.</li>
-          <li data-i18n="exp3_b2">Built an evaluation framework covering 2,000+ ETFs, mutual funds, and hedge funds using custom programming tools.</li>
-          <li data-i18n="exp3_b3">Implemented strategic portfolios for <strong>70+ families</strong> and more than $300M in assets.</li>
+          <li>Led strategic and tactical asset allocation for the offshore investment book ($300M+ AUM), spanning global equities, fixed income, and alternative investments.</li>
+          <li>Designed and coded a proprietary fund screening and due diligence framework covering 2,000+ ETFs, mutual funds, and hedge funds — combining quantitative scoring with qualitative manager diligence.</li>
+          <li>Constructed and implemented tailored investment portfolios for 70+ families, calibrated to risk profile, liquidity needs, currency exposure, and investment horizon.</li>
         </ul>
       </div>
       <div class="tl-item">
         <div class="tl-dot h"></div>
         <div class="tl-meta"><span class="tl-period">Jan 2021 — Nov 2022</span><span class="tl-loc">São Paulo, Brazil</span></div>
         <div class="tl-role" data-i18n="exp4_role">Equity Research Analyst — Global Equities</div>
-        <div class="tl-co">Kapitalo Investimentos</div>
+        <div class="tl-co"><a href="https://www.kapitalo.com.br/english" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid currentColor;opacity:.8;transition:opacity .2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.8'">Kapitalo Investimentos</a></div>
         <ul class="tl-bullets">
-          <li data-i18n="exp4_b1">Covered technology and high-growth companies for a long-biased portfolio of stocks, indices, and corporate bonds.</li>
-          <li data-i18n="exp4_b2">Built and managed a long-only portfolio of 10 companies using a first-principles methodology: biographies, channel checks, customer calls, management meetings — then valuation.</li>
-          <li data-i18n="exp4_b3">Site visit to Tesla's California Gigafactory; investor relations meetings with executive leadership.</li>
-          <li data-i18n="exp4_b4">Led internal data research: ETF/index decomposition, bottom-up earnings reviews, country risk premium comparatives.</li>
+          <li>Conducted fundamental equity research on 30+ US technology companies for a long-biased portfolio of stocks, indices, and corporate bonds.</li>
+          <li>Managed a concentrated long-only portfolio of 10 positions with full ownership of investment thesis, DCF / multiples-based valuation, risk monitoring, and position sizing.</li>
+          <li>Site visit to Tesla's Fremont Gigafactory; direct engagement with executive IR team alongside institutional investors.</li>
+          <li>Led internal quantitative research: ETF/index decomposition, bottom-up earnings analysis, and country risk premium benchmarking.</li>
         </ul>
       </div>
       <div class="tl-item">
         <div class="tl-dot h"></div>
         <div class="tl-meta"><span class="tl-period">May 2018 — Dec 2020</span><span class="tl-loc">São Paulo, Brazil</span></div>
-        <div class="tl-role" data-i18n="exp5_role">M&amp;A and Business Development Manager</div>
-        <div class="tl-co">Eren Groupe (now Total Eren / TotalEnergies)</div>
+        <div class="tl-role">M&amp;A and Business Development Manager — Renewable Energy</div>
+        <div class="tl-co"><a href="https://www.eren-groupe.com/en/histoire" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid currentColor;opacity:.8;transition:opacity .2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.8'">Eren Groupe (now Total Eren / TotalEnergies)</a> · French independent power producer · Solar &amp; Wind</div>
         <ul class="tl-bullets">
-          <li data-i18n="exp5_b1">Responsible for prospection, acquisition, and greenfield project development for a leading French independent power producer active in solar and wind.</li>
-          <li data-i18n="exp5_b2">Created an internal project database covering 50+ GW of evaluated opportunities — first of its kind across all Total Eren country operations.</li>
-          <li data-i18n="exp5_b3">Led the first two wind acquisitions with bilateral PPAs for Total Eren in Brazil, managing the full transaction lifecycle from NBO through shareholders' agreements.</li>
+          <li>Led origination, execution, and greenfield development of solar and wind assets for a leading French independent power producer (now part of TotalEnergies).</li>
+          <li>Built a proprietary deal origination pipeline covering 50+ GW of renewable energy investment opportunities across Brazil — the first systematic screening tool deployed across all Total Eren country operations. Enabled data-driven project ranking and accelerated investment committee decision-making.</li>
+          <li>Executed Total Eren's first two wind acquisitions in Brazil (160 MW combined, ~$154M invested), including bilateral PPA negotiation, SPA/SHA structuring, due diligence coordination across legal, technical, and financial workstreams, and project finance debt negotiations with public and private lenders.</li>
+          <li>Managed cross-border stakeholder relationships across French and Brazilian teams, external advisors, lenders, offtakers, and regulatory authorities throughout the full investment lifecycle.</li>
         </ul>
       </div>
     </div>
@@ -1216,11 +1083,15 @@ footer{
 
 
 
+
+
+
+
 <section id="deals">
   <div class="si">
     <p class="s-tag reveal" data-i18n="nav_ma_long">M&amp;A Projects</p>
-    <h2 class="s-title reveal reveal-delay-1" data-i18n="deals_title">Deals, <em>end-to-end</em></h2>
-    <p class="deals-intro reveal reveal-delay-2" data-i18n="deals_intro">Through my buy-side M&A experience, I played a direct role in the origination, negotiation, and successful closing of three renewable energy projects in Brazil — two wind farms and one solar complex. These assets are now fully operational and account for roughly <strong>232 million USD</strong> in aggregate investment. Across these transactions, I led or supported key workstreams including financial modelling, negotiation of SPAs and offtake agreements, and end-to-end project coordination. I was also actively engaged with public-sector stakeholders at both the state and federal levels, contributing to the regulatory and institutional efforts required to bring the projects to life.</p>
+    <h2 class="s-title reveal reveal-delay-1" >Transaction <em>Track Record</em></h2>
+    <p class="deals-intro reveal reveal-delay-2" >Three closed and operational renewable energy transactions in Brazil — two wind acquisitions and one solar development — totalling 252 MW of installed capacity and approximately $232M in aggregate investment. Led or supported origination, financial modelling, due diligence coordination, bilateral PPA negotiation, SPA/SHA structuring, project finance debt arrangements, and post-acquisition asset management across all three projects.</p>
     <div class="stat-bar">
       <div class="sb-item"><div class="sb-val">3</div><div class="sb-lbl" data-i18n="deal_stat1">Projects closed &amp; operational</div></div>
       <div class="sb-item"><div class="sb-val">251.8 MW</div><div class="sb-lbl" data-i18n="deal_stat2">Combined installed capacity</div></div>
@@ -1266,10 +1137,10 @@ footer{
           <div>
             <p class="narr-lbl" data-i18n="narr_role">My Role</p>
             <ul class="narr-list">
-              <li data-i18n="d1_r1">Originated the opportunity within the 50+ GW pipeline database I built for Total Eren Brazil and recommended the acquisition to Paris.</li>
+              <li>Originated the opportunity within the 50+ GW proprietary pipeline and presented the acquisition recommendation to the Paris investment committee.</li>
               <li data-i18n="d1_r2">Led bilateral PPA negotiation and all transaction documentation from NBO through binding MOU to shareholders' and shares purchase agreements.</li>
               <li data-i18n="d1_r3">Coordinated due diligence workstreams with legal, technical, and financial advisors across French and Brazilian teams.</li>
-              <li data-i18n="d1_r4">Led financial modelling and debt financing negotiations with private and public lenders.</li>
+              <li>Built project finance models including IRR/NPV analysis and sensitivity scenarios; led debt financing negotiations with private and public lenders.</li>
               <li data-i18n="d1_r5">Represented Total Eren in partner negotiations with Vila Energia to establish the 90/10 joint ownership structure, including negotiation of shareholders agreement.</li>
             </ul>
           </div>
@@ -1316,9 +1187,10 @@ footer{
           <div>
             <p class="narr-lbl">My Role</p>
             <ul class="narr-list">
-              <li data-i18n="d2_r1">Identified Maral within the proprietary pipeline database and recommended it to Paris as a strategic pre-construction entry into wind.</li>
+              <li>Identified Maral within the proprietary deal pipeline and recommended the acquisition to Paris as a strategic pre-construction entry into wind — a higher-risk profile requiring robust diligence on permitting, grid connection, and construction timelines.</li>
               <li data-i18n="d2_r2">Led buy-side negotiation with Voltalia Brazil from initial NBO through final shares purchase agreement.</li>
               <li data-i18n="d2_r3">Structured the 100% ownership approach, assessing and rejecting partnership options to maintain full control for Total Eren.</li>
+              <li>Coordinated technical, regulatory, and financial due diligence with external advisors; supported antitrust clearance process with CADE.</li>
             </ul>
           </div>
         </div>
@@ -1365,9 +1237,9 @@ footer{
           <div>
             <p class="narr-lbl">My Role</p>
             <ul class="narr-list">
-              <li data-i18n="d3_r1">Supported business development and project delivery during construction and ramp-up, working directly under the Managing Director of Total Eren Brazil.</li>
-              <li data-i18n="d3_r2">Contributed to the internal project database that benchmarked Dracena against the broader solar pipeline, informing capital allocation decisions.</li>
-              <li data-i18n="d3_r3">Coordinated with local teams, contractors, and regulators during the transition to commercial operation, tracking KPIs and reporting to Paris headquarters.</li>
+              <li>Supported project delivery and post-acquisition asset management during construction and ramp-up to commercial operation, reporting directly to the Managing Director of Total Eren Brazil.</li>
+              <li>Contributed to the proprietary deal pipeline that benchmarked Dracena's economics against the broader solar investment universe, informing portfolio-level capital allocation decisions.</li>
+              <li>Managed coordination with EPC contractors, local regulators, and Paris headquarters during transition to commercial operation — tracking construction KPIs, milestone delivery, and operational performance.</li>
             </ul>
             <p class="deal-fn" data-i18n="deal_fn">* BRL 829M covers Terra Santa and Maral combined, per Total Eren public announcement (Feb 2022).</p>
           </div>
@@ -1380,11 +1252,15 @@ footer{
 
 
 
+
+
+
+
 <section id="coverage">
   <div class="si">
-    <p class="s-tag reveal" data-i18n="nav_research_long">Equity Research Coverage</p>
-    <h2 class="s-title reveal reveal-delay-1" data-i18n="cov_title">Companies I <em>studied</em></h2>
-    <p class="cov-intro reveal reveal-delay-2" data-i18n="cov_intro">As an equity analyst, I covered the <strong>US technology sector with a focus on high-growth, disruptive businesses</strong>. My <strong>research methodology went beyond standard DCF modelling</strong> — I read founder biographies, ran channel checks with customers, engaged directly with management teams, and built thesis-driven memos from first principles. The portfolio I managed held 10 positions drawn from this 30+ company universe.<br>A few examples of complete investment opportunities include:</p>
+    <p class="s-tag reveal" >Equity Research</p>
+    <h2 class="s-title reveal reveal-delay-1" >Companies I have <em>covered</em></h2>
+    <p class="cov-intro reveal reveal-delay-2" >Fundamental equity research on 30+ US technology companies at Kapitalo Investimentos. Built investment theses combining business model analysis, TAM estimation, management engagement, and DCF / multiples-based valuation. Managed a concentrated 10-position long-only portfolio with full ownership of thesis development, risk monitoring, and position sizing. Authored 20+ investment memoranda for allocation decisions.</p>
 
     <div class="cov-table">
 
@@ -1480,11 +1356,15 @@ footer{
 
 
 
+
+
+
+
 <section id="portfolio">
   <div class="si">
-    <p class="s-tag reveal" data-i18n="nav_portfolio_long">Portfolio Management</p>
-    <h2 class="s-title reveal reveal-delay-1" data-i18n="pm_title">Capital under <em>work</em></h2>
-    <p class="pm-intro reveal reveal-delay-2" data-i18n="pm_intro">As portfolio manager of a MFO, I was responsible for the offshore investment book — designing and managing portfolios for 70+ families across global equities, fixed income, and alternative assets in the US and Europe.</p>
+    <p class="s-tag reveal" >Portfolio Management</p>
+    <h2 class="s-title reveal reveal-delay-1" >An approach to <em>disciplined investing</em></h2>
+    <p class="pm-intro reveal reveal-delay-2" >Portfolio Manager at est GP, a multi-family office managing ~$1B in AUM. Directly responsible for $300M+ in offshore capital across global equities, fixed income, and alternative investments for 70+ families.</p>
 
     <div class="pm-grid">
 
@@ -1788,93 +1668,26 @@ footer{
       <div class="pm-story">
         <div class="story-item">
           <div class="story-num">01</div>
-          <div class="story-ttl" data-i18n="pm_s1_title">Built the analytical framework from scratch</div>
-          <p class="story-body" data-i18n="pm_s1_body">The offshore book had no systematic evaluation infrastructure when I joined. I designed and coded a proprietary screening tool covering 2,000+ ETFs, mutual funds, and hedge funds — combining quantitative scoring (risk-adjusted returns, drawdown, factor exposures) with qualitative diligence. What had been a manual, judgment-driven process became a <strong>data-driven framework that could be consistently applied across the entire book</strong>.</p>
+          <div class="story-ttl">Built the analytical framework from scratch</div>
+          <p class="story-body">The offshore book had no systematic evaluation infrastructure when I joined. I designed and coded a proprietary screening tool covering 2,000+ ETFs, mutual funds, and hedge funds — combining quantitative scoring (risk-adjusted returns, drawdown, factor exposures) with qualitative diligence. What had been a manual, judgment-driven process became a <strong>data-driven framework that could be consistently applied across the entire book</strong>.</p>
         </div>
         <div class="story-div"></div>
         <div class="story-item">
           <div class="story-num">02</div>
-          <div class="story-ttl" data-i18n="pm_s2_title">Deployed strategic portfolios at scale</div>
-          <p class="story-body" data-i18n="pm_s2_body">Using the framework, I implemented tailored strategic portfolios for each family — calibrated to their risk profile, liquidity needs, currency exposure, and time horizon. Beyond strategic allocation, I managed tactical positioning in response to market conditions, adjusting weights across equities, fixed income, and alternatives across <strong>$300M+ in offshore capital serving 70+ families</strong>.</p>
+          <div class="story-ttl">Deployed strategic portfolios at scale</div>
+          <p class="story-body">Using the framework, I implemented tailored strategic portfolios for each family — calibrated to their risk profile, liquidity needs, currency exposure, and time horizon. Beyond strategic allocation, I managed tactical positioning in response to market conditions, adjusting weights across equities, fixed income, and alternatives across <strong>$300M+ in offshore capital serving 70+ families</strong>.</p>
         </div>
       </div>
 
     </div><!-- end pm-grid -->
 
-    <!-- ── The Innovation Framework ── -->
-    <div class="pm-framework">
-      <p class="s-tag" style="margin-bottom:1rem" data-i18n="pm_framework_tag">A new way to approach wealth management</p>
-      <h3 style="font-family:var(--serif);font-size:clamp(1.5rem,2.2vw,2rem);font-weight:300;color:var(--text);margin-bottom:.3rem">A data-driven framework, <em style="color:var(--accent);font-style:italic">built from scratch</em></h3>
-
-      <div class="pm-pipeline">
-
-        <div class="pm-stage">
-          <p class="pm-stage-num">I</p>
-          <p class="pm-stage-title" data-i18n="pm_stage1_title">Opportunity<br>Identification</p>
-          <ul class="pm-stage-items">
-            <li class="hl" data-i18n="pm_s1_i1">Systematic screening of 2,000+ funds</li>
-            <li class="hl" data-i18n="pm_s1_i2">Custom Python &amp; R scoring models</li>
-            <li data-i18n="pm_s1_i3">ETFs, mutual funds &amp; hedge funds</li>
-            <li data-i18n="pm_s1_i4">Risk-adjusted return ranking</li>
-            <li data-i18n="pm_s1_i5">Factor exposure mapping</li>
-          </ul>
-        </div>
-
-        <div class="pm-arrow">
-          <svg width="26" height="14" viewBox="0 0 26 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:.45">
-            <path d="M0 7H20M16 2L24 7L16 12" stroke="#c8a96e" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-
-        <div class="pm-stage">
-          <p class="pm-stage-num">II</p>
-          <p class="pm-stage-title" data-i18n="pm_stage2_title">Investment<br>Analysis</p>
-          <ul class="pm-stage-items">
-            <li class="hl" data-i18n="pm_s2_i1">Quantitative + qualitative diligence</li>
-            <li class="hl" data-i18n="pm_s2_i2">Drawdown &amp; volatility analytics</li>
-            <li data-i18n="pm_s2_i3">Manager track record review</li>
-            <li data-i18n="pm_s2_i4">Liquidity &amp; structure analysis</li>
-            <li data-i18n="pm_s2_i5">Benchmark comparison tools</li>
-          </ul>
-        </div>
-
-        <div class="pm-arrow">
-          <svg width="26" height="14" viewBox="0 0 26 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:.45">
-            <path d="M0 7H20M16 2L24 7L16 12" stroke="#c8a96e" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-
-        <div class="pm-stage">
-          <p class="pm-stage-num">III</p>
-          <p class="pm-stage-title" data-i18n="pm_stage3_title">Portfolio<br>Construction</p>
-          <ul class="pm-stage-items">
-            <li class="hl" data-i18n="pm_s3_i1">Risk-return optimisation per family</li>
-            <li class="hl" data-i18n="pm_s3_i2">Dynamic tactical positioning</li>
-            <li data-i18n="pm_s3_i3">Currency exposure calibration</li>
-            <li data-i18n="pm_s3_i4">Liquidity-horizon matching</li>
-            <li data-i18n="pm_s3_i5">Continuous rebalancing logic</li>
-          </ul>
-        </div>
-
-      </div><!-- end pipeline -->
-
-      <div class="pm-ba">
-        <div class="pm-ba-card before">
-          <p class="pm-ba-lbl" data-i18n="pm_before">Before</p>
-          <p class="pm-ba-text" data-i18n="pm_before_text">Manual, judgment-driven process. No evaluation infrastructure. Decisions made case-by-case with no repeatable framework across the offshore book.</p>
-        </div>
-        <div class="pm-ba-card after">
-          <p class="pm-ba-lbl" data-i18n="pm_after">After</p>
-          <p class="pm-ba-text" data-i18n="pm_after_text">Proprietary data-driven framework — coded from scratch — consistently applied across all portfolios. Analytical rigour previously reserved for institutional desks, brought to a family office.</p>
-        </div>
-      </div>
-
-      <div class="pm-stats">
+    <div class="pm-stats">
         <div class="pm-stat"><div class="pm-stat-val">2,000+</div><div class="pm-stat-lbl" data-i18n="pm_stat1">Funds in screening universe</div></div>
         <div class="pm-stat"><div class="pm-stat-val">$300M+</div><div class="pm-stat-lbl" data-i18n="pm_stat2">Offshore AUM managed</div></div>
         <div class="pm-stat"><div class="pm-stat-val">70+</div><div class="pm-stat-lbl" data-i18n="pm_stat3">Families served</div></div>
       </div>
-      <div class="pm-tools">
+
+    <div class="pm-tools">
         <div class="pm-tools-hd">
           <div class="pm-tools-line"></div>
           <span class="pm-tools-lbl" data-i18n="pm_tools_label">Back-office infrastructure levers</span>
@@ -1888,21 +1701,117 @@ footer{
           <div class="pm-tool">R</div>
           <div class="pm-tool">SQL</div>
           <div class="pm-tool">Tableau</div>
-          <div class="pm-tool">LaTeX</div>
+          <div class="pm-tool">Excel (advanced)</div>
         </div>
       </div>
-
-    </div><!-- end pm-framework -->
 
   </div>
 </section>
 
 
 
+
+
+
+
+<section id="education">
+  <div class="si">
+    <p class="s-tag reveal" >Academic Formation</p>
+    <h2 class="s-title reveal reveal-delay-1" >Education</h2>
+    <div class="edu-list">
+
+      <div class="edu-entry">
+        <div class="edu-left">
+          <p class="edu-period">2025 — Present</p>
+          <p class="edu-where">ESCP Business School<br>Paris &amp; London<br><span style="font-size:.75rem;color:var(--accent);font-style:italic">Grande École — top-tier French business</span></p>
+        </div>
+        <div class="edu-right">
+          <p class="edu-deg" data-i18n="edu1_deg">MBA in International Management</p>
+          <p class="edu-school" data-i18n="edu1_school">Finance, Strategy &amp; Organisation, Economics, Accounting, Leadership</p>
+          <p class="edu-note" >Entrepreneurship track. Focus areas: sustainable finance, energy transition, venture development.</p>
+        </div>
+      </div>
+
+      <div class="edu-entry">
+        <div class="edu-left">
+          <p class="edu-period">2014 — 2017</p>
+          <p class="edu-where">École Centrale Paris<br>(CentraleSupélec) · France<br><span style="font-size:.75rem;color:var(--accent);font-style:italic">Grande École — top-tier French engineering</span></p>
+        </div>
+        <div class="edu-right">
+          <p class="edu-deg">MSc Engineering &mdash; <em style="font-style:italic;color:var(--muted)">Diplôme d'Ingénieur</em></p>
+          <p class="edu-school" data-i18n="edu2_school">Mathematics, Control Systems, Applied Physics</p>
+          <p class="edu-note" data-i18n="edu2_note">Thesis: Energy Monitoring Systems for Hybrid Solar Panels.</p>
+        </div>
+      </div>
+
+      <div class="edu-entry">
+        <div class="edu-left">
+          <p class="edu-period">2012 — 2017</p>
+          <p class="edu-where">Escola Politécnica<br>da USP · São Paulo<br><span style="font-size:.75rem;color:var(--accent);font-style:italic">#1 ranked university in Latin America</span></p>
+        </div>
+        <div class="edu-right">
+          <p class="edu-deg">BSc Electrical Engineering &mdash; <em style="font-style:italic;color:var(--muted)">Automation &amp; Control</em></p>
+          <p class="edu-school" data-i18n="edu3_school">Control Systems, Optimisation, Signal Processing</p>
+          <p class="edu-note" data-i18n="edu3_note">Thesis: Coordination of EV Charging using Reinforcement Learning.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <div class="si">
+    <p class="s-tag reveal">Academic Projects</p>
+    <h2 class="s-title reveal reveal-delay-1">Technical and business <em>academic hands-on</em></h2>
+    <div class="research-grid">
+
+      <div class="research-card">
+        <p class="research-tag">Strategy · Healthcare · IP Commercialisation</p>
+        <h3 class="research-title">GTM Strategy for a Self-Charging Wearable Health Patent</h3>
+        <p class="research-body">How do you turn a patent into a revenue stream? The project examined how to bring to market a self-charging wearable health device — determining how to monetise an energy-harvesting capability while avoiding a premature push into the competitive consumer wearables market. The analysis covered market structure, consumer expectations, product differentiation, technical constraints, go-to-market options, and priority partnership targets. The main recommendation was clear: monetise first through a <strong>B2B embedded model</strong> rather than a branded consumer launch. The device's strongest advantage — energy autonomy — is most valuable where charging is a reliability problem, not a consumer convenience feature. The recommended path was to license or embed with device makers, health-tech companies, and OEM partners first, then expand toward B2B2C once technical maturity and market-readiness thresholds are met. The project also outlined a commercial roadmap including paid feasibility work, per-unit or royalty-based economics, and lighthouse pilot partnerships.</p>
+      </div>
+
+      <div class="research-card">
+        <p class="research-tag">Reinforcement Learning · Smart Grid · EVs</p>
+        <h3 class="research-title">Coordination of EV Charging through Multiagent Reinforcement Learning</h3>
+        <p class="research-body">Development of a distributed strategy for coordinating electric vehicle charging using multiagent reinforcement learning, balancing three competing objectives: keeping batteries charged, minimising electricity costs, and avoiding transformer overloads. The work proposed <strong>MASCO</strong> (MultiAgent Selfish-Collaborative Architecture), modelling the charging problem as a Markov Decision Process with defined agent states, actions, and rewards, and simulating a residential neighbourhood with realistic house loads, EV travel routines, transformer constraints, and electricity tariff regimes. Results showed MASCO could cut daily overload events from 33 (always-charging baseline) to as low as 6, while maintaining battery charge at ~99.96%. A strong proof of concept that decentralised reinforcement learning can improve EV charging coordination under realistic grid constraints.</p>
+      </div>
+
+      <div class="research-card">
+        <p class="research-tag">Energy · Embedded Systems · IoT</p>
+        <h3 class="research-title">Monitoring Architecture for Hybrid Solar Panels</h3>
+        <p class="research-body">Design of a monitoring system for hybrid solar panels (DualSun) to measure both electrical output and thermal performance. Requirements included automatic operation, industrial reliability, and low cost for large-scale deployment, with data transmitted to DualSun via GSM. The OpenEnergyMonitor / EmonTx platform was evaluated and rejected — designed for AC current rather than DC, and priced above the industrial target. The recommended architecture was a lower-cost system based on PIC microcontrollers, with wireless communication between panel-level sensors and a central base station. The project delivered a feasible technical direction and development roadmap rather than a finished product.</p>
+      </div>
+
+      <div class="research-card">
+        <p class="research-tag">Computer Vision · Robotics · 3D Mapping</p>
+        <h3 class="research-title">Indoor Environment Mapping Using RGB-D Cameras</h3>
+        <p class="research-body">Study of how RGB-D cameras (Microsoft Kinect) can be used for autonomous indoor mapping, combining RGB image processing with depth data to build 3D maps of unknown environments. Integrated OpenCV, SIFT/SURF keypoint detection, PCL point-cloud processing, RANSAC alignment, and ICP frame registration. Originally designed for a TurtleBot mobile robot, the project was resized after its importation was suspended — delivering a solid technical foundation for future real-time execution and robotic deployment.</p>
+      </div>
+
+      <div class="research-card">
+        <p class="research-tag">Pico-Satellite · Hardware · Embedded Systems</p>
+        <h3 class="research-title">TubeSat Personal Satellite</h3>
+        <p class="research-body">Design, assembly, and launch of a TubeSat personal satellite, in response to a government-driven initiative to train students and evaluate pico- and nanosatellite technologies in Brazil. Built around a four-tier PCB stack — Antenna, Power Management, Transceiver, and Microcontroller — with Spectrolab triple-junction solar cells, a Radiometrix UHF transceiver, and a BasicX-24 microcontroller. Payloads under study included a magnetometer, radiation hardness testing, and Earth remote sensing. The satellite was launched aboard Interorbital Systems' NEPTUNE 30 deployment vehicle.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
 <section id="projects">
   <div class="si">
-    <p class="s-tag reveal" data-i18n="proj_tag">Ventures &amp; Side Projects</p>
-    <h2 class="s-title reveal reveal-delay-1" data-i18n="proj_title">Other things I've <em>built, so far...</em></h2>
+    <p class="s-tag reveal" >Projects &amp; Ventures</p>
+    <h2 class="s-title reveal reveal-delay-1" >Other things I've <em>built</em></h2>
     <div class="proj-cols">
       <div class="proj-col reveal reveal-delay-1">
         <p class="proj-kicker" data-i18n="proj1_kicker">Community · Co-founded in Paris</p>
@@ -1913,15 +1822,16 @@ footer{
       <div class="proj-col reveal reveal-delay-2">
         <p class="proj-kicker" data-i18n="proj2_kicker">Infrastructure Intelligence Tool</p>
         <h3 class="proj-name">Forager</h3>
-        <p class="proj-desc" data-i18n="proj2_desc">An interactive mapping platform for solar, wind, and infrastructure assets. Born from a data-science approach I pioneered at Total Eren — where mapping 50+ GW of renewable opportunities in Brazil transformed M&amp;A pipeline quality — Forager generalises that methodology into a usable product. Still live; added material value in subsequent roles.</p>
-        <p class="proj-tags">GIS, JavaScript, Renewable Energy, M&amp;A</p>
+        <p class="proj-desc">An interactive GIS-based platform for mapping solar, wind, and infrastructure assets — purpose-built for renewable energy deal origination and market intelligence. Originally developed to systematise the 50+ GW pipeline at Total Eren Brazil, where it materially improved M&amp;A origination quality. Generalised into a reusable tool; deployed across subsequent roles.</p>
+        <p class="proj-tags">GIS, JavaScript, Renewable Energy, Deal Origination, Infrastructure Intelligence</p>
         <a href="https://joaocreste.github.io/forager/" target="_blank" style="display:inline-flex;align-items:center;gap:.4rem;margin-top:.9rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);text-decoration:none;opacity:.8;transition:opacity .2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.8'">↗ View Forager</a>
       </div>
       <div class="proj-col reveal reveal-delay-3">
-        <p class="proj-kicker" data-i18n="proj3_kicker">Music · Personal Practice</p>
-        <h3 class="proj-name" data-i18n="proj3_name">A Lot of Music</h3>
-        <p class="proj-desc" data-i18n="proj3_desc">I have studied piano for eight years at conservatory level — an education in precision, patience, and the discipline of building something complex over a long period of time. I still play regularly and compose my own pieces. Music is not a side interest; it is the counterweight to everything analytical in my life, and the place where I think most freely.</p>
-        <p class="proj-tags" data-i18n="proj3_tags">Piano, Composition, Conservatory, 8 Years</p>
+        <p class="proj-kicker">Music · Personal Practice</p>
+        <h3 class="proj-name">A Lot of Music</h3>
+        <p class="proj-desc">I have studied piano for eight years at conservatory level — an education in precision, patience, and the discipline of building something complex over a long period of time. I still play regularly and compose my own pieces. Music is not a side interest; it is the counterweight to everything analytical in my life, and the place where I think most freely.</p>
+        <p class="proj-tags">Piano, Composition, Conservatory, 8 Years</p>
+      </div>
       </div>
     </div>
   </div>
@@ -1929,11 +1839,15 @@ footer{
 
 
 
+
+
+
+
 <section id="contact">
   <div class="contact-wrap">
     <p class="s-tag" style="justify-content:center" data-i18n="nav_contact">Contact</p>
-    <h2 class="contact-ttl" data-i18n="contact_title">Let's start a <em>conversation</em></h2>
-    <p class="contact-sub" data-i18n="contact_sub">Open to conversations about infrastructure, energy transition, equity research, and entrepreneurial ventures at the intersection of energy and technology. Based between London and Paris, operating internationally.</p>
+    <h2 class="contact-ttl" >Contact</h2>
+    <p class="contact-sub" >Open to conversations about infrastructure investment, energy transition, and clean energy M&amp;A. Based in London. EU and UK work-eligible.</p>
     <div class="contact-links">
       <a href="mailto:joaocreste@gmail.com" class="c-link c-link-primary">✉ joaocreste@gmail.com</a>
       <a href="mailto:joao.creste@edu.escp.com" class="c-link c-link-primary">✉ joao.creste@edu.escp.com</a>
