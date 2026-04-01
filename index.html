@@ -55,6 +55,7 @@ section{position:relative;z-index:1}
 
 /* ── ABOUT ── */
 #about{border-top:1px solid var(--border);background:var(--surface)}
+#about>.si{padding-bottom:2rem}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
 .about-text p{color:var(--sub);font-size:1rem;line-height:1.88;margin-bottom:1.35rem}
 .about-text p strong{color:var(--text);font-weight:500}
@@ -567,6 +568,18 @@ footer{
 .pm-tools-line{flex:1;height:1px;background:rgba(200,169,110,.15)}
 .pm-tools-grid{display:flex;flex-wrap:wrap;gap:.55rem;justify-content:center}
 .pm-tool{font-family:var(--mono);font-size:.65rem;letter-spacing:.06em;color:var(--accent);background:rgba(200,169,110,.06);border:1px solid rgba(200,169,110,.22);padding:.38rem .85rem;white-space:nowrap}
+
+/* ── CAREER GANTT ── */
+.ct-wrap{padding:0 3rem 3rem}
+
+.ct-inner{width:100%;overflow-x:auto;padding-bottom:.5rem}
+.ct-svg-wrap{min-width:700px;width:100%;position:relative}
+.ct-legend{display:flex;gap:2rem;margin-top:1.6rem;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.04);flex-wrap:wrap}
+.ct-leg-item{display:flex;align-items:center;gap:.55rem;font-family:var(--mono);font-size:.58rem;letter-spacing:.06em;color:var(--muted)}
+.ct-leg-swatch{width:20px;height:9px;border-radius:1px}
+.ct-leg-swatch.work{background:rgba(200,169,110,.18);border:1px solid rgba(200,169,110,.4)}
+.ct-leg-swatch.edu{background:rgba(61,153,112,.15);border:1px solid rgba(61,153,112,.35)}
+
 </style>
 </head>
 <body>
@@ -683,9 +696,9 @@ footer{
     <div class="about-grid">
       <div class="about-text">
         <p>Italian-Brazilian engineer and ESCP MBA candidate (Paris &amp; London), with six years of experience across renewable energy M&amp;A, equity research, and portfolio management. I hold an MSc in Engineering from CentraleSupélec and a BSc in Electrical Engineering from USP — a technical foundation that sharpens how I evaluate energy infrastructure, project finance structures, and the technologies reshaping power markets.</p>
-        <p>My early career spans the <em style="color:var(--accent);font-style:normal">full investment lifecycle</em>: origination and execution of three renewable energy transactions ($232M, 252 MW), fundamental equity research on 30+ US technology companies, and strategic asset allocation of $300M+ in offshore capital for 70+ families.</p>
-        <p>I am currently looking for investment roles in energy transition in London or Paris, even though I consider myself a global citizen. I look forward to applying buy-side transaction experience, financial modelling skills, and deep energy sector knowledge to originate, execute, and manage investments across the energy transition end-to-end.</p>
-        <p>Outside of work, I compose music at the piano and build apps that quietly improve my daily life — from health trackers to tools that make my work a little sharper.</p>
+        <p>My career spans the <strong>full investment lifecycle</strong>: origination and execution of three renewable energy transactions ($232M, 252 MW), fundamental equity research on 30+ US technology companies, and strategic asset allocation of $300M+ in offshore capital for 70+ families. Each role has deepened a different dimension of the same conviction — that the energy transition is as much a capital allocation challenge as it is a technical one.</p>
+        <p>Looking for investment roles in energy transition in London or Paris, even though I consider myself a global citizen. I can apply buy-side transaction experience, financial modelling skills, and deep energy sector knowledge to originate, execute, and manage investments across the energy transition end-to-end.</p>
+        <p>I also build tools and apps, like <em>Forager</em>, an interactive GIS platform for mapping renewable energy and infrastructure assets.</p>
 
       </div>
       <div class="sidebar">
@@ -998,7 +1011,65 @@ footer{
         </div>
       </div>
     </div>
+
+  </div><!-- end .si -->
+
+  <!-- ── CAREER GANTT TIMELINE ── -->
+  <div class="ct-wrap">
+    <div class="ct-inner">
+      <div class="ct-svg-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1960 228" width="100%" height="228" style="display:block;overflow:hidden">
+<line x1="308.8" y1="42" x2="308.8" y2="164" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="308.8" y="30" font-family="'DM Mono',monospace" font-size="12.5" fill="#3a3e47" text-anchor="middle">2012</text>
+<line x1="308.8" y1="36" x2="308.8" y2="42" stroke="#3a3e47" stroke-width="0.8"/>
+<line x1="417.5" y1="42" x2="417.5" y2="164" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="526.2" y1="42" x2="526.2" y2="164" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="526.2" y="30" font-family="'DM Mono',monospace" font-size="12.5" fill="#3a3e47" text-anchor="middle">2014</text>
+<line x1="526.2" y1="36" x2="526.2" y2="42" stroke="#3a3e47" stroke-width="0.8"/>
+<line x1="635.0" y1="42" x2="635.0" y2="164" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="743.8" y1="42" x2="743.8" y2="164" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="743.8" y="30" font-family="'DM Mono',monospace" font-size="12.5" fill="#3a3e47" text-anchor="middle">2016</text>
+<line x1="743.8" y1="36" x2="743.8" y2="42" stroke="#3a3e47" stroke-width="0.8"/>
+<line x1="852.5" y1="42" x2="852.5" y2="164" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="961.2" y1="42" x2="961.2" y2="164" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="961.2" y="30" font-family="'DM Mono',monospace" font-size="12.5" fill="#3a3e47" text-anchor="middle">2018</text>
+<line x1="961.2" y1="36" x2="961.2" y2="42" stroke="#3a3e47" stroke-width="0.8"/>
+<line x1="1070.0" y1="42" x2="1070.0" y2="164" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="1178.8" y1="42" x2="1178.8" y2="164" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="1178.8" y="30" font-family="'DM Mono',monospace" font-size="12.5" fill="#3a3e47" text-anchor="middle">2020</text>
+<line x1="1178.8" y1="36" x2="1178.8" y2="42" stroke="#3a3e47" stroke-width="0.8"/>
+<line x1="1287.5" y1="42" x2="1287.5" y2="164" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="1396.2" y1="42" x2="1396.2" y2="164" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="1396.2" y="30" font-family="'DM Mono',monospace" font-size="12.5" fill="#3a3e47" text-anchor="middle">2022</text>
+<line x1="1396.2" y1="36" x2="1396.2" y2="42" stroke="#3a3e47" stroke-width="0.8"/>
+<line x1="1505.0" y1="42" x2="1505.0" y2="164" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="2 5"/>
+<line x1="1613.8" y1="42" x2="1613.8" y2="164" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="1613.8" y="30" font-family="'DM Mono',monospace" font-size="12.5" fill="#3a3e47" text-anchor="middle">2024</text>
+<line x1="1613.8" y1="36" x2="1613.8" y2="42" stroke="#3a3e47" stroke-width="0.8"/>
+<line x1="1722.5" y1="42" x2="1722.5" y2="164" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="1831.2" y="30" font-family="'DM Mono',monospace" font-size="13.8" fill="#c8a96e" text-anchor="middle">Today</text>
+<line x1="1831.2" y1="36" x2="1831.2" y2="42" stroke="#c8a96e" stroke-width="1.5"/>
+<line x1="200" y1="42" x2="1940" y2="42" stroke="#22262d" stroke-width="1"/>
+<rect x="526.2" y="70.0" width="326.2" height="32" fill="rgba(61,153,112,0.12)" stroke="rgba(61,153,112,0.5)" stroke-width="1" rx="0"/>
+<text x="689.4" y="90.5" font-family="'DM Mono',monospace" font-size="12.5" fill="#3d9970" text-anchor="middle" letter-spacing="0.5">Diplôme d'Ingénieur</text>
+<rect x="852.5" y="70.0" width="326.2" height="32" fill="rgba(200,169,110,0.12)" stroke="rgba(200,169,110,0.55)" stroke-width="1" rx="0"/>
+<text x="1015.6" y="90.5" font-family="'DM Mono',monospace" font-size="12.5" fill="#c8a96e" text-anchor="middle" letter-spacing="0.5">M&A</text>
+<rect x="1178.8" y="70.0" width="543.8" height="32" fill="rgba(200,169,110,0.12)" stroke="rgba(200,169,110,0.55)" stroke-width="1" rx="0"/>
+<text x="1450.6" y="90.5" font-family="'DM Mono',monospace" font-size="12.5" fill="#c8a96e" text-anchor="middle" letter-spacing="0.5">Capital Markets</text>
+<rect x="1722.5" y="70.0" width="171.8" height="32" fill="rgba(61,153,112,0.12)" stroke="rgba(61,153,112,0.5)" stroke-width="1" rx="0"/>
+<text x="1808.4" y="90.5" font-family="'DM Mono',monospace" font-size="12.5" fill="#3d9970" text-anchor="middle" letter-spacing="0.5">MBA</text>
+<rect x="308.8" y="122.0" width="543.8" height="32" fill="rgba(61,153,112,0.12)" stroke="rgba(61,153,112,0.5)" stroke-width="1" rx="0"/>
+<text x="580.6" y="142.5" font-family="'DM Mono',monospace" font-size="12.5" fill="#3d9970" text-anchor="middle" letter-spacing="0.5">BSc Electrical Engineering</text>
+<line x1="1858.4" y1="40" x2="1858.4" y2="206.0" stroke="#c8a96e" stroke-width="1.5" opacity="0.6"/>
+<rect x="200" y="172" width="12" height="9" fill="rgba(61,153,112,0.12)" stroke="rgba(61,153,112,0.5)" stroke-width="1"/>
+<text x="218" y="180" font-family="'DM Mono',monospace" font-size="11.9" fill="#6b6f77" letter-spacing="0.5">Education</text>
+<rect x="320" y="172" width="12" height="9" fill="rgba(200,169,110,0.12)" stroke="rgba(200,169,110,0.55)" stroke-width="1"/>
+<text x="338" y="180" font-family="'DM Mono',monospace" font-size="11.9" fill="#6b6f77" letter-spacing="0.5">Professional</text>
+</svg>
+      </div>
+    </div>
   </div>
+  <div style="height:2rem"></div>
 </section>
 
 
@@ -1015,7 +1086,7 @@ footer{
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-meta"><span class="tl-period">2025 — Present</span><span class="tl-loc">Paris &amp; London</span></div>
-        <div class="tl-role" data-i18n="exp1_role">MBA in International Management Candidate</div>
+        <div class="tl-role" data-i18n="exp1_role">MBA in International Management</div>
         <div class="tl-co"><a href="https://escp.eu/programmes/MBA" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid currentColor;opacity:.8;transition:opacity .2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.8'">ESCP Business School</a></div>
         <ul class="tl-bullets">
           <li data-i18n="exp1_b1">Full-time programme across Paris and London campuses covering Finance, Strategy, Economics, Accounting, and Leadership.</li>
@@ -1363,7 +1434,7 @@ footer{
 <section id="portfolio">
   <div class="si">
     <p class="s-tag reveal" >Portfolio Management</p>
-    <h2 class="s-title reveal reveal-delay-1" >An approach to <em>disciplined investing</em></h2>
+    <h2 class="s-title reveal reveal-delay-1" >How I <em>manage capital</em></h2>
     <p class="pm-intro reveal reveal-delay-2" >Portfolio Manager at est GP, a multi-family office managing ~$1B in AUM. Directly responsible for $300M+ in offshore capital across global equities, fixed income, and alternative investments for 70+ families.</p>
 
     <div class="pm-grid">
@@ -1726,7 +1797,7 @@ footer{
           <p class="edu-where">ESCP Business School<br>Paris &amp; London<br><span style="font-size:.75rem;color:var(--accent);font-style:italic">Grande École — top-tier French business</span></p>
         </div>
         <div class="edu-right">
-          <p class="edu-deg" data-i18n="edu1_deg">MBA in International Management Candidate</p>
+          <p class="edu-deg" data-i18n="edu1_deg">MBA in International Management</p>
           <p class="edu-school" data-i18n="edu1_school">Finance, Strategy &amp; Organisation, Economics, Accounting, Leadership</p>
           <p class="edu-note" >Entrepreneurship track. Focus areas: sustainable finance, energy transition, venture development.</p>
         </div>
@@ -1849,8 +1920,8 @@ footer{
     <h2 class="contact-ttl" >Contact</h2>
     <p class="contact-sub" >Open to conversations about infrastructure investment, energy transition, and clean energy M&amp;A. Based in London. EU and UK work-eligible.</p>
     <div class="contact-links">
-      <a href="mailto:joaocreste@gmail.com" class="c-link c-link-primary">✉ joaocreste@gmail.com</a>
-      <a href="mailto:joao.creste@edu.escp.com" class="c-link c-link-primary">✉ joao.creste@edu.escp.com</a>
+      <a href="/cdn-cgi/l/email-protection#dab0b5bbb5b9a8bfa9aebf9abdb7bbb3b6f4b9b5b7" class="c-link c-link-primary">✉ <span class="__cf_email__" data-cfemail="cea4a1afa1adbcabbdbaab8ea9a3afa7a2e0ada1a3">[email&#160;protected]</span></a>
+      <a href="/cdn-cgi/l/email-protection#52383d333d7c312037212637123736277c372131227c313d3f" class="c-link c-link-primary">✉ <span class="__cf_email__" data-cfemail="90fafff1ffbef3e2f5e3e4f5d0f5f4e5bef5e3f3e0bef3fffd">[email&#160;protected]</span></a>
       <a href="https://www.linkedin.com/in/joaocreste/" target="_blank" class="c-link c-link-linkedin">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:14px;height:14px;fill:currentColor;flex-shrink:0"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         LinkedIn
@@ -1903,7 +1974,8 @@ footer{
 
 
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script>
   // ── Active nav link on scroll ──
   const secs = document.querySelectorAll('section[id]');
   const links = document.querySelectorAll('.nav-links a');
@@ -2067,16 +2139,6 @@ footer{
     }, {threshold:0.1});
     mapObs.observe(pmMap);
   }
-
-  // ── Close mobile menu on ESC ──
-  document.addEventListener('keydown', (e) => {
-    if(e.key === 'Escape'){
-      document.getElementById('mobile-menu').classList.remove('open');
-      document.querySelector('.nav-mobile-toggle').classList.remove('open');
-    }
-  });
-
 </script>
-
 </body>
 </html>
